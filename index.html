@@ -6,14 +6,15 @@
 <title>China Family Trip 2027 · 中国 — מפת מסלולים</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Frank+Ruhl+Libre:wght@500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rubik:wght@500;600;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
+button,input,select,textarea{font-family:inherit}
 
 :root{--bg:#F7F5EF;--card:#FFFFFF;--ink:#343A36;--muted:#6E766F;--forest:#34483E;--sage:#879B82;--sage-l:#E6ECE3;--terra:#C77B61;--terra-l:#F6E6DF;--line:#ECE8DF;--sea:#E4ECEA;--land:#F4F0E6;--prov:#E2DACB;--river:#B9CFD3;--shadow:0 10px 30px rgba(52,72,62,.08);--ok:#5E8B6A;--bad:#B5573E}
 @media (prefers-color-scheme:dark){:root{--bg:#1C211E;--card:#262C28;--ink:#E9E6DE;--muted:#A6ADA6;--forest:#9DBBA6;--sage:#7E9479;--sage-l:#2F3832;--terra:#D98D72;--terra-l:#3A2C26;--line:#343B36;--sea:#1B2421;--land:#2C332E;--prov:#3A423C;--river:#35505A;--shadow:0 10px 30px rgba(0,0,0,.3)}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Assistant,Arial,sans-serif;overflow-x:hidden}
-h1,h2,h3{font-family:"Frank Ruhl Libre",serif;font-weight:700;line-height:1.2;margin:0}
+h1,h2,h3{font-family:Rubik,Assistant,sans-serif;font-weight:700;line-height:1.2;margin:0}
 h2{font-size:28px;margin:44px 0 6px}h3{font-size:19px}
 .zh{font-family:"Noto Serif SC",serif;color:var(--muted);font-size:.9em}
 .wrap{max-width:1280px;margin:0 auto;padding:0 20px}
@@ -41,12 +42,12 @@ header{padding:24px 0 8px}
 .hero .thumbs button{border:2px solid transparent;width:56px;height:40px;border-radius:10px;background:center/cover;cursor:pointer;padding:0}
 .hero .thumbs button.on{border-color:#fff}
 .weather{position:absolute;z-index:1;left:24px;top:24px;background:rgba(255,255,255,.78);backdrop-filter:blur(6px);border-radius:18px;padding:12px 16px;font-size:14px;min-width:190px;color:#343A36}
-.weather b{font-size:22px;display:block;font-family:"Frank Ruhl Libre",serif}
+.weather b{font-size:22px;display:block;font-family:Rubik,Assistant,sans-serif}
 .btn{border:0;border-radius:999px;padding:10px 18px;font:600 15px Assistant,sans-serif;cursor:pointer;background:var(--forest);color:#fff;text-decoration:none;display:inline-block}
 .btn.ghost{background:rgba(255,255,255,.85);color:#34483E}
 .controls{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px}
 .seg{display:inline-flex;background:var(--card);border-radius:999px;box-shadow:var(--shadow);padding:4px}
-.seg button{border:0;background:none;padding:6px 14px;border-radius:999px;font:600 14px Assistant;cursor:pointer;color:var(--ink)}
+.seg button{border:0;background:none;padding:6px 14px;border-radius:999px;font:600 14px Assistant,sans-serif;cursor:pointer;color:var(--ink)}
 .seg button.on{background:var(--sage);color:#fff}
 .ctl label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
 details.apps{margin-top:18px}
@@ -66,7 +67,7 @@ details.apps summary::-webkit-details-marker{display:none}
 #map .prov{fill:none;stroke:var(--prov);stroke-width:.8;vector-effect:non-scaling-stroke;stroke-dasharray:3 3}
 #map .riv{fill:none;stroke:var(--river);stroke-width:1.4;vector-effect:non-scaling-stroke}
 .zoom{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:6px;z-index:2}
-.zoom button{width:38px;height:38px;border-radius:12px;border:0;background:var(--card);box-shadow:var(--shadow);font:700 18px Assistant;color:var(--ink);cursor:pointer}
+.zoom button{width:38px;height:38px;border-radius:12px;border:0;background:var(--card);box-shadow:var(--shadow);font:700 18px Assistant,sans-serif;color:var(--ink);cursor:pointer}
 .maphint{position:absolute;bottom:8px;right:10px;font-size:12px;color:var(--muted);background:rgba(255,255,255,.7);border-radius:999px;padding:2px 10px;z-index:2}
 @media (prefers-color-scheme:dark){.maphint{background:rgba(38,44,40,.8)}}
 .tip{position:absolute;z-index:3;pointer-events:none;background:var(--card);border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.18);width:220px;overflow:hidden;opacity:0;transition:opacity .15s;font-size:13px}
@@ -78,13 +79,13 @@ details.apps summary::-webkit-details-marker{display:none}
 .guide{margin-top:10px;background:var(--forest);color:#fff;border-radius:18px;padding:12px 14px}
 @media (prefers-color-scheme:dark){.guide{background:#34483E}}
 .guide .gtop{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.guide .gtitle{font:700 17px "Frank Ruhl Libre",serif}
+.guide .gtitle{font:700 17px Rubik,Assistant,sans-serif}
 .guide .gsub{font-size:14px;opacity:.92;margin-top:2px;min-height:22px}
 .guide .gbtns{display:flex;gap:6px}
-.guide .gbtns button{border:0;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;font:700 14px Assistant;padding:6px 12px;cursor:pointer}
+.guide .gbtns button{border:0;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;font:700 14px Assistant,sans-serif;padding:6px 12px;cursor:pointer}
 .guide .gbtns button.play{background:#C77B61}
 .chips{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:2px;scrollbar-width:none}
-.chip{flex:none;border:0;border-radius:12px;background:rgba(255,255,255,.12);color:#fff;font:600 12px Assistant;padding:6px 10px;cursor:pointer;text-align:right;line-height:1.3}
+.chip{flex:none;border:0;border-radius:12px;background:rgba(255,255,255,.12);color:#fff;font:600 12px Assistant,sans-serif;padding:6px 10px;cursor:pointer;text-align:right;line-height:1.3}
 .chip.on{background:#fff;color:#34483E}
 .chip .t{display:block;font-weight:400;opacity:.85}
 .chip.bad{box-shadow:inset 0 0 0 2px #F0A58C}
@@ -98,7 +99,7 @@ details.apps summary::-webkit-details-marker{display:none}
 .arr{color:var(--terra);font-size:13px}
 .sumgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
 .sumgrid div{background:var(--bg);border-radius:14px;padding:10px;text-align:center}
-.sumgrid b{display:block;font:700 20px "Frank Ruhl Libre",serif;color:var(--forest)}
+.sumgrid b{display:block;font:700 20px Rubik,Assistant,sans-serif;color:var(--forest)}
 .sumgrid span{font-size:12px;color:var(--muted)}
 .check{border-radius:14px;padding:10px 14px;font-size:14px;margin:10px 0}
 .check.good{background:var(--sage-l)}.check.warn{background:var(--terra-l)}
@@ -127,36 +128,36 @@ table.cost tr.tot td{font-weight:700;border-bottom:0;font-size:16px;color:var(--
 .citycard td{padding:6px 4px;border-bottom:1px solid var(--line);vertical-align:top}
 .mini{width:100%;border-collapse:collapse;font-size:14px}
 .mini th,.mini td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
-.mini th{font-family:"Frank Ruhl Libre",serif}
+.mini th{font-family:Rubik,Assistant,sans-serif}
 /* compare */
 .cmpwrap{overflow-x:auto}
 table.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-width:880px}
 table.cmp th,table.cmp td{padding:10px;text-align:right;vertical-align:top;border-bottom:1px solid var(--line)}
-table.cmp th{font-family:"Frank Ruhl Libre",serif;font-size:16px}
+table.cmp th{font-family:Rubik,Assistant,sans-serif;font-size:16px}
 table.cmp td.lbl{color:var(--muted);font-size:13px;white-space:nowrap}
-table.cmp tr.big td{font:700 18px "Frank Ruhl Libre",serif;color:var(--forest)}
+table.cmp tr.big td{font:700 18px Rubik,Assistant,sans-serif;color:var(--forest)}
 /* destinations */
 .dest{display:grid;grid-template-columns:310px minmax(0,1fr);gap:20px;align-items:start}
 .destside{position:sticky;top:12px}
 .filters{display:flex;gap:8px;overflow-x:auto;margin:8px 0 12px;scrollbar-width:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
 .pcard{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
-.pcard .ph{height:150px;position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:10px 14px;color:#fff;font:700 13px Assistant;background-size:cover;background-position:center}
+.pcard .ph{height:150px;position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:10px 14px;color:#fff;font:700 13px Assistant,sans-serif;background-size:cover;background-position:center}
 .pcard .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,0) 60%)}
 .pcard .ph span{position:relative}
 .pcard .num{position:absolute;top:10px;right:12px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.92);color:#34483E;display:grid;place-items:center;font-weight:700}
 .pcard .bd{padding:12px 14px;flex:1}
-.pcard h4{margin:0;font-size:17px;font-family:"Frank Ruhl Libre",serif}
+.pcard h4{margin:0;font-size:17px;font-family:Rubik,Assistant,sans-serif}
 .pcard p{margin:6px 0;font-size:14px}
 .pcard details{font-size:13px;margin-top:6px}
 .pcard summary{cursor:pointer;color:var(--forest);font-weight:600}
 .pcard .ft{display:flex;gap:6px;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--line)}
-.ib{border:0;background:var(--bg);border-radius:999px;padding:5px 10px;font:600 12px Assistant;cursor:pointer;color:var(--ink);text-decoration:none}
+.ib{border:0;background:var(--bg);border-radius:999px;padding:5px 10px;font:600 12px Assistant,sans-serif;cursor:pointer;color:var(--ink);text-decoration:none}
 .ib.want.on{background:var(--terra);color:#fff}
 .ib.vis.on{background:var(--forest);color:#fff}
 .hotel{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:14px 16px;margin-bottom:12px}
 .hotel .k{font-size:12px;font-weight:700;color:var(--terra)}
-.hotel h4{margin:2px 0 4px;font-size:16px;font-family:"Frank Ruhl Libre",serif}
+.hotel h4{margin:2px 0 4px;font-size:16px;font-family:Rubik,Assistant,sans-serif}
 .hotel p{margin:4px 0;font-size:13px}
 .grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 ul.clean{margin:6px 0;padding-inline-start:20px}ul.clean li{margin:4px 0}
@@ -168,7 +169,7 @@ footer{margin:40px 0 30px;font-size:13px;color:var(--muted)}
 @media(max-width:1000px){.planner,.dest,.grid2{grid-template-columns:minmax(0,1fr)}.mapcard,.destside{position:static}.sumgrid{grid-template-columns:repeat(2,1fr)}.weather{display:none}.hero .in{padding:26px 22px 80px}.hero .thumbs{right:22px}}
 @media print{.tabs,.controls,details.apps,.filters,.ft,.btn,.zoom,.guide .gbtns{display:none!important}body{background:#fff}.mapcard,.destside{position:static}}
 
-.recogrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}.rbox{background:var(--sage-l);border-radius:16px;padding:14px 16px}.rbox.e{background:var(--terra-l)}.rbox .big{font:700 20px "Frank Ruhl Libre",serif;color:var(--forest)}.rbox .pr{font:700 22px "Frank Ruhl Libre",serif;color:var(--terra)}@media(max-width:700px){.recogrid{grid-template-columns:1fr}}
+.recogrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}.rbox{background:var(--sage-l);border-radius:16px;padding:14px 16px}.rbox.e{background:var(--terra-l)}.rbox .big{font:700 20px Rubik,Assistant,sans-serif;color:var(--forest)}.rbox .pr{font:700 22px Rubik,Assistant,sans-serif;color:var(--terra)}@media(max-width:700px){.recogrid{grid-template-columns:1fr}}
 :root{--fl:#C77B61;--tr:#34483E;--bo:#4F7FA0}
 .modebar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
 .mk{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;font-weight:700;font-size:15px;color:#fff}
@@ -178,7 +179,7 @@ footer{margin:40px 0 30px;font-size:13px;color:var(--muted)}
 .tl{position:relative;margin-top:6px}
 .tl .cty{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:16px;padding:8px;cursor:pointer}
 .tl .cty .th{width:64px;height:52px;border-radius:12px;background:#879B82 center/cover;flex:none}
-.tl .cty .nm{font:700 17px Assistant;line-height:1.2}
+.tl .cty .nm{font:700 17px Assistant,sans-serif;line-height:1.2}
 .tl .cty .nm .zh{font-size:15px;color:var(--ink);margin-inline-start:4px}
 .tl .cty .dt{font-size:13px;color:var(--muted)}
 .tl .cty .nt{margin-inline-start:auto;background:var(--card);border-radius:999px;padding:4px 12px;font-weight:700;font-size:14px;white-space:nowrap}
@@ -191,7 +192,7 @@ footer{margin:40px 0 30px;font-size:13px;color:var(--muted)}
 .tl .mv .bx{flex:1;padding:6px 0}
 .tl .mv .lab{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 12px;color:#fff;font-weight:700;font-size:14px}
 .tl .mv.fl .lab{background:var(--fl)}.tl .mv.tr .lab{background:#34483E}.tl .mv.bo .lab{background:var(--bo)}
-.tl .mv .tm{font:700 16px Assistant;margin-inline-start:8px}
+.tl .mv .tm{font:700 16px Assistant,sans-serif;margin-inline-start:8px}
 .tl .mv .st{font-size:13px;color:var(--muted);margin-top:3px}
 .tl .mv details{font-size:13px;margin-top:4px}
 .tl .mv summary{cursor:pointer;color:var(--forest);font-weight:600}
@@ -211,7 +212,7 @@ footer{margin:40px 0 30px;font-size:13px;color:var(--muted)}
 .cityban{position:relative;border-radius:22px;overflow:hidden;min-height:280px;background:#55675d center/cover;box-shadow:var(--shadow);display:flex;align-items:flex-end;margin:6px 0 16px}
 .cityban::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,26,22,.82) 0%,rgba(20,26,22,.25) 55%,rgba(20,26,22,0) 100%)}
 .cbin{position:relative;padding:26px 30px;color:#fff;width:100%}
-.cbname{font:700 clamp(40px,6vw,64px)/1 "Frank Ruhl Libre",serif}
+.cbname{font:700 clamp(40px,6vw,64px)/1 Rubik,Assistant,sans-serif}
 .cbname span{font-family:"Noto Serif SC",serif;font-weight:700;margin-inline-start:10px}
 .cbfacts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .cbfacts span{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border-radius:999px;padding:5px 14px;font-size:14px}
@@ -237,7 +238,7 @@ footer{margin:40px 0 30px;font-size:13px;color:var(--muted)}
 .pcard .ft .ib{padding:4px 9px;font-size:12px}
 .pcard.must{box-shadow:0 0 0 2px #C77B61,var(--shadow)!important}
 .pcard .ph{position:relative}
-.pcard .ph .mustb{position:absolute!important;top:8px;right:8px;background:#C77B61;color:#fff;font:700 12px Assistant;border-radius:999px;padding:3px 10px}
+.pcard .ph .mustb{position:absolute!important;top:8px;right:8px;background:#C77B61;color:#fff;font:700 12px Assistant,sans-serif;border-radius:999px;padding:3px 10px}
 .pcard .ph .inset{position:absolute!important;top:8px;left:8px;width:84px;height:84px;border-radius:12px;border:3px solid #fff;background:center/cover;box-shadow:0 4px 12px rgba(0,0,0,.25);overflow:hidden}
 .pcard .ph .inset b{position:absolute;bottom:0;left:0;right:0;text-align:center;background:rgba(199,123,97,.92);color:#fff;font-size:11px;padding:1px 0}
 .pcard{overflow:visible!important}.pcard .ph{border-radius:16px 16px 0 0}
@@ -248,7 +249,7 @@ details.col:not([open])>summary::after{transform:rotate(90deg)}
 .mnav{display:none}
 @media(max-width:700px){
  .mnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:8;background:var(--card);box-shadow:0 -4px 16px rgba(0,0,0,.1);justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
- .mnav a{flex:1;text-align:center;text-decoration:none;color:var(--forest);font:700 12px Assistant;padding:4px 2px;border-radius:10px}
+ .mnav a{flex:1;text-align:center;text-decoration:none;color:var(--forest);font:700 12px Assistant,sans-serif;padding:4px 2px;border-radius:10px}
  .mnav a span{display:block;font-size:18px;line-height:1.2}
  body{padding-bottom:64px}
  h2{font-size:23px;margin-top:32px}
@@ -272,8 +273,8 @@ details.col:not([open])>summary::after{transform:rotate(90deg)}
 .rtabs{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;overflow:visible!important;padding:6px 0 14px}
 .rt{border:0;background:var(--card);box-shadow:var(--shadow);border-radius:18px;padding:12px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;font-family:inherit;color:var(--ink);transition:transform .15s}
 .rt:hover{transform:translateY(-2px)}
-.rt .rl{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 24px "Frank Ruhl Libre",serif;background:var(--sage)}
-.rt .rn{font:700 14px Assistant;text-align:center;line-height:1.2}
+.rt .rl{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font:700 24px Rubik,Assistant,sans-serif;background:var(--sage)}
+.rt .rn{font:700 14px Assistant,sans-serif;text-align:center;line-height:1.2}
 .rt .rs{font-size:12px;color:var(--muted);text-align:center}
 .rt .rc{font-size:12.5px;font-weight:700;color:var(--terra);text-align:center}
 .rt.active{box-shadow:0 0 0 3px var(--forest),var(--shadow)}
@@ -292,7 +293,7 @@ details.col:not([open])>summary::after{transform:rotate(90deg)}
 .mcard .kv b{display:block;font-size:16px;color:var(--forest)}
 .entry td,.entry th{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top;font-size:14px}
 .entry{width:100%;border-collapse:collapse}
-.entry th{font-family:"Frank Ruhl Libre",serif;font-size:15px}
+.entry th{font-family:Rubik,Assistant,sans-serif;font-size:15px}
 .yes{color:var(--ok);font-weight:700}.warn{color:var(--terra);font-weight:700}
 
 @media(max-width:560px){.multi{grid-template-columns:minmax(0,1fr)}}
@@ -332,13 +333,13 @@ details.col:not([open])>summary::after{transform:rotate(90deg)}
 .drv-in{background:#fff;color:#1f2a2b;border-radius:20px;padding:24px 22px;max-width:560px;width:100%;text-align:center}
 .drv-l{font:500 22px "Noto Serif SC",serif;color:#555}
 .driver .drv-zh{font:700 clamp(46px,13vw,96px)/1.15 "Noto Serif SC",serif;margin:8px 0;word-break:break-word}
-.driver .drv-zh.lat{font:700 clamp(26px,7vw,44px)/1.2 system-ui,sans-serif}
+.driver .drv-zh.lat{font:700 clamp(26px,7vw,44px)/1.2 Assistant,sans-serif}
 .driver .drv-city{font:500 22px "Noto Serif SC",serif;color:#444}
-.driver .drv-en{font:500 16px system-ui,sans-serif;color:#777;margin-top:6px}
-.driver .drv-zh.hz{font:700 clamp(30px,8vw,58px)/1.2 "Noto Serif SC",serif}.drv-addr{font:600 clamp(18px,4.6vw,26px)/1.4 "Noto Serif SC",serif;margin:6px 0 2px}.drv-ok{font:13px system-ui,sans-serif;background:#e8f1ea;color:#2f5d3e;border-radius:8px;padding:6px 8px;margin-top:10px}.drv-warn{font:13px system-ui,sans-serif;background:#fbf3e2;color:#7a5a1c;border-radius:8px;padding:6px 8px;margin-top:10px}
+.driver .drv-en{font:500 16px Assistant,sans-serif;color:#777;margin-top:6px}
+.driver .drv-zh.hz{font:700 clamp(30px,8vw,58px)/1.2 "Noto Serif SC",serif}.drv-addr{font:600 clamp(18px,4.6vw,26px)/1.4 "Noto Serif SC",serif;margin:6px 0 2px}.drv-ok{font:13px Assistant,sans-serif;background:#e8f1ea;color:#2f5d3e;border-radius:8px;padding:6px 8px;margin-top:10px}.drv-warn{font:13px Assistant,sans-serif;background:#fbf3e2;color:#7a5a1c;border-radius:8px;padding:6px 8px;margin-top:10px}
 .driver .drv-bt{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.driver .drv-bt *{font:600 14px system-ui,sans-serif}
-.driver .drv-h{font:12px system-ui,sans-serif;color:#888;margin:12px 0 0}
+.driver .drv-bt *{font:600 14px Assistant,sans-serif}
+.driver .drv-h{font:12px Assistant,sans-serif;color:#888;margin:12px 0 0}
 .sheet{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;display:none;align-items:flex-end}
 .sheet.on{display:flex}.sh-in{background:#fff;width:100%;border-radius:20px 20px 0 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom))}
 .sh-in h3{margin:0 0 10px}.sh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
@@ -393,7 +394,7 @@ section[id],#hero,#settings{scroll-margin-top:28px}
 .side-link .nav-label{overflow:hidden;text-overflow:ellipsis}
 /* Reserve a clear gutter so the rail never covers dashboard content. */
 @media(min-width:1200px){.wrap{margin-right:190px;margin-left:auto}}
-@media(min-width:701px) and (max-width:1199px){.wrap{margin-right:76px;margin-left:0}.side-nav{right:8px;width:54px;padding:10px 6px;gap:6px}.side-nav-brand{padding:2px 0 8px}.side-nav-brand small{display:none}.side-link{justify-content:center;padding:10px 0;min-height:44px}.side-link .nav-label{display:none}.side-link .nav-icon{font-size:19px}.side-link[title]:hover::after{content:attr(title);position:absolute;right:62px;background:var(--forest);color:#fff;padding:6px 10px;border-radius:9px;font:600 12px Assistant;white-space:nowrap}}
+@media(min-width:701px) and (max-width:1199px){.wrap{margin-right:76px;margin-left:0}.side-nav{right:8px;width:54px;padding:10px 6px;gap:6px}.side-nav-brand{padding:2px 0 8px}.side-nav-brand small{display:none}.side-link{justify-content:center;padding:10px 0;min-height:44px}.side-link .nav-label{display:none}.side-link .nav-icon{font-size:19px}.side-link[title]:hover::after{content:attr(title);position:absolute;right:62px;background:var(--forest);color:#fff;padding:6px 10px;border-radius:9px;font:600 12px Assistant,sans-serif;white-space:nowrap}}
 @media(max-width:700px){.side-nav{display:none}.wrap{margin:0 auto}.mnav{display:flex}}
 
 #tripLock[hidden],#tripBody[hidden]{display:none!important}
@@ -418,26 +419,226 @@ section[id],#hero,#settings{scroll-margin-top:28px}
 .rt .rl{color:#14201a}
 .due.late{color:#e8907a}.due.soon{color:#e3b866}.due.ok{color:var(--forest)}
 }
-.driver .drv-l{font:500 clamp(20px,5.5vw,28px) "Noto Serif SC",serif;color:#555}.driver .drv-zh.hz{font:700 clamp(32px,9vw,60px)/1.2 "Noto Serif SC",serif}.driver .drv-addr{font:600 clamp(19px,5vw,28px)/1.4 "Noto Serif SC",serif;margin:8px 0 2px}.driver .drv-ok,.driver .drv-warn{font:13px/1.4 system-ui,sans-serif;border-radius:8px;padding:6px 8px;margin-top:10px}.driver .drv-ok{background:#e8f1ea;color:#2f5d3e}.driver .drv-warn{background:#fbf3e2;color:#7a5a1c}.cp{border:1px solid #d6d1c4;background:transparent;color:inherit;border-radius:6px;font:12px system-ui,sans-serif;padding:1px 6px;margin:0 3px;cursor:pointer;vertical-align:middle;line-height:1.4}.cp:active{transform:scale(.94)}.gnote{font:13px/1.5 system-ui,sans-serif;background:#fbf3e2;color:#7a5a1c;border-radius:8px;padding:6px 8px;margin:6px 0}.gnote .gz{margin-top:4px;display:flex;flex-wrap:wrap;gap:4px;align-items:center}.gnote .zl{font:600 15px "Noto Serif SC",serif;color:#7a5a1c;text-decoration:underline}@media (prefers-color-scheme:dark){.cp{border-color:#555}.gnote{background:#3a3222;color:#f0dcb0}.gnote .zl{color:#f0dcb0}}.cals{flex-direction:column}.cal{min-width:0;width:100%}@media(min-width:1001px){#side{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}#side::-webkit-scrollbar{width:8px}#side::-webkit-scrollbar-thumb{background:#cfc8b8;border-radius:8px}}.twohot{background:#fbf3e2;color:#6b4e14;border:1px solid #ecd9ae;border-radius:10px;padding:8px 10px;margin:6px 0 10px;font-size:14px;line-height:1.5}.twohot ol{margin:4px 0;padding-inline-start:20px}.twohot.sm{font-size:12px;padding:4px 8px;margin:4px 0}@media (prefers-color-scheme:dark){.twohot{background:#3a3222;color:#f0dcb0;border-color:#5a4a2a}}.rnchip{font:13px/1.5 system-ui,sans-serif;background:#eaf1f6;color:#2c4a63;border-radius:8px;padding:5px 8px;margin:4px 0;direction:rtl;text-align:right}.rnbox{margin-top:18px}.rnbox>summary{cursor:pointer;list-style:none}.rnbox>summary::-webkit-details-marker{display:none}.rnhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.rnhead h3{margin:0}.rnpill{font-size:12px;background:#e8efe9;color:#34483E;border-radius:999px;padding:2px 10px}.rnsum{margin:6px 0 2px;font-size:15px;line-height:1.55}.rnchips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 10px}.rngrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}.rnitem{background:#faf8f3;border:1px solid #ece6d8;border-inline-start:4px solid #ccc;border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.5}.rnitem[hidden]{display:none}.rnitem.c1{border-inline-start-color:#C77B61}.rnitem.c2{border-inline-start-color:#4F7FA0}.rnitem.c3{border-inline-start-color:#b9b2a3}.rntop{display:flex;align-items:center;gap:6px}.rntop b{flex:1}.rnic{font-size:18px}.rnlv{font-size:11px;color:#8a8a8a;white-space:nowrap}.rnz{margin:2px 0;display:flex;align-items:center;gap:4px}.rnitem p{margin:4px 0}.rnq{font:italic 13px "Noto Serif SC",serif;color:#6b6b6b;border-inline-start:2px solid #ddd;padding-inline-start:8px;margin:4px 0}.rnfoot{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#8a8a8a;margin-top:4px}@media (prefers-color-scheme:dark){.rnitem{background:#24282a;border-color:#3a3f41}.rnpill{background:#2e3a33;color:#cfe3d5}.rnq{color:#aaa;border-color:#555}}.dowlbl{display:inline-block;font:600 13px system-ui,sans-serif;background:#f2ece0;color:#6b5a3a;border-radius:999px;padding:2px 10px;margin:4px 0}.altday{margin-top:10px;padding-top:8px;border-top:1px dashed #ddd5c4}@media (prefers-color-scheme:dark){.dowlbl{background:#3a3428;color:#e8d9b8}.altday{border-color:#444}}.dv{margin:12px 0}.dvtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.dvtop h3{margin:0}.dvtabs{display:flex;gap:6px;overflow-x:auto;margin:12px 0 4px;padding-bottom:4px;border-bottom:1px solid var(--line,#e8e3d8)}.dvtab{border:0;background:transparent;font:600 14px Assistant,system-ui,sans-serif;color:#7b7b7b;padding:8px 12px;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer}.dvtab.on{color:#34483E;border-bottom-color:#7FA08A}.dvhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 6px}.dvt{font:700 19px "Frank Ruhl Libre",serif}.dvvar button{font-size:13px}.dvsum{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}.dvsum span{font-size:13px;background:#f3f0e8;border-radius:999px;padding:3px 10px;color:#5b5b5b}.dvgrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}.dvtl{list-style:none;margin:0;padding:0;position:relative}.dvtl:before{content:"";position:absolute;inset-inline-start:15px;top:14px;bottom:14px;border-inline-start:2px dashed #cfd9cf}.dvs{position:relative;padding-inline-start:44px;margin-bottom:6px}.dvdot{position:absolute;inset-inline-start:2px;top:12px;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid #7FA08A;color:#34483E;font:700 13px system-ui,sans-serif;display:flex;align-items:center;justify-content:center;z-index:1}.dvs.open .dvdot{background:#34483E;color:#fff;border-color:#34483E}.dvcard{background:#fff;border:1px solid #ece6d8;border-radius:14px;padding:8px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}.dvs.open .dvcard{border-color:#7FA08A;box-shadow:0 2px 10px rgba(52,72,62,.12)}.dvhd{all:unset;display:flex;align-items:center;gap:10px;width:100%;cursor:pointer}.dvic{width:34px;height:34px;border-radius:10px;background:#eef3ee;display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}.dvnm{flex:1;line-height:1.35}.dvnm small{display:block;color:#8a8a8a;font-size:12px}.dvslot{font:600 12px system-ui,sans-serif;color:#34483E;background:#eef3ee;border-radius:999px;padding:2px 9px;white-space:nowrap}.dvd{font-size:14px;color:#4a4a4a;margin:4px 0 0;line-height:1.5}.dvmore{margin-top:6px;border-top:1px solid #f0ece2;padding-top:6px}.dvtip{font-size:13px;background:#faf8f3;border-radius:8px;padding:5px 8px}.dvtr{font-size:12px;color:#7b7b7b;margin:6px 0 2px;padding-inline-start:4px}.dvmap{position:sticky;top:12px}.dvsvg{width:100%;height:auto;display:block}.dvbg{fill:#f3f0e8}.dvline{fill:none;stroke:#7FA08A;stroke-width:2.5;stroke-dasharray:6 5}.dvm circle{fill:#fff;stroke:#34483E;stroke-width:2;cursor:pointer}.dvm text,.dvh text{font:700 12px system-ui,sans-serif;fill:#34483E;text-anchor:middle;pointer-events:none}.dvm.on circle{fill:#C77B61;stroke:#C77B61}.dvm.on text{fill:#fff}.dvh circle{fill:#fff;stroke:#C77B61;stroke-width:2}.dvmapnote,.dvnomap{font-size:12px;color:#8a8a8a;margin-top:6px}@media(max-width:900px){.dvgrid{grid-template-columns:1fr}.dvmap{position:static;order:-1}.dvsvg{max-height:220px}}.dvmapd>summary{cursor:pointer;font:600 13px system-ui,sans-serif;color:#34483E;margin-bottom:6px}@media (prefers-color-scheme:dark){.dvcard{background:var(--card,#1f2422);border-color:#3a3f41}.dvic,.dvslot{background:#2c3a32;color:#d7e6dc}.dvsum span{background:#2c2f30;color:#ccc}.dvtab.on{color:#cfe3d5}.dvbg{fill:#26292a}.dvm circle,.dvh circle,.dvdot{fill:#1f2422;background:#1f2422}.dvdot{color:#cfe3d5}.dvm text,.dvh text{fill:#cfe3d5}.dvd{color:#ccc}.dvtip{background:#26292a}.dvmore{border-color:#333}}</style>
+.driver .drv-l{font:500 clamp(20px,5.5vw,28px) "Noto Serif SC",serif;color:#555}.driver .drv-zh.hz{font:700 clamp(32px,9vw,60px)/1.2 "Noto Serif SC",serif}.driver .drv-addr{font:600 clamp(19px,5vw,28px)/1.4 "Noto Serif SC",serif;margin:8px 0 2px}.driver .drv-ok,.driver .drv-warn{font:13px/1.4 Assistant,sans-serif;border-radius:8px;padding:6px 8px;margin-top:10px}.driver .drv-ok{background:#e8f1ea;color:#2f5d3e}.driver .drv-warn{background:#fbf3e2;color:#7a5a1c}.cp{border:1px solid #d6d1c4;background:transparent;color:inherit;border-radius:6px;font:12px Assistant,sans-serif;padding:1px 6px;margin:0 3px;cursor:pointer;vertical-align:middle;line-height:1.4}.cp:active{transform:scale(.94)}.gnote{font:13px/1.5 Assistant,sans-serif;background:#fbf3e2;color:#7a5a1c;border-radius:8px;padding:6px 8px;margin:6px 0}.gnote .gz{margin-top:4px;display:flex;flex-wrap:wrap;gap:4px;align-items:center}.gnote .zl{font:600 15px "Noto Serif SC",serif;color:#7a5a1c;text-decoration:underline}@media (prefers-color-scheme:dark){.cp{border-color:#555}.gnote{background:#3a3222;color:#f0dcb0}.gnote .zl{color:#f0dcb0}}.cals{flex-direction:column}.cal{min-width:0;width:100%}@media(min-width:1001px){#side{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}#side::-webkit-scrollbar{width:8px}#side::-webkit-scrollbar-thumb{background:#cfc8b8;border-radius:8px}}.twohot{background:#fbf3e2;color:#6b4e14;border:1px solid #ecd9ae;border-radius:10px;padding:8px 10px;margin:6px 0 10px;font-size:14px;line-height:1.5}.twohot ol{margin:4px 0;padding-inline-start:20px}.twohot.sm{font-size:12px;padding:4px 8px;margin:4px 0}@media (prefers-color-scheme:dark){.twohot{background:#3a3222;color:#f0dcb0;border-color:#5a4a2a}}.rnchip{font:13px/1.5 Assistant,sans-serif;background:#eaf1f6;color:#2c4a63;border-radius:8px;padding:5px 8px;margin:4px 0;direction:rtl;text-align:right}.rnbox{margin-top:18px}.rnbox>summary{cursor:pointer;list-style:none}.rnbox>summary::-webkit-details-marker{display:none}.rnhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.rnhead h3{margin:0}.rnpill{font-size:12px;background:#e8efe9;color:#34483E;border-radius:999px;padding:2px 10px}.rnsum{margin:6px 0 2px;font-size:15px;line-height:1.55}.rnchips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 10px}.rngrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}.rnitem{background:#faf8f3;border:1px solid #ece6d8;border-inline-start:4px solid #ccc;border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.5}.rnitem[hidden]{display:none}.rnitem.c1{border-inline-start-color:#C77B61}.rnitem.c2{border-inline-start-color:#4F7FA0}.rnitem.c3{border-inline-start-color:#b9b2a3}.rntop{display:flex;align-items:center;gap:6px}.rntop b{flex:1}.rnic{font-size:18px}.rnlv{font-size:11px;color:#8a8a8a;white-space:nowrap}.rnz{margin:2px 0;display:flex;align-items:center;gap:4px}.rnitem p{margin:4px 0}.rnq{font:italic 13px "Noto Serif SC",serif;color:#6b6b6b;border-inline-start:2px solid #ddd;padding-inline-start:8px;margin:4px 0}.rnfoot{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:#8a8a8a;margin-top:4px}@media (prefers-color-scheme:dark){.rnitem{background:#24282a;border-color:#3a3f41}.rnpill{background:#2e3a33;color:#cfe3d5}.rnq{color:#aaa;border-color:#555}}.dowlbl{display:inline-block;font:600 13px Assistant,sans-serif;background:#f2ece0;color:#6b5a3a;border-radius:999px;padding:2px 10px;margin:4px 0}.altday{margin-top:10px;padding-top:8px;border-top:1px dashed #ddd5c4}@media (prefers-color-scheme:dark){.dowlbl{background:#3a3428;color:#e8d9b8}.altday{border-color:#444}}.dv{margin:12px 0}.dvtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.dvtop h3{margin:0}.dvtabs{display:flex;gap:6px;overflow-x:auto;margin:12px 0 4px;padding-bottom:4px;border-bottom:1px solid var(--line,#e8e3d8)}.dvtab{border:0;background:transparent;font:600 14px Assistant,Assistant,sans-serif;color:#7b7b7b;padding:8px 12px;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer}.dvtab.on{color:#34483E;border-bottom-color:#7FA08A}.dvhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 6px}.dvt{font:700 19px Rubik,Assistant,sans-serif}.dvvar button{font-size:13px}.dvsum{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}.dvsum span{font-size:13px;background:#f3f0e8;border-radius:999px;padding:3px 10px;color:#5b5b5b}.dvgrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;align-items:start}.dvtl{list-style:none;margin:0;padding:0;position:relative}.dvtl:before{content:"";position:absolute;inset-inline-start:15px;top:14px;bottom:14px;border-inline-start:2px dashed #cfd9cf}.dvs{position:relative;padding-inline-start:44px;margin-bottom:6px}.dvdot{position:absolute;inset-inline-start:2px;top:12px;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid #7FA08A;color:#34483E;font:700 13px Assistant,sans-serif;display:flex;align-items:center;justify-content:center;z-index:1}.dvs.open .dvdot{background:#34483E;color:#fff;border-color:#34483E}.dvcard{background:#fff;border:1px solid #ece6d8;border-radius:14px;padding:8px 12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}.dvs.open .dvcard{border-color:#7FA08A;box-shadow:0 2px 10px rgba(52,72,62,.12)}.dvhd{all:unset;display:flex;align-items:center;gap:10px;width:100%;cursor:pointer}.dvic{width:34px;height:34px;border-radius:10px;background:#eef3ee;display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}.dvnm{flex:1;line-height:1.35}.dvnm small{display:block;color:#8a8a8a;font-size:12px}.dvslot{font:600 12px Assistant,sans-serif;color:#34483E;background:#eef3ee;border-radius:999px;padding:2px 9px;white-space:nowrap}.dvd{font-size:14px;color:#4a4a4a;margin:4px 0 0;line-height:1.5}.dvmore{margin-top:6px;border-top:1px solid #f0ece2;padding-top:6px}.dvtip{font-size:13px;background:#faf8f3;border-radius:8px;padding:5px 8px}.dvtr{font-size:12px;color:#7b7b7b;margin:6px 0 2px;padding-inline-start:4px}.dvmap{position:sticky;top:12px}.dvsvg{width:100%;height:auto;display:block}.dvbg{fill:#f3f0e8}.dvline{fill:none;stroke:#7FA08A;stroke-width:2.5;stroke-dasharray:6 5}.dvm circle{fill:#fff;stroke:#34483E;stroke-width:2;cursor:pointer}.dvm text,.dvh text{font:700 12px Assistant,sans-serif;fill:#34483E;text-anchor:middle;pointer-events:none}.dvm.on circle{fill:#C77B61;stroke:#C77B61}.dvm.on text{fill:#fff}.dvh circle{fill:#fff;stroke:#C77B61;stroke-width:2}.dvmapnote,.dvnomap{font-size:12px;color:#8a8a8a;margin-top:6px}@media(max-width:900px){.dvgrid{grid-template-columns:1fr}.dvmap{position:static;order:-1}.dvsvg{max-height:220px}}.dvmapd>summary{cursor:pointer;font:600 13px Assistant,sans-serif;color:#34483E;margin-bottom:6px}@media (prefers-color-scheme:dark){.dvcard{background:var(--card,#1f2422);border-color:#3a3f41}.dvic,.dvslot{background:#2c3a32;color:#d7e6dc}.dvsum span{background:#2c2f30;color:#ccc}.dvtab.on{color:#cfe3d5}.dvbg{fill:#26292a}.dvm circle,.dvh circle,.dvdot{fill:#1f2422;background:#1f2422}.dvdot{color:#cfe3d5}.dvm text,.dvh text{fill:#cfe3d5}.dvd{color:#ccc}.dvtip{background:#26292a}.dvmore{border-color:#333}}
+/* ---- app views ---- */
+[data-view]:not(.von){display:none!important}
+.mnav a.on{background:var(--sage-l)}
+.homesum{margin-top:16px}
+.homesum .hs-top{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;justify-content:space-between}
+.homesum .hs-route{font:700 18px Assistant,sans-serif;color:var(--forest)}
+.homesum .hs-meta{font:400 14px Assistant,sans-serif;color:var(--ink);opacity:.85}
+.homesum .hs-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.homesum .hs-kpis div{background:var(--sage-l);border-radius:14px;padding:10px 12px}
+.homesum .hs-kpis b{display:block;font:700 18px Assistant,sans-serif;color:var(--forest)}
+.homesum .hs-kpis span{font:400 12px Assistant,sans-serif}
+.homesum h3{font:700 14px Assistant,sans-serif;margin:6px 0}
+.homesum ul{list-style:none;margin:0;padding:0}
+.homesum li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--line,#E4DED2);font:400 14px Assistant,sans-serif}
+.homesum li small{white-space:nowrap;opacity:.75}
+.homesum li.late small{color:#b4462b;opacity:1;font-weight:700}
+.homesum .btn.ghost{background:var(--sage-l);color:var(--ink)!important;border-color:transparent}
+.homesum .hs-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+@media(max-width:700px){.homesum .hs-kpis b{font-size:16px}}
+
+/* distances card */
+.dstc .dst-note{font:400 14px/1.5 Assistant,sans-serif;color:var(--muted);margin:2px 0 10px}
+.dstc .dst-from{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;background:var(--sage-l);border-radius:12px;padding:9px 12px;margin-bottom:4px;font:400 13px Assistant,sans-serif}
+.dstc .dst-from span{color:var(--muted)}.dstc .dst-from b{font:700 14px Assistant,sans-serif;color:var(--ink)}.dstc .dst-from small{flex-basis:100%;color:var(--muted)}
+.dstc .dst{padding:12px 2px;border-top:1px solid var(--line)}
+.dstc .dst:first-of-type{border-top:0}
+.dstc .dst-h,.dstc .dst-s{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.dstc .dst-n{font:700 15px/1.35 Assistant,sans-serif;color:var(--ink)}
+.dstc .dst-km{font:700 14px Assistant,sans-serif;color:var(--forest);white-space:nowrap}
+.dstc .dst-s{margin-top:3px}
+.dstc .dst-zh{font:500 14px "Noto Serif SC",serif;color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-align:start}
+.dstc .dst-zh span{font-size:12px;opacity:.7}.dstc .dst-zh:hover{color:var(--forest)}
+.dstc .dst-t{font:400 13px Assistant,sans-serif;color:var(--muted);white-space:nowrap}
+.dstc .dst-l{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:7px}
+.dstc .dst-l a{font:600 13px Assistant,sans-serif;color:var(--forest);text-decoration:none}
+.dstc .dst-l a:hover{text-decoration:underline}
+
+/* view headers */
+.vhead{display:flex;justify-content:space-between;align-items:flex-end;gap:10px 16px;flex-wrap:wrap;margin:26px 0 16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.vhead h2{margin:0;font-size:30px}
+.vhead p{margin:5px 0 0;color:var(--muted);font:400 15px/1.5 Assistant,sans-serif}
+.vh-act{display:flex;gap:8px;flex-wrap:wrap}
+.vh-act a,.vh-act button{font:700 13px Assistant,sans-serif;padding:8px 14px;border-radius:999px;background:var(--sage-l);color:var(--forest);text-decoration:none;border:0;cursor:pointer}
+.vh-act [hidden]{display:none}
+.subh{font-size:21px;margin:30px 0 4px}
+.settings-head h2{font-size:21px}
+@media(max-width:700px){.vhead{margin:14px 0 12px}.vhead h2{font-size:24px}.vhead p{font-size:14px}}
+
+.pill.active .zh{color:inherit!important;opacity:.75}
+.dvgrid.nomap{grid-template-columns:1fr!important}.dvgrid.nomap .dvmap{position:static!important;order:0!important}
+
+/* booking calendar v3 */
+.bookcal{margin:12px 0;background:#fcfbf7}
+.bkhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.bkh1{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.bkh1 h3{margin:0}
+.bkpct{font:600 13px Assistant,sans-serif;color:var(--done-t);background:var(--done-l);padding:3px 10px;border-radius:999px}
+.bkics{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 12px;font:600 12px Assistant,sans-serif;color:var(--muted);cursor:pointer}
+.bkics:hover{color:var(--ink);border-color:var(--ink)}
+.bkbar{height:4px;border-radius:4px;background:var(--line);margin:10px 0 12px;overflow:hidden}.bkbar div{height:100%;background:var(--done);border-radius:4px}
+.bktools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.bkchips{display:flex;flex-wrap:wrap;gap:6px}
+.bkchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 10px;font:600 12px Assistant,sans-serif;color:var(--muted);cursor:pointer;white-space:nowrap}
+.bkchip i{width:8px;height:8px;border-radius:50%;background:var(--k);opacity:.3}
+.bkchip.on{color:var(--ink);border-color:color-mix(in srgb,var(--k) 45%,var(--line))}.bkchip.on i{opacity:1}
+.bcnav{display:flex;gap:4px;align-items:center}
+.bcnav button{border:1px solid var(--line);background:var(--card);border-radius:999px;min-width:32px;height:32px;padding:0 10px;font:600 13px Assistant,sans-serif;color:var(--ink);cursor:pointer}
+.bcnav button[disabled]{opacity:.35;cursor:default}
+.bcms{display:grid;grid-template-columns:1fr;gap:22px}
+.bcmh{font:700 16px Rubik,Assistant,sans-serif;margin:0 0 8px}
+.bcg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.bcw{font:600 12px Assistant,sans-serif;color:var(--muted);text-align:center;padding-bottom:2px}
+.bcd{position:relative;min-height:82px;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:6px 7px 9px;display:flex;flex-direction:column;gap:5px;font:400 12px Assistant,sans-serif;color:var(--ink);text-align:start;cursor:default;overflow:hidden}
+.bcd.out{background:transparent;border-color:transparent;color:#c9c4b8}
+.bcd.out b{font-weight:400}
+.bcd.in{box-shadow:inset 0 2px 0 var(--cc,transparent)}
+.bcd[data-bcd]{cursor:pointer}.bcd[data-bcd]:hover{border-color:#cfc8b8}
+.bcd.sel{border-color:var(--forest);box-shadow:0 0 0 1px var(--forest)}
+.bcd.today b{background:var(--terra);color:#fff;border-radius:999px;padding:0 6px}
+.bct{display:flex;align-items:center;gap:5px}
+.bct b{font:600 13px Assistant,sans-serif}
+.bcc{font:600 10px Assistant,sans-serif;font-style:normal;color:var(--cc)}
+.bok{margin-inline-start:auto;width:16px;height:16px;flex:none;border-radius:50%;background:var(--done);color:#fff;display:grid;place-items:center;font:700 10px Assistant,sans-serif}
+.bpart{margin-inline-start:auto;width:14px;height:14px;flex:none;border-radius:50%;border:2px solid var(--done);background:linear-gradient(90deg,var(--done) 50%,transparent 50%)}
+.bdl{min-width:16px;height:16px;flex:none;border-radius:999px;background:#fdecea;color:#c0392b;font:700 10px Assistant,sans-serif;display:grid;place-items:center;padding:0 4px}
+.bct b+.bdl,.bct .bcc+.bdl{margin-inline-start:auto}
+.bcx{display:flex;flex-direction:column;gap:3px;align-items:stretch}
+.bt{display:block;font:600 11px/1.3 Assistant,sans-serif;font-style:normal;padding:2px 6px;border-radius:6px;background:color-mix(in srgb,var(--k) 13%,transparent);color:color-mix(in srgb,var(--k) 80%,#000);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bt.ok{opacity:.7}
+.bt.more{background:var(--bg);color:var(--muted);text-align:center}
+.bt.dl{--k:#c0392b}
+.bnight{position:absolute;inset-inline:6px;bottom:4px;height:3px;border-radius:3px;background:var(--k);opacity:.45}
+.bnight.ok{background:var(--done);opacity:.85}
+.bagenda{display:none}
+.bcdinfo{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font:400 14px Assistant,sans-serif;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.bcdh{display:flex;justify-content:space-between;align-items:center}
+.bcds{font:600 12px Assistant,sans-serif;color:var(--muted);margin:10px 0 2px}
+.bcdi{display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px solid var(--line)}
+.bcdi span{flex:1}
+.bcdk{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--k);margin-inline-end:6px}
+.bgo{font-size:11px}
+.bst.sm{width:30px;height:30px;padding:0;font-size:14px}
+.bkst{font:700 15px Rubik,Assistant,sans-serif;margin:18px 0 8px}
+.bkstrip{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.bkm{flex:none;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:78px;padding:8px 10px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;font:400 12px Assistant,sans-serif;color:var(--ink)}
+.bkm b{font:700 13px Assistant,sans-serif}.bkm small{font-size:11px;opacity:.8}
+.bkm.on{outline:2px solid var(--forest)}
+.bitem.flash{box-shadow:0 0 0 2px var(--done)}
+.bkf{margin:6px 0 10px}
+.bkmf{display:flex;align-items:center;gap:8px}
+.bitem.mini{grid-template-columns:34px 1fr auto;align-items:center;padding:5px 8px}
+.bitem.mini .bst{width:30px;height:30px;padding:0}
+.bmini{background:none;border:0;text-align:start;font:400 13px Assistant,sans-serif;color:var(--ink);cursor:pointer;padding:0}
+.ib.gc{padding:3px 7px;flex:none}
+@media(max-width:700px){
+ .bcg{gap:3px}.bcw{font-size:11px}
+ .bcd{min-height:58px;padding:4px 3px 7px;border-radius:8px;gap:3px}
+ .bct b{font-size:12px}.bcc{display:none}
+ .bok{width:13px;height:13px;font-size:8px}.bpart{width:11px;height:11px;border-width:1.5px}.bdl{min-width:13px;height:13px;font-size:9px;padding:0 3px}
+ .bt{font-size:9px;padding:1px 3px;border-radius:4px}
+ .bcmh{font-size:15px}
+ .bagm{margin-bottom:14px}
+ .bag{display:flex;align-items:flex-start;gap:10px;width:100%;text-align:start;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:8px 10px;margin-bottom:6px;cursor:pointer;box-shadow:inset -3px 0 0 var(--cc,transparent);font:400 13px Assistant,sans-serif;color:var(--ink)}
+ .bag.sel{border-color:var(--forest)}
+ .bagd{display:flex;flex-direction:column;align-items:center;min-width:30px}.bagd b{font:700 16px Assistant,sans-serif}.bagd small{color:var(--muted)}
+ .bagb{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}.bagc{color:var(--muted);font-size:12px}
+ .bag .bcx{flex-direction:row;flex-wrap:wrap}
+ .bktools{flex-direction:column;align-items:stretch}.bkchips{flex-wrap:wrap}.bcnav{flex-wrap:wrap}.bookcal,.bktools,.bktools>*{min-width:0;max-width:100%}
+ .bcdi{flex-wrap:wrap}
+}
+@media(prefers-color-scheme:dark){.bubble b[style*="#34483E"]{color:#8fc7a3!important}.bookcal{background:var(--card)}.bdl{background:#4a2420;color:#ffb4a8}.bcd.out{color:#5c5a52}.bt{color:color-mix(in srgb,var(--k) 60%,#fff)}}
+/* done = WhatsApp green */
+:root{--done:#5B8466;--done-l:#E3ECE2;--done-t:#3E6248}@media(prefers-color-scheme:dark){:root{--done:#7FAE8B;--done-l:#2C3B30;--done-t:#A9CDB2}}
+.bch.s2{background:var(--done)!important;border-color:var(--done)!important;border-style:solid!important;color:#fff!important}
+.bcd.hb2{background:var(--done-l)!important;background-image:none!important}
+.s2 .bst,.bst.done{background:var(--done)!important;color:#fff!important}
+.s2 .bst small{color:#fff!important}
+.bkm.ok{background:var(--done-l)!important;border-color:var(--done)!important}.bkm.ok span{color:var(--done-t)!important}
+.prog div{background:var(--done)!important}
+.bklg .bch{border-style:solid}
+
+/* itinerary by city */
+.tripgrid{grid-template-columns:minmax(0,1fr)!important}.tripgrid>*{min-width:0}
+.blist{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:8px}
+.itabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;margin-bottom:6px}
+.itab{flex:none;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:8px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card);cursor:pointer;color:var(--ink);font:400 12px Assistant,sans-serif}
+.itab b{font:700 14px Assistant,sans-serif;display:flex;align-items:center;gap:6px}.itab b i{width:9px;height:9px;border-radius:50%;background:var(--cc)}
+.itab small{color:var(--muted)}
+.itab.on{border-color:var(--forest);box-shadow:inset 0 -3px 0 var(--cc,var(--forest))}
+.idv{margin:0 0 10px}
+.igrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.icard{border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--card);box-shadow:inset 0 3px 0 var(--cc);display:flex;flex-direction:column;gap:6px}
+.icard.home{opacity:.85}
+.ich{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.ich .idate{display:flex;align-items:baseline;gap:6px;margin-inline-end:auto}.ich .idate b{font:700 15px Rubik,Assistant,sans-serif}.ich .idate span{font:400 12px Assistant,sans-serif;color:var(--muted)}
+.icard .enl{font-size:14px;line-height:1.55}
+.icard .gmb{align-self:flex-start;margin-top:auto}
+@media(max-width:700px){.blist,.igrid{grid-template-columns:1fr}}
+
+.bkgt{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px}
+.bkg{flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;font:600 13px Assistant,sans-serif;color:var(--ink);cursor:pointer}
+.bkg i{width:8px;height:8px;border-radius:50%;background:var(--cc)}
+.bkg small{font-weight:400;color:var(--muted)}
+.bkg.on{border-color:var(--forest);background:var(--sage-l)}
+.bsec{margin:14px 0 4px}
+.bsech{display:flex;align-items:center;gap:8px;font:700 14px Rubik,Assistant,sans-serif;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.bsech i{width:10px;height:10px;border-radius:50%;background:var(--cc,var(--muted))}
+.bsech small{margin-inline-start:auto;font:600 12px Assistant,sans-serif;color:var(--muted)}
+
+.bhot{display:block;margin-top:auto;font:700 11px/1.3 Assistant,sans-serif;padding:2px 6px;border-radius:6px;background:color-mix(in srgb,#3F6E8C 12%,transparent);color:#2f5670;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bhot.ok{background:var(--done-l);color:var(--done-t)}
+.bhot b{color:var(--done)}
+.bhot.last{white-space:normal}
+.bhl{font-weight:600;opacity:.85}
+.bnx{display:block;font:600 10px/1.3 Assistant,sans-serif;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bnx.ok{color:var(--done-t)}
+.bhs{display:none}
+@media(max-width:700px){.bhf{display:none}.bhs{display:inline}.bhot{font-size:9px;padding:1px 3px}.bnx{font-size:8px}.bhl{display:none}.bhot.last::after{content:" ⇥";}}
+@media(prefers-color-scheme:dark){.bhot{color:#9cc3dc}}
+/* apps */
+.apps h3{font-size:21px}
+.apps .apps-sub{margin:4px 0 14px;color:var(--muted);font:400 14px/1.5 Assistant,sans-serif}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.app{border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px;background:var(--card)}
+.app.done{border-color:var(--sage);background:var(--sage-l)}
+.app-h{display:flex;gap:12px;align-items:center}
+.app-logo{flex:none;display:block;border-radius:14px;transition:transform .15s}
+a.app-logo:hover{transform:scale(1.06)}
+.app-tile{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12);overflow:hidden}
+.app-tile svg{width:32px;height:32px}
+.app-h h4{margin:0;font:700 17px Rubik,Assistant,sans-serif}
+.app-h .zh{font:500 14px "Noto Serif SC",serif;color:var(--muted)}
+.app-role{font:700 12px Assistant,sans-serif;color:var(--terra)}
+.app p{margin:0;font:400 14px/1.55 Assistant,sans-serif}
+.app .app-b{color:var(--ink);background:var(--bg);border-radius:10px;padding:8px 10px;font-size:13px}
+.app-dl{display:flex;gap:14px;font:600 13px Assistant,sans-serif;margin-top:auto;padding-top:4px}
+.app-dl a{color:var(--forest);text-decoration:none}.app-dl a:hover{text-decoration:underline}.app-dl span{color:var(--muted);font-weight:400}
+.app-ok{display:flex;gap:6px;align-items:center;font:600 13px Assistant,sans-serif;cursor:pointer}
+.app-ok input{accent-color:var(--forest);width:16px;height:16px}
+.apps .apps-src{margin:12px 0 0;font:400 12px/1.6 Assistant,sans-serif;color:var(--muted)}
+.apps .apps-src a{color:inherit}
+.apps{margin-bottom:16px}
+</style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="hello">
-    <svg width="70" height="70" viewBox="0 0 100 100" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="#343A36"/><circle cx="76" cy="24" r="13" fill="#343A36"/><circle cx="50" cy="54" r="38" fill="#fff" stroke="#E4DED2" stroke-width="2"/><ellipse cx="35" cy="50" rx="9" ry="12" fill="#343A36" transform="rotate(-20 35 50)"/><ellipse cx="65" cy="50" rx="9" ry="12" fill="#343A36" transform="rotate(20 65 50)"/><circle cx="37" cy="50" r="3.5" fill="#fff"/><circle cx="63" cy="50" r="3.5" fill="#fff"/><ellipse cx="50" cy="66" rx="6" ry="4" fill="#343A36"/><path d="M44 74q6 5 12 0" stroke="#343A36" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-    <div class="bubble"><b>你好! 🐼</b> במפה <b style="color:#C77B61">כתום מקווקו = טיסה ✈</b>, <b style="color:#34483E">ירוק רציף = רכבת 🚄</b> ו<b style="color:#4F7FA0">כחול מנוקד = שיט או רכב</b>. בצד יש רשימה מסודרת לפי הסדר: עיר, איך עוברים, העיר הבאה.</div>
-  </div>
-  <div class="hero" id="hero">
+  <div class="hero" id="hero" data-view="home">
     <div class="weather" id="weather"></div>
     <div class="in">
       <h1>China 2027 · 中国</h1>
       <div class="sub">טיול משפחתי · 12 או 14 לילות · מתל אביב, עם סיום ב־Shanghai 上海<br><span class="zh">Guilin 桂林 · Yangshuo 阳朔 · Chongqing 重庆 · Zhangjiajie 张家界 · Beijing 北京</span></div>
-      <div class="row"><a class="btn" href="#planner">Explore routes</a><a class="btn ghost" href="#dest">♥ Our shortlist</a></div>
+      <div class="row"><a class="btn" href="#planner">בחירת מסלול</a><a class="btn ghost" href="#dest">היעדים</a></div>
     </div>
     <div class="thumbs" id="heroThumbs"></div>
     <div class="credit" id="heroCredit"></div>
   </div>
-  <div class="card settings-panel" id="settings">
+  <div class="card homesum" id="homeSum" data-view="home"></div>
+  <div class="vhead" data-view="plan"><div><h2>הגדרות ומסלולים</h2><p>קובעים אורך, נוסעים ותאריך, ובוחרים את המסלול. השינויים נשמרים ומתעדכנים בכל הדשבורד.</p></div><div class="vh-act"><a href="#settings">⚙ הגדרות</a><a href="#planner">🗺 המסלולים</a></div></div>
+  <div class="card settings-panel" id="settings" data-view="plan">
     <div class="settings-head">
       <div><h2>הגדרות הטיול</h2><p>ההגדרות חלות על כל המסלולים. את המסלול עצמו בוחרים למטה, ב״בחירת מסלול״.</p></div>
       <span class="settings-status" id="settingsSync">ההגדרות נשמרות בדפדפן</span>
@@ -463,8 +664,8 @@ section[id],#hero,#settings{scroll-margin-top:28px}
   <a class="side-link" href="#trip" data-section="trip" title="יומן והזמנות" onclick="setTripOpen(true)"><span class="nav-icon">☑</span><span class="nav-label">יומן והזמנות</span></a>
 </nav>
 
-<section id="planner">
-  <h2>בחירת מסלול</h2>
+<section id="planner" data-view="plan">
+  <h3 class="subh">בחירת מסלול</h3>
   <p class="section-intro">בחרו מסלול כדי לראות את המפה, זמני המעבר, מספר הלילות והעלות המשוערת. ב״השוואה״ אפשר לראות את כולם יחד.</p>
   <div class="tabs" id="routeTabs"></div>
   <div id="singleView" class="planner">
@@ -501,8 +702,8 @@ section[id],#hero,#settings{scroll-margin-top:28px}
 
 
 
-<section id="dest">
-  <h2>היעדים: מה רואים ואיפה ישנים</h2>
+<section id="dest" data-view="dest">
+  <div class="vhead" data-view="dest"><div><h2>יעדים</h2><p>בוחרים עיר ורואים מה עושים בה, איפה ישנים ואיך מתניידים.</p></div></div>
   <div class="tabs" id="destTabs"></div>
   <div id="destSide"></div>
   <h3 class="secth" id="seeTitle"></h3>
@@ -510,9 +711,9 @@ section[id],#hero,#settings{scroll-margin-top:28px}
   <div id="rnBox"></div>
 </section>
 
-<section id="prepare">
-  <h2>לפני שמזמינים</h2>
-  <p class="section-intro">רשימת דברים שכדאי לבדוק ולסגור לפני היציאה.</p>
+<section id="prepare" data-view="prepare">
+  <div class="vhead" data-view="prepare"><div><h2>לפני הנסיעה</h2><p>מה לבדוק ומה לסגור לפני היציאה, ומתי.</p></div></div>
+  <div class="card apps"><h3>4 אפליקציות שחייבים לפני סין</h3><p class="apps-sub">להוריד, להירשם ולבדוק שהכל עובד <b>עוד בישראל</b>. לחיצה על הלוגו פותחת את חנות האפליקציות.</p><div class="apps-grid"><div class="app"><div class="app-h"><a class="app-logo" data-ios="https://apps.apple.com/app/id333206289" data-and="https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone" href="https://apps.apple.com/app/id333206289" target="_blank" rel="noopener" title="הורדת Alipay"><span class="app-tile" style="background:#fff"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1677FF" d="M19.695 15.07c3.426 1.158 4.203 1.22 4.203 1.22V3.846c0-2.124-1.705-3.845-3.81-3.845H3.914C1.808.001.102 1.722.102 3.846v16.31c0 2.123 1.706 3.845 3.813 3.845h16.173c2.105 0 3.81-1.722 3.81-3.845v-.157s-6.19-2.602-9.315-4.119c-2.096 2.602-4.8 4.181-7.607 4.181-4.75 0-6.361-4.19-4.112-6.949.49-.602 1.324-1.175 2.617-1.497 2.025-.502 5.247.313 8.266 1.317a16.796 16.796 0 0 0 1.341-3.302H5.781v-.952h4.799V6.975H4.77v-.953h5.81V3.591s0-.409.411-.409h2.347v2.84h5.744v.951h-5.744v1.704h4.69a19.453 19.453 0 0 1-1.986 5.06c1.424.52 2.702 1.011 3.654 1.333m-13.81-2.032c-.596.06-1.71.325-2.321.869-1.83 1.608-.735 4.55 2.968 4.55 2.151 0 4.301-1.388 5.99-3.61-2.403-1.182-4.438-2.028-6.637-1.809"/></svg></span></a><div><h4>Alipay <span class="zh">支付宝</span></h4><span class="app-role">תשלומים</span></div></div><p>בסין משלמים כמעט בכל מקום בסריקת קוד QR: מסעדות, דוכנים, מוניות ואטרקציות. חלק מהמקומות לא מקבלים כרטיס אשראי, וקשה לקבל עודף במזומן. Alipay מאפשר לשלם עם כרטיס Visa או Mastercard ישראלי.</p><p class="app-b"><b>לפני הטיסה:</b> להירשם עם מספר הטלפון הישראלי, לחבר כרטיס אשראי ולאמת דרכון (נדרש למסגרת תשלום גבוהה יותר). כדאי לבדוק עם הבנק שאין חסימה לעסקאות בסין.</p><div class="app-dl"><a href="https://apps.apple.com/app/id333206289" target="_blank" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.eg.android.AlipayGphone" target="_blank" rel="noopener">Google Play</a></div><label class="app-ok"><input type="checkbox" data-app="ali"> הותקן ונבדק</label></div><div class="app"><div class="app-h"><a class="app-logo" data-ios="https://apps.apple.com/app/id414478124" data-and="https://play.google.com/store/apps/details?id=com.tencent.mm" href="https://apps.apple.com/app/id414478124" target="_blank" rel="noopener" title="הורדת WeChat"><span class="app-tile" style="background:#07C160"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg></span></a><div><h4>WeChat <span class="zh">微信</span></h4><span class="app-role">תקשורת ותשלום גיבוי</span></div></div><p>האפליקציה שדרכה כולם מתקשרים בסין: מלונות, מדריכים, נהגים ומסעדות. יש בה גם WeChat Pay, גיבוי טוב ל־Alipay. בכרטיס זר יש עמלה של 3%, חוץ מעסקאות מתחת ל־200 יואן (לפי עדכון ממרץ 2026).</p><p class="app-b"><b>לפני הטיסה:</b> להירשם כמה שבועות מראש, כי ההרשמה לפעמים דורשת אישור ממשתמש קיים. לחבר כרטיס אשראי ב־WeChat Pay.</p><div class="app-dl"><a href="https://apps.apple.com/app/id414478124" target="_blank" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.tencent.mm" target="_blank" rel="noopener">Google Play</a></div><label class="app-ok"><input type="checkbox" data-app="wx"> הותקן ונבדק</label></div><div class="app"><div class="app-h"><a class="app-logo" data-ios="https://apps.apple.com/app/id461703208" data-and="https://play.google.com/store/apps/details?id=com.autonavi.minimap" href="https://apps.apple.com/app/id461703208" target="_blank" rel="noopener" title="הורדת Amap"><span class="app-tile" style="background:#1E8CFF"><svg viewBox="0 0 48 48" aria-hidden="true" style="color:#fff"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2" stroke-linejoin="round" d="M15.011 30.09L5.5 23.01l37-16.394l-8.736 34.768l-15.51-10.268L42.5 6.616Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2" stroke-linejoin="round" d="m15.011 30.09l.865 9.295l2.378-8.269"/></svg></span></a><div><h4>Amap <span class="zh">高德地图</span></h4><span class="app-role">ניווט ומוניות</span></div></div><p>Google Maps בסין לא מדויק ולא עובד בלי VPN או גלישה בנדידה. Amap מדויק, כולל תחבורה ציבורית, ויש בו ממשק באנגלית (מינואר 2025) והזמנת מונית באנגלית. ליד כל אתר בדשבורד יש כפתור 高德.</p><p class="app-b"><b>לפני הטיסה:</b> להוריד, לבחור אנגלית ולנסות חיפוש של אחד המלונות, למשל בהעתקת השם הסיני מהדשבורד.</p><div class="app-dl"><a href="https://apps.apple.com/app/id461703208" target="_blank" rel="noopener">App Store</a><a href="https://play.google.com/store/apps/details?id=com.autonavi.minimap" target="_blank" rel="noopener">Google Play</a></div><label class="app-ok"><input type="checkbox" data-app="amap"> הותקן ונבדק</label></div><div class="app"><div class="app-h"><span class="app-logo"><span class="app-tile" style="background:#34483E"><svg viewBox="0 0 24 24" aria-hidden="true" style="color:#fff"><path fill="currentColor" d="m12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976zm0 6a2 2 0 0 0-1 3.732V15h2l.001-4.268A2 2 0 0 0 12 7"/></svg></span></span><div><h4>VPN <span class="zh"></span></h4><span class="app-role">גישה לאתרים חסומים</span></div></div><p>ברשת סינית (Wi‑Fi של מלון או SIM סיני) חסומים Google, Gmail, WhatsApp, Instagram ועוד. בגלישה בנדידה מישראל או ב־eSIM בינלאומי החסימה בדרך כלל לא חלה, ולכן VPN משמש בעיקר כגיבוי ל־Wi‑Fi.</p><p class="app-b"><b>לפני הטיסה:</b> להתקין ולהפעיל עוד בישראל, כי בסין קשה להוריד VPN ולהירשם אליו. לבדוק שהספק מציין שהוא עובד בסין.</p><div class="app-dl"><span>בוחרים ספק בתשלום ומתקינים מהחנות</span></div><label class="app-ok"><input type="checkbox" data-app="vpn"> הותקן ונבדק</label></div></div><p class="apps-src">מקורות: <a href="https://english.beijing.gov.cn/travellinginbeijing/essentials/inboundtourismfacilitationmeasures/202603/t20260326_4566766.html" target="_blank" rel="noopener">עמלות WeChat Pay (ממשלת בייג׳ינג, 3.2026)</a> · <a href="https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250711/8f2fcf3c6b624a56a6b2c0d8152ea2f2.html" target="_blank" rel="noopener">Amap באנגלית (ממשלת שנגחאי)</a> · <a href="https://www.trip.com/guide/info/how-to-use-alipay.html" target="_blank" rel="noopener">Alipay לתיירים (Trip.com, 4.2026)</a> · <a href="https://www.chinatours.com/travellers-guide-access-internet-china" target="_blank" rel="noopener">אינטרנט בסין 2026</a> · נבדק 18.11.2026</p></div>
   <div class="grid2">
     <div class="card"><h3>חובה לבדוק</h3><ul class="clean">
       <li><b>ויזה:</b> לפי בדיקה מאפריל 2026, ישראלים צריכים ויזת תייר לסין. יש לאמת, ולוודא שלדרכון יש תוקף של 6 חודשים לפחות.</li>
@@ -537,15 +738,17 @@ section[id],#hero,#settings{scroll-margin-top:28px}
   </div>
 </section>
 
-<section id="trip">
+<section id="trip" data-view="trip">
+  <div class="vhead" data-view="trip"><div><h2>יומן והזמנות</h2><p>יום אחרי יום, ורשימת ההזמנות לפי דחיפות.</p></div><div class="vh-act"><button class="ib" id="tripCloseBtn" type="button">סגירת התצוגה ✕</button></div></div>
   <div class="card triplock" id="tripLock">
-    <div><h2 style="margin:0 0 4px">היומן וההזמנות שלנו</h2><p class="muted" style="margin:0">התוכנית היומית ורשימת ההזמנות מתעדכנות לפי ההגדרות שבחרתם בראש הדף.</p></div>
+    <div><p class="muted" style="margin:0">התוכנית היומית ורשימת ההזמנות מתעדכנות לפי מה שבחרתם במסך ההגדרות.</p></div>
     <button class="btn" id="tripOpenBtn">פתיחת היומן וההזמנות</button>
   </div>
   <div id="tripBody" hidden>
-    <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px"><h2 style="margin:0">היומן וההזמנות שלנו</h2><button class="ib" id="tripCloseBtn" type="button">סגירת התצוגה ✕</button></div>
+    
     <div class="card controls tripctl" id="tripCtl"></div>
-    <div class="tripgrid"><div class="card" id="itin"></div><div class="card" id="book"></div></div>
+    <div class="card bookcal" id="bookCal"></div>
+    <div class="tripgrid"><div class="card" id="book"></div><div class="card" id="itin"></div></div>
   </div>
 </section>
 
@@ -744,7 +947,7 @@ function renderSide(){const side=document.getElementById("side");
  <p class="small muted">טיסה בינלאומית: כרטיס פתוח (נחיתה ב־${C[r.entry||"bj"].en} וחזרה מ־Shanghai), כ־$${r.intl.toLocaleString()} לאדם. נבדק ב־Google Flights ב־16.11.2026 לסוף אוגוסט–תחילת ספטמבר 2027: Etihad דרך Abu Dhabi, שני כרטיסים בכיוון אחד (TLV→Guangzhou כ־$700–730 לאדם, TLV→Beijing כ־$1,030–1,070, Shanghai→TLV כ־$950). כרטיס multi-city אחד עשוי לצאת זול יותר. טיסות פנים לאוגוסט 2027 עוד לא במכירה, ולכן המחיר שלהן הוא אומדן. מחירי הרכבות לפי התעריף הנוכחי. מלונות: לפי מחירי Trip.com ל־2.9.2027 של המלונות ברמה המומלצת (נבדק 17.11.2026, חדר ל־2, כולל מסים). המלונות עוד לא העלו מחירים לעונה, וחלק מהם עוד לא פתוחים להזמנה, כך שהמחיר בפועל עשוי להיות גבוה יותר. חדר משפחתי מחושב כ־1.6 מחיר של חדר רגיל (אומדן).</p>`;
  side.innerHTML=h;
  side.querySelectorAll(".mv").forEach(m=>m.querySelector(".lab").onclick=()=>{stopPlay();goStep(+m.dataset.i)});
- side.querySelectorAll(".cty[data-c]").forEach(c=>c.onclick=()=>{S.dest=c.dataset.c;renderDest();document.getElementById("dest").scrollIntoView({behavior:"smooth"})});
+ side.querySelectorAll(".cty[data-c]").forEach(c=>c.onclick=()=>{S.dest=c.dataset.c;renderDest();goTo("dest")});
 }
 
 /* ---------- compare: small multiples ---------- */
@@ -757,7 +960,7 @@ function miniMap(r){const pts=[...stops(r).map(s=>C[s[0]]),...(r.entry?[C[r.entr
 function seqHTML(r){const nodes=stops(r).map(([k,n])=>[k,n]);let out="",off=0;nodes.forEach(([k,n],i)=>{const a=off;off+=n;const leg=i<nodes.length-1?L[r.legs[i+1]]:null;const md=leg?rec(leg):null;
  out+=`<div class="sq"><span class="sc"><b>${C[k].en}</b> <span class="zh">${C[k].zh}</span> <small>${n===1?"1 night":n+" nights"} · ${dd(a)}–${dd(a+n)}</small></span>${md?`<span class="i" style="background:${MC[md.m]}">${IC[md.m]} ${shortT(leg)}</span>`:`<span class="i end">✈ home</span>`}</div>`});return out}
 function renderMulti(){document.getElementById("multi").innerHTML=R.map(r=>{const c=cost(r),hh=hours(r);return`<div class="mcard" data-r="${r.id}">${miniMap(r)}<h3>${r.id} · ${r.name} <span class="tag t">${r.tag}</span></h3><div class="seq" dir="ltr">${seqHTML(r)}</div><div class="small" style="margin:4px 0"><b>${stops(r).length} ערים · ${nl(r)} לילות${nl(r)!==r.ideal?` <span style="font-weight:400;color:var(--muted)">(מומלץ: ${r.ideal})</span>`:""}</b></div><div class="kv"><div><b>${f(c.total)}</b>סה״כ</div><div><b class="${65000-c.total>12000?"ok":"no"}">${f(65000-c.total)}</b>יתרה</div><div><b>${hh.nf} ✈ · ${hh.nt} 🚄⛴</b>מעברים</div><div><b>כ־${Math.round(hh.tot)} שעות</b>זמן נטו במעברים</div></div></div>`}).join("");
- document.querySelectorAll(".mcard").forEach(m=>m.onclick=()=>{S.all=false;S.route=m.dataset.r;S.step=-1;renderAll();fitRoute();document.getElementById("planner").scrollIntoView({behavior:"smooth"})})}
+ document.querySelectorAll(".mcard").forEach(m=>m.onclick=()=>{S.all=false;S.route=m.dataset.r;S.step=-1;renderAll();fitRoute();goTo("planner")})}
 function renderCmp(){const cs=R.map(cost),hs=R.map(hours);const row=(l,fn,cls="")=>`<tr class="${cls}"><td class="lbl">${l}</td>${R.map((r,i)=>`<td>${fn(r,i)}</td>`).join("")}</tr>`;
  let h=`<tr><th></th>${R.map(r=>`<th>${r.id} · ${r.name}</th>`).join("")}</tr>`;
  h+=row("סה״כ משוער",(r,i)=>f(cs[i].total),"big");
@@ -822,8 +1025,8 @@ const am=(zh,city)=>`https://uri.amap.com/search?keyword=${encodeURIComponent(zh
 const gdir=(stops,mode)=>{const o=stops[0],d=stops[stops.length-1],w=stops.slice(1,-1);return`https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(o)}&destination=${encodeURIComponent(d)}${w.length?`&waypoints=${encodeURIComponent(w.join("|"))}`:""}&travelmode=${mode||"driving"}`};
 const DAYS={bj:[["יום 1","Tiananmen → Forbidden City → Jingshan Park → ערב ב־Wangfujing → חזרה למלון",["HOTEL","Tiananmen Square, Beijing","The Palace Museum, Beijing","Jingshan Park, Beijing","Wangfujing Street, Beijing","HOTEL"],"walking"],
 ["יום 2","Great Wall Mutianyu: רכבל כיסאות למעלה, מגלשה למטה → חזרה למלון",["HOTEL","Mutianyu Great Wall","HOTEL"],"driving"],
-["יום 3","Temple of Heaven בבוקר → סמטאות Hutongs בריקשה (Shichahai, Nanluoguxiang) → ערב ב־Qianmen → חזרה למלון",["HOTEL","Temple of Heaven, Beijing","Shichahai Houhai Beijing","Nanluoguxiang, Beijing","Qianmen Street, Beijing","HOTEL"],"driving"],
-["יום 4 (אם יש)","Summer Palace → Olympic Park → Sanlitun → חזרה למלון",["HOTEL","Summer Palace, Beijing","Bird's Nest National Stadium Beijing","Sanlitun, Beijing","HOTEL"],"driving"]]};
+["יום 3","Summer Palace בבוקר → סמטאות Hutongs בריקשה (Shichahai, Nanluoguxiang) → ערב ב־Qianmen → חזרה למלון",["HOTEL","Summer Palace, Beijing","Shichahai Houhai Beijing","Nanluoguxiang, Beijing","Qianmen Street, Beijing","HOTEL"],"driving"],
+["יום 4 (אם יש)","Temple of Heaven → Olympic Park → Sanlitun → חזרה למלון",["HOTEL","Temple of Heaven, Beijing","Bird's Nest National Stadium Beijing","Sanlitun, Beijing","HOTEL"],"driving"]]};
 const ALLQ={bj:["HOTEL","Tiananmen Square, Beijing","The Palace Museum, Beijing","Jingshan Park, Beijing","Nanluoguxiang, Beijing","Shichahai Houhai Beijing","Temple of Heaven, Beijing","Qianmen Street, Beijing","Summer Palace, Beijing","Bird's Nest National Stadium Beijing"]};
 let HSEL={};let HBASE={};try{HBASE=JSON.parse(localStorage.getItem("cn27base")||"{}")}catch(e){}const baseIdx=k=>{const l=H[k].list,bk=(typeof STORE!=="undefined"&&STORE.b&&STORE.b["ht_"+k]&&STORE.b["ht_"+k].s===2)?STORE.b["ht_"+k].n:null;let i=bk?l.findIndex(x=>x[1]===bk):-1;if(i<0&&HBASE[k])i=l.findIndex(x=>x[1]===HBASE[k]);return i>=0?i:(HSEL[k]||0)};const hq=k=>{const l=H[k].list,i=baseIdx(k);return l[i][6]||l[i][5]||ANCH[k]||`${l[i][1]}, ${C[k].en}`};const fillH=(arr,k)=>arr.map(x=>x==="HOTEL"?hq(k):x);
 
@@ -836,18 +1039,18 @@ Object.keys(CITYX.P).forEach(k=>{P[k]=CITYX.P[k];H[k].list=CITYX.H[k].map(h=>h[5
 const DAYX={
 bj:[["יום 1","Tiananmen Square {天安门广场} → Forbidden City {故宫} → Jingshan Park {景山公园} → evening on Wangfujing {王府井} → back to hotel",["HOTEL","Tiananmen Square, Beijing","The Palace Museum, Beijing","Jingshan Park, Beijing","Wangfujing Street, Beijing","HOTEL"],"walking",{}],
  ["יום 2","Great Wall at Mutianyu {慕田峪长城}: chairlift up, walk the wall, toboggan down → back to hotel",["HOTEL","Mutianyu Great Wall","HOTEL"],"driving",{T:1,note:"יום מחוץ לעיר · כשעה וחצי לכל כיוון ברכב"}],
- ["יום 3","Temple of Heaven {天坛} in the morning → rickshaw through the hutongs: Shichahai {什刹海} & Nanluoguxiang {南锣鼓巷} → evening at Qianmen {前门} → back to hotel",["HOTEL","Temple of Heaven, Beijing","Shichahai Houhai Beijing","Nanluoguxiang, Beijing","Qianmen Street, Beijing","HOTEL"],"driving",{}],
- ["יום 4","Summer Palace {颐和园} → Olympic Park {奥林匹克公园} → Sanlitun {三里屯} → back to hotel",["HOTEL","Summer Palace, Beijing","Bird's Nest National Stadium Beijing","Sanlitun, Beijing","HOTEL"],"driving",{}]],
+ ["יום 3","Summer Palace {颐和园} in the morning, from the North Palace Gate → rickshaw through the hutongs: Shichahai {什刹海} & Nanluoguxiang {南锣鼓巷} → evening at Qianmen {前门} → back to hotel",["HOTEL","Summer Palace, Beijing","Shichahai Houhai Beijing","Nanluoguxiang, Beijing","Qianmen Street, Beijing","HOTEL"],"driving",{}],
+ ["יום 4","Temple of Heaven {天坛} in the morning → Olympic Park {奥林匹克公园} → Sanlitun {三里屯} → back to hotel",["HOTEL","Temple of Heaven, Beijing","Bird's Nest National Stadium Beijing","Sanlitun, Beijing","HOTEL"],"driving",{}]],
 gz:[["ערב הנחיתה","Rest at the hotel → Beijing Road {北京路} → Pearl River night cruise from Tianzi Wharf {天字码头} → back to hotel",["HOTEL","北京路步行街 广州","Tianzi Wharf, Guangzhou","HOTEL"],"walking",{L:1}],
- ["יום 2","Dim sum breakfast → Shamian Island {沙面} → Chen Clan Ancestral Hall {陈家祠} → Canton Tower {广州塔} at night → back to hotel",["HOTEL","Shamian Island, Guangzhou","Chen Clan Ancestral Hall, Guangzhou","Canton Tower","HOTEL"],"driving",{}]],
+ ["יום 2","Dim sum breakfast → Chen Clan Ancestral Hall {陈家祠} → Yongqingfang {永庆坊} → Shamian Island {沙面} → rest at the hotel → Canton Tower {广州塔} at sunset → Haixin Bridge {海心桥} → back to hotel",["HOTEL","Chen Clan Ancestral Hall, Guangzhou","Yongqingfang, Guangzhou","Shamian Island, Guangzhou","HOTEL","Canton Tower","HOTEL"],"driving",{}]],
 gl:[["יום 1","Elephant Trunk Hill {象鼻山} → Dongxi Xiang {东西巷} → Zhengyang Street {正阳步行街} → night cruise on the Two Rivers & Four Lakes {两江四湖} → back to hotel",["HOTEL","Elephant Trunk Hill, Guilin","东西巷 桂林","Riyue Shuangta Guilin","HOTEL"],"walking",{}],
  ["יום טיול","Day trip: Longji Rice Terraces {龙脊梯田} — Ping'an village {平安寨} viewpoints → back to Guilin",["HOTEL","Longji Rice Terraces","HOTEL"],"driving",{T:1,X:1,note:"יום טיול מחוץ לעיר · כשעתיים לכל כיוון ברכב (אומדן)"}]],
 ys:[["יום 1","Li River cruise {漓江} from Mopanshan Pier {磨盘山码头} → check in → evening on West Street {西街}",["Mopanshan Pier Li River Cruise","HOTEL"],"driving",{}],
  ["יום 2","Bamboo raft on the Yulong River {遇龙河}, the quiet stretch Xiatang Pier {夏棠码头} → Jima Pier {骥马码头} → e-bike or cycling through the villages {十里画廊} → evening: Golden Dragon Parade {金龙巡游} at Yulong Bridge {遇龙桥} → back to hotel",["HOTEL","Yulonghe Xiatang Wharf","HOTEL"],"driving",{dow:[5,6],dowLbl:"🐉 שישי או שבת: עם המופע",rn:"מבוסס על המלצות מטיילים ב־RedNote: הקטע השקט של הרפסודה, ובערב 金龙巡游 (בדרך כלל רק בשישי ובשבת). המופע ב־遇龙桥, כחצי שעה מ־West Street. ב־Google המיקום של הגשר לא מדויק, לנווט ב־Amap.",alt:["יום 2","Bamboo raft on the Yulong River {遇龙河}, the quiet stretch Xiatang Pier {夏棠码头} → Jima Pier {骥马码头} → e-bike or cycling through the villages {十里画廊} → sunset at the Qianli Jiangshan viewpoint {千里江山图} (free) → dinner at Wangjianglou {望江楼餐吧} by West Street → back to hotel",["HOTEL","Yulonghe Xiatang Wharf","望江楼餐吧 阳朔","HOTEL"],"driving",{dowLbl:"🌅 בשאר הימים: בלי המופע",rn:"מבוסס על המלצות מטיילים ב־RedNote: שקיעה בתצפית 千里江山图 (בחינם), וארוחה בלי דגים ב־望江楼餐吧. ב־Amap לחפש 千里江山图大型水墨画打卡地."}]}],
  ["יום 3","Xingping {兴坪} → the 20-yuan note viewpoint {二十元人民币背景} → bamboo raft on the most scenic stretch of the Li River → back to hotel",["HOTEL","Xingping, Yangshuo","HOTEL"],"driving",{T:1,note:"כשעה לכל כיוון ברכב (אומדן)"}],
  ["יום טיול","Day trip: Longji Rice Terraces {龙脊梯田} — Ping'an village {平安寨} viewpoints → back to Yangshuo",["HOTEL","Longji Rice Terraces","HOTEL"],"driving",{T:1,X:1,note:"יום טיול ארוך · כ־3 שעות לכל כיוון ברכב (אומדן). קל יותר מ־Guilin"}]],
-ckg:[["יום 1","Jiefangbei {解放碑} → Hongyadong {洪崖洞} lit up at night → back to hotel",["HOTEL","Jiefangbei, Chongqing","Hongyadong, Chongqing","HOTEL"],"walking",{}],
- ["יום 2","Liziba {李子坝} (train through the building) → Eling Park {鹅岭公园} → Ciqikou {磁器口} → evening: Yangtze River Cableway {长江索道} and night cruise from Chaotianmen {朝天门} → back to hotel",["HOTEL","Liziba Station, Chongqing","Eling Park, Chongqing","Ciqikou Ancient Town, Chongqing","Yangtze River Cableway, Chongqing","Chaotianmen, Chongqing","HOTEL"],"driving",{}],
+ckg:[["יום 1","Jiefangbei {解放碑} → Shibati {十八梯} → Hongyadong {洪崖洞} lit up at night → back to hotel",["HOTEL","Jiefangbei, Chongqing","Shibati, Chongqing","Hongyadong, Chongqing","HOTEL"],"walking",{}],
+ ["יום 2","Liziba {李子坝} (train through the building) → Eling Park {鹅岭公园} & Eling Second Factory {鹅岭二厂} → Ciqikou {磁器口} → evening: Yangtze River Cableway {长江索道} and night cruise from Chaotianmen {朝天门} → back to hotel",["HOTEL","Liziba Station, Chongqing","Eling Park, Chongqing","Ciqikou Ancient Town, Chongqing","Yangtze River Cableway, Chongqing","Chaotianmen, Chongqing","HOTEL"],"driving",{}],
  ["יום טיול","Day trip: Wulong Karst {武隆} — Three Natural Bridges {天生三桥} → back to Chongqing",["HOTEL","Three Natural Bridges, Wulong","HOTEL"],"driving",{T:1,X:1,note:"יום טיול מחוץ לעיר · כ־3 שעות לכל כיוון (אומדן)"}]],
 zjj:[["יום הגעה","Arrive → transfer to Wulingyuan {武陵源} → check in and rest → evening on Xibu Street {溪布街} → back to hotel",["HOTEL","Xibu Street, Zhangjiajie","HOTEL"],"walking",{A:1}],
  ["יום 1","Forest Park at opening → Bailong Elevator {百龙天梯} up → Yuanjiajie {袁家界} (the “Avatar” peaks: Mihuntai {迷魂台}, Hallelujah Mountain {乾坤柱}, First Bridge Under Heaven {天下第一桥}) → park shuttle bus to Tianzi Mountain {天子山} → Tianzi cable car down → back to hotel",["HOTEL","Bailong Elevator, Zhangjiajie","天子山 张家界","HOTEL"],"driving",{}],
@@ -857,7 +1060,7 @@ zjj:[["יום הגעה","Arrive → transfer to Wulingyuan {武陵源} → check
 sh:[["יום 1","Nanjing Road {南京路} → The Bund {外滩} → North Bund {北外滩} at sunset → back to hotel",["HOTEL","Nanjing Road Pedestrian Street, Shanghai","The Bund, Shanghai","North Bund, Shanghai","HOTEL"],"walking",{}],
  ["יום 2","Yu Garden {豫园} → Lujiazui {陆家嘴}: Oriental Pearl Tower {东方明珠} & Shanghai Tower {上海中心} → evening in Xintiandi {新天地} & Tianzifang {田子坊} → back to hotel",["HOTEL","Yu Garden, Shanghai","Oriental Pearl Tower","Shanghai Tower","Xintiandi, Shanghai","Tianzifang, Shanghai","HOTEL"],"driving",{}],
  ["יום 3","West Nanjing Road {南京西路} → Jing'an Temple {静安寺} → Huaihai Road {淮海路} → Wukang Road {武康路} → back to hotel",["HOTEL","West Nanjing Road, Shanghai","Jing'an Temple, Shanghai","淮海中路 陕西南路 上海","Wukang Mansion, Shanghai","HOTEL"],"driving",{}],
- ["יום טיול","Day trip: Zhujiajiao water town {朱家角} — canals, stone bridges, boat ride → back to Shanghai",["HOTEL","Zhujiajiao, Shanghai","HOTEL"],"transit",{T:1,X:1,note:"יום טיול מחוץ לעיר · כשעה במטרו (אומדן)"}]]};
+ ["יום טיול","Day trip: Zhujiajiao water town {朱家角} — canals, stone bridges, boat ride → back to Shanghai",["HOTEL","Zhujiajiao, Shanghai","HOTEL"],"transit",{T:1,X:1,note:"יום טיול מחוץ לעיר · כשעתיים במטרו (קו 17) ואוטובוס, או כ־70 דק׳ במונית"}]]};
 Object.keys(DAYX).forEach(k=>DAYS[k]=DAYX[k]);
 const zhfmt=s=>String(s||"").replace(/\{([^}]+)\}/g,'<span class="zh">$1</span>');
 const plain=s=>String(s||"").replace(/\s*\{[^}]+\}/g,"");
@@ -929,6 +1132,139 @@ const DV={ys:{days:[
  {ic:"🌾",cat:"טבע",slot:"יום שלם",n:"Longji Rice Terraces",z:"龙脊梯田",g:"Longji Rice Terraces",ll:"25.7704,110.1322",dur:"יום שלם",d:"טרסות האורז, תצפיות בכפר 平安寨."}
 ]}
 ]}};
+Object.assign(DV,{
+gz:{days:[
+{id:"l",tab:"ערב הנחיתה",title:"ערב ראשון קליל: מדרחוב ושיט על נהר הפנינה",anchors:["שיט: היציאות של 19:10 או 20:10 הכי יפות"],book:["שיט Pearl River (ב־WeChat או בקופה)"],stops:[
+ {ic:"🏨",cat:"מלון",slot:"אחר הצהריים",n:"Check in",z:"",hotel:1,dur:"מנוחה",d:"צ׳ק־אין ומנוחה אחרי הטיסה.",tr:"🚶 המלונות המומלצים בהליכה מ־Beijing Road"},
+ {ic:"🏮",cat:"מדרחוב",slot:"ערב",n:"Beijing Road",z:"北京路步行街",g:"Beijing Road Pedestrian Street, Guangzhou",dur:"כשעה",d:"המדרחוב המרכזי של העיר. הליכה קלה בערב הראשון.",rn:1,tr:"🚶 ל־Tianzi Wharf בקצה הדרומי של הרחוב (אומדן: כ־10 דק׳)"},
+ {ic:"⛴",cat:"שיט",slot:"19:10 / 20:10",n:"Pearl River Night Cruise",z:"天字码头",g:"Tianzi Wharf, Guangzhou",dur:"70–90 דק׳",d:"שיט ערב לאורך הנהר המואר, עם Canton Tower מהמים.",rn:1,tip:"בקיץ סופות וטייפונים עלולים לבטל את השיט. לבדוק תחזית ביום עצמו."}
+]},
+{id:"d2",tab:"יום 2 · העיר הישנה",title:"Chen Clan, Yongqingfang ו־Shamian בבוקר, Canton Tower בשקיעה",anchors:["לצאת מוקדם: בצהריים חם מאוד","Canton Tower: הכי יפה בין 17:00 ל־18:30"],book:["Canton Tower (אם עולים. בסוף שבוע מראש)"],stops:[
+ {ic:"🏯",cat:"מורשת",slot:"בוקר",n:"Chen Clan Ancestral Hall",z:"陈家祠",g:"Chen Clan Ancestral Hall, Guangzhou",dur:"כשעה",d:"מתחם משפחתי מסורתי עם גילופי עץ, אבן וקרמיקה. ¥10, פתוח גם בימי שני.",tip:"רוב המטיילים ממליצים, אבל כמה מקומיים כותבים ש״זה רק בית ישן״. שעה מספיקה.",rn:1,tr:"🚇 2 תחנות במטרו (לפי פוסט)"},
+ {ic:"🏘",cat:"שכונה ישנה",slot:"בוקר",n:"Yongqingfang",z:"永庆坊",g:"Yongqingfang, Guangzhou",dur:"כשעה",d:"רחובות הבתים עם הקשתות (骑楼) של העיר הישנה, וגשר הירח 月亮桥. כניסה חופשית.",tip:"מקומיים כותבים שהגשר יפה יותר בערב, ובצהריים חם מאוד.",rn:1,tr:"🚕 כ־7 דק׳ במונית (לפי פוסט)"},
+ {ic:"🌳",cat:"טיול רגלי",slot:"לפני הצהריים",n:"Shamian Island",z:"沙面",g:"Shamian Island, Guangzhou",dur:"1–2 שעות",d:"אי קטן עם בניינים קולוניאליים, כנסיות ושדרות עצי באניאן. הכניסה חופשית, ואת רוב הבניינים רואים רק מבחוץ.",tip:"שמש חזקה: מטרייה, כובע ומים. בסוף שבוע הרבה צילומי חתונה.",rn:1,tr:"🏨 חזרה למלון למנוחה בשעות החמות"},
+ {ic:"🏨",cat:"מלון",slot:"צהריים",n:"Rest",z:"",hotel:1,dur:"מנוחה",d:"מנוחה בשעות החמות.",tr:"🚕 כ־25 דק׳ במונית, או מטרו קו 3 (לפי פוסט)"},
+ {ic:"🗼",cat:"תצפית",slot:"17:00–18:30",n:"Canton Tower",z:"广州塔",g:"Canton Tower",dur:"1–2 שעות",d:"תצפית בגובה 433 מ׳, או מרפסת פתוחה בגובה 488 מ׳. מ־19:00 המגדל מואר.",tip:"הדעות חלוקות: חלק אומרים ״חובה לעלות״, ואחרים ממליצים לחסוך ולצלם את המגדל מבחוץ. ביום מעונן הפסגה בעננים.",rn:1,tr:"🚶 כ־8 דק׳ ברגל (לפי פוסט)"},
+ {ic:"🌉",cat:"רשות",slot:"ערב",n:"Haixin Bridge",z:"海心桥",dur:"כחצי שעה",d:"גשר להולכי רגל מעל נהר הפנינה, מול המגדל המואר. בחינם.",tip:"מומלץ בפוסט אחד בלבד.",rn:1}
+]}
+]},
+gl:{days:[
+{id:"d1",tab:"יום 1 · העיר",title:"Elephant Trunk Hill, הסמטאות ושיט לילה בין האגמים",anchors:["השיט: יציאות ערב בין 17:50 ל־21:30"],book:["שיט Two Rivers & Four Lakes (מומלץ אונליין)"],stops:[
+ {ic:"🐘",cat:"נוף",slot:"בוקר",n:"Elephant Trunk Hill",z:"象鼻山",g:"Elephant Trunk Hill, Guilin",dur:"כשעה",d:"סלע בצורת חדק של פיל שנכנס לנהר. סמל העיר.",tip:"הכניסה חינם (מאז 2022, אומת מול Guangming Daily). נכנסים משער 3, שם נקודת הצילום המלאה של ״הפיל שותה״. שעה–שעתיים מספיקות.",rn:1,tr:"🚕 כ־10 דק׳ במונית (אומדן)"},
+ {ic:"🏘",cat:"סמטאות",slot:"צהריים",n:"Dongxi Xiang",z:"东西巷",g:"East West Lane, Guilin",dur:"כשעה",d:"סמטאות משוחזרות בסגנון ישן, עם חנויות קטנות.",tip:"בערב, כשהפנסים נדלקים, יפה יותר.",rn:1,tr:"🚶 צמוד ל־Zhengyang Street"},
+ {ic:"🛍",cat:"מדרחוב",slot:"אחר הצהריים",n:"Zhengyang Street",z:"正阳步行街",dur:"כשעה",d:"המדרחוב המרכזי של מרכז העיר. בסופו נכנסים ישר ל־Dongxi Xiang.",tip:"יש הרבה ״מושכי לקוחות״ ברחוב, לא להיגרר.",rn:1,tr:"🚶 / 🚕 למזח Wenchangqiao (אומדן)"},
+ {ic:"⛴",cat:"שיט לילה",slot:"ערב",n:"Two Rivers & Four Lakes",z:"两江四湖",g:"Sun and Moon Pagodas, Guilin",dur:"כשעה וחצי",d:"שיט בין האגמים המוארים, עם פגודות השמש והירח. יוצאים ממזח Wenchangqiao או מ־Fisherman's Wharf.",tip:"מטיילים ממליצים על יציאה בין 19:30 ל־20:30, כשכל האורות דולקים. על הסירה רוח, לקחת שכבה דקה. אונליין זול יותר ממחיר במזח. מתחת ל־1.2 מ׳ חינם, 1.2–1.49 מ׳ מוזל.",rn:1}
+]},
+{id:"x1",tab:"🚌 Longji",title:"יום טיול: Longji Rice Terraces",extra:"יום טיול ארוך · כשעתיים עד שעתיים וחצי לכל כיוון ברכב. נכנס רק אם יש לילה נוסף.",anchors:["לצאת מוקדם, לפני החום של הצהריים"],book:["רכב פרטי או סיור יומי"],stops:[
+ {ic:"🌾",cat:"טבע",slot:"יום שלם",n:"Longji Rice Terraces",z:"龙脊梯田 平安寨",g:"Longji Rice Terraces",dur:"יום שלם",d:"טרסות אורז וכפרי Zhuang. ב־Ping'an שתי התצפיות המרכזיות: 七星伴月 ו־九龙五虎.",tip:"הדרך הקלה: שאטל מהחניה עד 九龙五虎 (¥30 לכיוון, ¥50 הלוך־חזור), ומשם כחצי שעה הליכה ל־七星伴月. אבני השביל חלקות, נעליים טובות ומעיל דק. מחיר הכניסה לא חד־משמעי: פוסט מ־10.2026 כותב ¥80 לשלושת הכפרים ל־3 ימים, ואתר תיירות כותב ¥100.",rn:1}
+]}
+]},
+ckg:{days:[
+{id:"d1",tab:"יום 1 · מרכז העיר",title:"Jiefangbei, מדרגות Shibati ו־Hongyadong המואר",anchors:["Hongyadong נדלק בקיץ בסביבות 19:30–20:00"],book:[],stops:[
+ {ic:"🏙",cat:"מרכז העיר",slot:"אחר הצהריים",n:"Jiefangbei",z:"解放碑",g:"Jiefangbei, Chongqing",dur:"כשעה",d:"הכיכר והמדרחוב במרכז העיר, בין גורדי השחקים.",tip:"מטיילת כותבת שבבוקר הכי פחות אנשים.",rn:1,tr:"🚶 הליכה קצרה (אומדן)"},
+ {ic:"🪜",cat:"שכונה ישנה",slot:"לפני השקיעה",n:"Shibati",z:"十八梯",g:"Shibati, Chongqing",dur:"כשעה",d:"מדרגות אבן עתיקות שיורדות בין בתים על כלונסאות. כניסה חופשית.",tip:"מומלץ ב־3 פוסטים. יורדים במדרגות, ומטיילת ממליצה לצלם מהעיקול באמצע הדרך. אפשר להמשיך גם ל־山城巷 הסמוכה.",rn:1,tr:"🚕 כ־10 דק׳ במונית (אומדן)"},
+ {ic:"🏮",cat:"תצפית לילה",slot:"ערב",n:"Hongyadong",z:"洪崖洞",g:"Hongyadong, Chongqing",dur:"1–2 שעות",d:"מבנה מואר בסגנון עתיק על צלע ההר. היופי הוא מבחוץ.",tip:"התצפית הבטוחה למשפחות: בגדה, מימין לגשר Qiansimen (שביל שטוח עם תאורה ומעקה). מבפנים בעיקר מסעדות וחנויות, צפוף ומבלבל. מטיילים: ״להסתכל מבחוץ, ואת הפנורמה לצלם מגשר Qiansimen״. בחגים צריך להזמין מראש בחשבון הרשמי.",rn:1}
+]},
+{id:"d2",tab:"יום 2 · העיר ההררית",title:"רכבת דרך בניין, עיירה עתיקה ורכבל מעל הנהר",anchors:["Liziba: הכי טוב בין 7:00 ל־9:00","שיט: יציאה בין 19:30 ל־20:00"],book:["רכבל Yangtze (ב־WeChat מ־7:45, עד יומיים מראש)","שיט לילה (1–3 ימים מראש)"],stops:[
+ {ic:"🚝",cat:"חוויה",slot:"7:00–9:00",n:"Liziba Station",z:"李子坝单轨穿楼观景平台",g:"Liziba Station, Chongqing",dur:"20–30 דק׳",d:"המונורייל של קו 2 עובר דרך בניין מגורים. מרפסת התצפית חינמית, מחוץ לשערי המטרו.",tip:"יציאה 2, לפי השלטים 观景台. רכבת כל 3–8 דקות. בבוקר הבניין מואר בשמש; בצהריים עמוס ואין צל. לסרב למוכרי ״כניסת VIP״, התצפית בחינם. גם מטיילים ב־RedNote ממליצים 7:30–9:00.",rn:1,tr:"🚕 כ־10 דק׳ במונית (אומדן)"},
+ {ic:"🌳",cat:"תצפית",slot:"בוקר",n:"Eling Park",z:"鹅岭公园",g:"Eling Park, Chongqing",dur:"1.5 שעות",d:"פארק על רכס, עם תצפית על העיר ועל שני הנהרות. צמוד אליו Eling Second Factory 鹅岭二厂, מפעל ישן שהפך למתחם עם קירות צבעוניים ונקודות צילום.",tip:"קרוב ל־Liziba, כך שאפשר להמשיך ישר. את 二厂 ממליצים ב־2 פוסטים, בבוקר כשעוד ריק.",rn:1,tr:"🚕 כ־30 דק׳ במונית (אומדן)"},
+ {ic:"🏘",cat:"עיירה עתיקה",slot:"צהריים",n:"Ciqikou",z:"磁器口",g:"Ciqikou Ancient Town, Chongqing",dur:"שעתיים",d:"עיירה עתיקה על נהר Jialing, עם סמטאות וחנויות.",tip:"הרחוב הראשי צפוף. מטיילת ממליצה ללכת ברחוב האחורי 禹王巷.",rn:1,tr:"🏨 מנוחה במלון לפני הערב"},
+ {ic:"🚡",cat:"רכבל",slot:"ערב",n:"Yangtze River Cableway",z:"长江索道",g:"Yangtze River Cableway, Chongqing",dur:"כשעה עם התור",d:"רכבל מעל נהר היאנגצה. לקנות לכיוון אחד.",tip:"בערבי סוף שבוע תור של שעה ויותר. ביום חול, או אחרי 20:30 מהתחנה הדרומית, כמעט בלי תור. גם ב־RedNote: ״לנסוע בכיוון ההפוך, התור קצר יותר״.",rn:1,tr:"🚕 / 🚶 למזח של השיט (לבדוק בכרטיס איזה מזח)"},
+ {ic:"⛴",cat:"שיט לילה",slot:"19:30–20:00",n:"Two Rivers Night Cruise",z:"朝天门",g:"Chaotianmen, Chongqing",dur:"כ־45 דק׳",d:"שיט במפגש הנהרות Yangtze ו־Jialing, מול העיר המוארת. ¥158 במזח, ¥110–138 באתרי הזמנות.",tip:"שלושה סוגי שיט יוצאים משלושה מזחים שונים, במרחק 1–2 ק״מ. לבדוק בכרטיס מאיזה מזח. האורות כבים בסביבות 22:00. כרטיס שמי, להביא דרכון."}
+]},
+{id:"x1",tab:"🚌 Wulong",title:"יום טיול: Wulong Karst",extra:"יום טיול ארוך · כ־3 שעות לכל כיוון (אומדן). נכנס רק אם יש לילה נוסף.",anchors:["כניסות 9:00–16:00"],book:["כרטיס Wulong (לפחות שעתיים מראש)"],stops:[
+ {ic:"🏞",cat:"טבע",slot:"יום שלם",n:"Wulong Karst",z:"武隆天生三桥",g:"Three Natural Bridges, Wulong",dur:"יום שלם",d:"שלושה גשרי סלע טבעיים ענקיים בתוך קניון. הכרטיס כולל אוטובוס ומעלית."}
+]}
+]},
+zjj:{days:[
+{id:"a",tab:"יום ההגעה",title:"מגיעים ל־Wulingyuan, ערב רגוע",anchors:[],book:["כרטיס לפארק (לבדוק כחודש לפני)"],stops:[
+ {ic:"🏨",cat:"מלון",slot:"אחר הצהריים",n:"Check in",z:"",hotel:1,dur:"מנוחה",d:"העברה ל־Wulingyuan, צ׳ק־אין ומנוחה.",tr:"🚶 Xibu Street בהליכה קצרה מהמלונות ב־Wulingyuan"},
+ {ic:"🏮",cat:"רחוב ערב",slot:"ערב",n:"Xibu Street",z:"溪布街",g:"Xibu Street, Zhangjiajie",dur:"ערב",d:"רחוב ערב ליד השער המזרחי של הפארק."}
+]},
+{id:"d1",tab:"יום 1 · Avatar",title:"מעלית Bailong, הרי ה״אווטאר״ ו־Tianzi",anchors:["להיות בשער המזרחי בסביבות 7:00, 20–30 דק׳ לפני השעה בכרטיס","הרכבל והמעלית נסגרים בסביבות 17:30, לרדת מהרמה עד אמצע אחר הצהריים"],book:["כרטיס פארק עם שעת כניסה","כרטיס משולב לרכבלים ולמעלית"],stops:[
+ {ic:"🚪",cat:"כניסה",slot:"7:00",n:"Zhangjiajie Forest Park",z:"张家界国家森林公园",g:"Zhangjiajie National Forest Park",dur:"תור",d:"נכנסים מהשער המזרחי (מסלול B: עולים במעלית Bailong) ונוסעים בשאטל החינמי של הפארק.",tip:"השעות של 8:00–10:00 נגמרות ראשונות. ההזמנה ב־WeChat, בתוכנית 「张家界旅游小助手」. הכרטיס הבסיסי (כניסה + שאטל, כ־¥240) לא כולל את המעלית והרכבלים. מטיילת (9.2026) קנתה כרטיס ל־4 נסיעות ב־¥238.",rn:1,tr:"🚌 שאטל הפארק"},
+ {ic:"🛗",cat:"מעלית",slot:"בוקר",n:"Yuanjiajie & Bailong Elevator",z:"百龙天梯",g:"Bailong Elevator, Zhangjiajie",dur:"60–90 דק׳ עם התור",d:"מעלית זכוכית של 326 מ׳ לאורך צוק. במסלול B עולים בה מלמטה ורואים את ההרים ״צומחים״.",rn:1,tip:"בבוקר של קיץ התור 60–90 דקות. בשער Zimugang (באמצע) התור קצר בהרבה, אבל מגיעים אליו רק במונית.",tr:"🚌 / 🚶 לתצפיות של Yuanjiajie"},
+ {ic:"⛰",cat:"תצפיות",slot:"צהריים",n:"Yuanjiajie",z:"袁家界",g:"Yuanjiajie, Zhangjiajie",dur:"2–3 שעות",d:"עמודי הסלע מהסרט: 迷魂台, 乾坤柱 (Hallelujah Mountain) ו־天下第一桥.",tip:"ב־Google המיקום של Yuanjiajie לא מדויק. לנווט ב־Amap.",tr:"🚌 שאטל הפארק ל־Tianzi"},
+ {ic:"🚡",cat:"רכבל",slot:"אחר הצהריים",n:"Tianzi Mountain",z:"天子山",g:"Tianzi Mountain, Zhangjiajie",dur:"1–2 שעות",d:"תצפית רחבה על הרמה, וירידה ברכבל Tianzi.",rn:1,tip:"להתחיל לרדת עד אמצע אחר הצהריים, הרכבל נסגר מוקדם."}
+]},
+{id:"d2",tab:"יום 2 · Tianmen",title:"Tianmen Mountain ומעבר לעיר Zhangjiajie",anchors:["לקחת את שעת הכניסה המוקדמת ביותר"],book:["Tianmen (¥288, כרטיס שמי ומתוזמן, שבוע ומעלה מראש)"],extra:"היום עוברים לישון בעיר Zhangjiajie, ליד תחנת Zhangjiajie West.",stops:[
+ {ic:"🚕",cat:"מעבר",slot:"בוקר",n:"Check out",z:"张家界市区",dur:"כ־40 דק׳",d:"צ׳ק־אאוט ונסיעה במונית לעיר Zhangjiajie.",tr:"🚕 כ־40 דק׳ (אומדן)"},
+ {ic:"🏔",cat:"הר",slot:"יום",n:"Tianmen Mountain",z:"天门山",g:"Tianmen Mountain Cableway, Zhangjiajie",dur:"4–6 שעות",d:"Tianmen Cave, שבילי צוק ושביל זכוכית.",tip:"כרגע נמכר רק מסלול C. ¥288 כולל כניסה, רכבל Tianmen Cave ו־7 מדרגות נעות בתוך ההר. בתשלום נוסף: מדרגות נעות במקום 999 המדרגות (¥32), כיסויי נעליים לשביל הזכוכית (¥5 לשביל). מטיילים ממליצים על הקטע המערבי (西线). חצי לולאה כ־4 שעות. בפסגה קר ב־8–10° ויש רוח, לקחת מעיל. שאטל חינם מתחנת הרכבל בעיר לשער.",rn:1},
+ {ic:"🏨",cat:"מלון",slot:"ערב",n:"מלון ליד Zhangjiajie West",z:"张家界西站",dur:"לילה",d:"המלון השני: לילה בעיר, קרוב לתחנה לקראת היציאה (למשל JI Hotel Tianmen)."}
+]},
+{id:"x1",tab:"🥾 Golden Whip",title:"חצי יום: Golden Whip Stream",extra:"בתוך הפארק, אותו כרטיס · כחצי יום.",anchors:[],book:[],stops:[
+ {ic:"🥾",cat:"הליכה",slot:"חצי יום",n:"Golden Whip Stream",z:"金鞭溪",g:"Golden Whip Stream, Zhangjiajie",dur:"כ־3 שעות",d:"שביל מישורי של 7.5 ק״מ לאורך נחל, בין עמודי הסלע. מתחילים בשער הדרומי והולכים עד 水绕四门, ומשם שאטל לשער המזרחי.",rn:1,tip:"לגרסה קצרה: עד Purple Grass Pond וחזרה, כשעה וחצי. יש קופים: לא להוציא אוכל בגלוי."}
+]},
+{id:"x2",tab:"🌉 Glass Bridge",title:"יום טיול: Grand Canyon & Glass Bridge",extra:"מחוץ לאזור · כשעה לכל כיוון מ־Wulingyuan (אומדן).",anchors:["החלון של 8:00 הכי פנוי"],book:["Glass Bridge (נפתח 30 יום מראש)"],stops:[
+ {ic:"🌉",cat:"גשר זכוכית",slot:"8:00",n:"Grand Canyon Glass Bridge",z:"张家界大峡谷玻璃桥",g:"Zhangjiajie Grand Canyon Glass Bridge",dur:"חצי יום",d:"גשר זכוכית מעל קניון, והליכה בתוך הקניון.",tip:"אין תיקים על הגשר (יש לוקרים). ברוח חזקה ובסופות הגשר נסגר."}
+]}
+]},
+bj:{days:[
+{id:"d1",tab:"יום 1 · העיר האסורה",title:"Tiananmen, העיר האסורה ותצפית מ־Jingshan",anchors:["העיר האסורה: כניסה אחרונה 16:00 · סגור בימי שני"],book:["העיר האסורה (נפתח 7 ימים מראש ב־20:00 שעון בייג׳ינג)","כיכר Tiananmen (חינם, 1–7 ימים מראש)"],stops:[
+ {ic:"🏛",cat:"כיכר",slot:"בוקר",n:"Tiananmen Square",z:"天安门广场",g:"Tiananmen Square, Beijing",dur:"כשעה",d:"הכיכר הגדולה מול שער הכניסה לעיר האסורה.",tip:"חובה להזמין מראש (חינם): 1–7 ימים לפני, בתוכנית ה־WeChat 「天安门广场预约参观」. המקומות נפתחים כל יום ב־12:00. דרכון מקורי לכל אחד (Trip.com, 9.10.2026). מטיילים מזכירים לבדוק מאיזו נקודת בידוק נכנסים.",rn:1,tr:"🚶 צמוד לכניסה הדרומית"},
+ {ic:"🏯",cat:"ארמון",slot:"בוקר–צהריים",n:"Forbidden City",z:"故宫午门",g:"The Palace Museum, Beijing",dur:"3–4 שעות",d:"ארמון הקיסרים. נכנסים מהדרום (Meridian Gate) ויוצאים בצפון.",tip:"לנווט ל־故宫午门 ולא ל״故宫״, אחרת הניווט מוביל לשער הצפוני שבו אין כניסה. אם הזמן קצר: שלושת האולמות המרכזיים, ו־Treasure Gallery רק אם נשאר זמן.",rn:1,tr:"🚶 חוצים את הכביש בצפון"},
+ {ic:"⛰",cat:"תצפית",slot:"אחר הצהריים",n:"Jingshan Park",z:"景山公园",g:"Jingshan Park, Beijing",dur:"כשעה",d:"גבעה מול היציאה הצפונית, עם התצפית הכי יפה על גגות הארמון.",tr:"🚕 כ־10 דק׳ חזרה ל־Wangfujing (אומדן)"},
+ {ic:"🛍",cat:"רחוב",slot:"ערב",n:"Wangfujing Street",z:"王府井大街",g:"Wangfujing Street, Beijing",dur:"ערב",d:"רחוב הקניות המרכזי, ממש ליד המלונות המומלצים."}
+]},
+{id:"d2",tab:"יום 2 · החומה",title:"החומה הסינית ב־Mutianyu",extra:"יום מחוץ לעיר · כשעה וחצי לכל כיוון ברכב.",anchors:["רכבל ומגלשה: 8:00–17:00","להגיע מוקדם בבוקר"],book:["כרטיס Mutianyu אונליין (QR)","נהג ליום"],stops:[
+ {ic:"🚗",cat:"נסיעה",slot:"בוקר",n:"נסיעה ל־Mutianyu",z:"",dur:"כשעה וחצי",d:"נסיעה ברכב מהמלון.",tr:"🚌 שאטל ¥15 מהכניסה לתחנת הרכבל"},
+ {ic:"🧱",cat:"החומה",slot:"בוקר–צהריים",n:"Great Wall · Mutianyu",z:"慕田峪长城",g:"Mutianyu Great Wall",dur:"3–4 שעות",d:"עולים ברכבל כיסאות ליד מגדל 6, הולכים על החומה, ויורדים במגלשה (Toboggan 滑道).",tip:"ילדים מתחת לגיל 10 גולשים רק עם מבוגר. בגשם או ברוח המגלשה עלולה להיסגר, כדאי לשאול לפני העלייה."},
+ {ic:"🏨",cat:"מלון",slot:"אחר הצהריים",n:"Back to hotel",z:"",hotel:1,dur:"מנוחה",d:"חזרה למלון וערב חופשי."}
+]},
+{id:"d3",tab:"יום 3 · ארמון הקיץ",title:"Summer Palace בבוקר, ריקשה בסמטאות, ערב ב־Qianmen",anchors:["Summer Palace: כניסה מ־6:00 · להגיע מוקדם, לפני החום והעומס"],book:["Summer Palace (1–7 ימים מראש ב־WeChat של הפארק)"],stops:[
+ {ic:"🏞",cat:"ארמון ואגם",slot:"בוקר",n:"Summer Palace",z:"颐和园北宫门",g:"Summer Palace, Beijing",dur:"3–3.5 שעות",d:"ארמון הקיץ של הקיסרים על אגם Kunming. מסלול חד־כיווני מהשער הצפוני (北宫门, מטרו קו 4) עד השער 新建宫门, בלי לחזור על אותה דרך.",tip:"״יותר מ־3 שעות, פחות מ־20 אלף צעדים״ (פוסט, 10.2026). Foxiang Pavilion ו־Suzhou Street בכרטיס משולב. אפשר לראות את Foxiang מעבר לאגם ולוותר על העלייה. מ־Renshou Hall והלאה צפוף. בקיץ מעט צל ליד האגם: כובע ומים.",rn:1,hl:[
+  ["Suzhou Street","苏州街","רחוב תעלות קטן שהקיסר Qianlong בנה כדי לשחזר עיירת מים מדרום סין. בכרטיס המשולב."],
+  ["Four Great Regions","四大部洲","מתחם מקדשים בסגנון טיבטי על המורד הצפוני. רואים אותו מיד אחרי השער הצפוני."],
+  ["Hall of Painted Scenes","画中游","ביתנים על צלע הגבעה. כל חלון ומסגרת ממסגרים נוף, ״כמו ללכת בתוך ציור״."],
+  ["Marble Boat","石舫","סירה שבסיסה מאבן והמבנה העליון מעץ. שילוב של סגנון סיני ומערבי."],
+  ["Long Corridor","长廊","מסדרון מקורה של יותר מ־700 מ׳ לאורך האגם, עם תקרה מצוירת לכל אורכו."],
+  ["Tower of Buddhist Incense","佛香阁","המגדל על הגבעה, הסמל של הארמון. אפשר לוותר על העלייה ולצלם אותו מהאגם."],
+  ["Yulan Hall","玉澜堂","כאן הוחזק הקיסר Guangxu אחרי כישלון רפורמת 1898."],
+  ["Hall of Benevolence and Longevity","仁寿殿","האולם שבו Cixi ו־Guangxu ניהלו את ענייני הממלכה."],
+  ["Zhichun Pavilion","知春亭","ביתן על אי קטן, עם מים מכל הצדדים ותצפית על האגם ועל הגבעה. ״מומלץ במיוחד״."],
+  ["Bronze Ox & 17-Arch Bridge","铜牛 · 十七孔桥","שור נחושת על שפת האגם, ולידו הגשר הארוך של האגם. מליד השור יש תצפית יפה על המגדל."]
+ ],tr:"🚕 כ־30 דק׳ במונית ל־Shichahai (אומדן)"},
+ {ic:"🛺",cat:"ריקשה",slot:"צהריים",n:"Shichahai",z:"什刹海",g:"Shichahai, Beijing",dur:"1–2 שעות",d:"הסמטאות העתיקות סביב האגמים. סיור בריקשה.",tip:"לסגור מחיר ומסלול עם נהג הריקשה לפני שעולים.",tr:"🚶 / 🚕 קרוב ל־Nanluoguxiang"},
+ {ic:"🏘",cat:"סמטה",slot:"אחר הצהריים",n:"Nanluoguxiang",z:"南锣鼓巷",g:"Nanluoguxiang, Beijing",dur:"כשעה",d:"סמטה מרכזית עם חנויות קטנות.",tr:"🚕 כ־20 דק׳ ל־Qianmen (אומדן)"},
+ {ic:"🏮",cat:"רחוב",slot:"ערב",n:"Qianmen & Dashilar",z:"前门大街",g:"Qianmen Street, Beijing",dur:"ערב",d:"רחוב הליכה היסטורי וסמטאות של חנויות ותיקות, דרומית לכיכר."}
+]},
+{id:"d4",tab:"יום 4 · אם יש",title:"Temple of Heaven בבוקר, הפארק האולימפי ו־Sanlitun",anchors:["Temple of Heaven: הכי נעים עד 9:00 · המבנים סגורים בימי שני"],book:["Temple of Heaven (1–7 ימים מראש ב־WeChat ״Visiting Beijing Parks״)"],stops:[
+ {ic:"⛩",cat:"מקדש",slot:"בוקר",n:"Temple of Heaven",z:"天坛公园",g:"Temple of Heaven, Beijing",dur:"2–3 שעות",d:"פארק ענק עם המקדש העגול שבו הקיסרים התפללו ליבול טוב. בבוקר המקומיים עושים טאי צ׳י, רוקדים, שרים ומשחקים.",tip:"הכרטיס הבסיסי לא כולל את Hall of Prayer, צריך כרטיס משולב. מסלול מומלץ: נכנסים מהשער המזרחי (מטרו קו 5) ויוצאים מהשער הדרומי.",rn:1,hl:[
+  ["Hall of Prayer for Good Harvests","祈年殿","המבנה העגול עם שלוש קומות הגג הכחולות, הסמל של המקום. כאן הקיסר התפלל ליבול טוב. בכרטיס המשולב."],
+  ["Danbi Bridge","丹陛桥","שביל אבן מוגבה שמחבר את האולם בצפון למזבח בדרום. הולכים עליו לאורך הציר המרכזי."],
+  ["Echo Wall","回音壁","קיר עגול שמעביר קול: לוחשים צמוד לקיר בצד אחד ושומעים בצד השני. כשיש הרבה אנשים קשה לשמוע."],
+  ["Circular Mound Altar","圜丘","מזבח אבן פתוח בשלוש קומות. מי שעומד על האבן שבמרכז שומע את קולו מוגבר."],
+  ["הבוקר בפארק","天坛公园","מוקדם בבוקר המקומיים ממלאים את הפארק בטאי צ׳י, ריקודים, מקהלות ומשחקי קלפים. חוויה בפני עצמה."]
+ ],tr:"🚕 כ־35 דק׳ במונית לפארק האולימפי (אומדן)"},
+ {ic:"🏟",cat:"פארק",slot:"אחר הצהריים",n:"Olympic Park",z:"奥林匹克公园",g:"Beijing National Stadium",dur:"כשעה",d:"״קן הציפור״ ו״קוביית המים״ מאולימפיאדת 2008.",tr:"🚕 כ־25 דק׳ במונית (אומדן)"},
+ {ic:"🌃",cat:"רובע",slot:"ערב",n:"Sanlitun",z:"三里屯",g:"Sanlitun, Beijing",dur:"ערב",d:"אזור מודרני של מותגים ובתי קפה. מתאים לבני הנוער."}
+]}
+]},
+sh:{days:[
+{id:"d1",tab:"יום 1 · The Bund",title:"Nanjing Road, The Bund ו־North Bund בשקיעה",anchors:["The Bund: להגיע בסביבות 19:00 לאורות"],book:[],stops:[
+ {ic:"🛍",cat:"מדרחוב",slot:"אחר הצהריים",n:"Nanjing Road",z:"南京路步行街",g:"Nanjing Road Pedestrian Street, Shanghai",dur:"כשעה",d:"רחוב הקניות שמתחבר ל־The Bund.",tr:"🚶 הולכים מזרחה עד הנהר"},
+ {ic:"🌇",cat:"תצפית",slot:"שקיעה",n:"North Bund",z:"北外滩",g:"North Bund, Shanghai",dur:"כשעה",d:"הטיילת שמצפון ל־The Bund, עם נוף על Pudong ועל הבניינים ההיסטוריים.",tip:"מטיילים: ״פחות אנשים, נוף יפה״. בדרך ל־The Bund עוברים בגשר הפלדה Waibaidu 外白渡桥.",rn:1,tr:"🚶 כ־15 דק׳ לאורך הנהר (אומדן)"},
+ {ic:"✨",cat:"טיילת",slot:"ערב",n:"The Bund",z:"外滩",g:"The Bund, Shanghai",dur:"1–2 שעות",d:"הטיילת ההיסטורית מול קו הרקיע המואר של Pudong.",rn:1}
+]},
+{id:"d2",tab:"יום 2 · Pudong",title:"Yu Garden בבוקר, גורדי השחקים של Lujiazui, ערב ב־Xintiandi",anchors:["Yu Garden: כניסה אחרונה 16:00 · סגור בימי שני","Shanghai Tower: הכי יפה בסביבות 17:00"],book:["Yu Garden (אונליין)","Shanghai Tower (יום־יומיים לפני, לפי מזג האוויר)"],stops:[
+ {ic:"🏯",cat:"גן",slot:"בוקר",n:"Yu Garden",z:"豫园",g:"Yu Garden, Shanghai",dur:"1.5–2 שעות",d:"גן סיני מסורתי, ובחוץ סמטאות הבזאר.",tr:"🚇 / 🚕 ל־Lujiazui (אומדן: 15–20 דק׳), או מעבורת ב־¥2 ממזח 金陵东路渡口 למזח 东昌路渡口, עם נוף על שתי הגדות (לפי מטיילים)"},
+ {ic:"🗼",cat:"תצפית",slot:"אחר הצהריים",n:"Oriental Pearl Tower",z:"东方明珠",g:"Oriental Pearl Tower",dur:"כשעה",d:"המגדל עם הכדורים הוורודים. אפשר לבחור בינו לבין Shanghai Tower, לא חייבים את שניהם.",tr:"🚶 כ־10 דק׳ ברגל (אומדן)"},
+ {ic:"🏙",cat:"תצפית",slot:"17:00",n:"Shanghai Tower",z:"上海中心大厦",g:"Shanghai Tower",dur:"כשעה",d:"תצפית בקומה 118, בין הגבוהות בעולם.",tip:"אין החזר כספי. להזמין רק יום־יומיים לפני, כשרואים שהשמיים בהירים.",tr:"🚕 כ־20 דק׳ ל־Xintiandi (אומדן)"},
+ {ic:"🌃",cat:"רובע",slot:"ערב",n:"Xintiandi",z:"新天地",g:"Xintiandi, Shanghai",dur:"ערב",d:"בתי שיקומן (shikumen) משוחזרים עם חנויות ובתי קפה.",tr:"🚕 כ־10 דק׳ ל־Tianzifang (אומדן)"},
+ {ic:"🏘",cat:"סמטאות",slot:"ערב",n:"Tianzifang",z:"田子坊",g:"Tianzifang, Shanghai",dur:"כשעה",d:"מבוך סמטאות צרות עם חנויות קטנות וגלריות."}
+]},
+{id:"d3",tab:"יום 3 · הרובע הצרפתי",title:"West Nanjing Road, Jing'an Temple ו־Wukang Road",anchors:[],book:[],stops:[
+ {ic:"🛍",cat:"רחוב",slot:"בוקר",n:"West Nanjing Road",z:"南京西路",g:"West Nanjing Road, Shanghai",dur:"כשעה",d:"שדרת הקניות היוקרתית של העיר.",tr:"🚶 ממשיכים מערבה"},
+ {ic:"🛕",cat:"מקדש",slot:"צהריים",n:"Jing'an Temple",z:"静安寺",g:"Jing'an Temple, Shanghai",dur:"כשעה",d:"מקדש בודהיסטי עם גגות מוזהבים, בין גורדי שחקים.",tr:"🚕 כ־10 דק׳ במונית (אומדן)"},
+ {ic:"🛒",cat:"רחוב",slot:"אחר הצהריים",n:"Huaihai Road",z:"淮海中路",g:"Middle Huaihai Road, Shanghai",dur:"כשעה",d:"רחוב קניות מרכזי ברובע הצרפתי.",tr:"🚕 / 🚶 ל־Wukang Road (אומדן)"},
+ {ic:"🌳",cat:"רחוב",slot:"אחר הצהריים",n:"Wukang Road",z:"武康大楼",g:"Wukang Mansion, Shanghai",dur:"1–2 שעות",d:"רחוב עם עצים ובתים מהתקופה הקולוניאלית, ו־Wukang Mansion בפינה. מול הבניין: בית Soong Ching-ling.",tip:"מטרו: תחנת Jiaotong University, יציאה 7. ממשיכים ל־Anfu Road 安福路 הסמוכה.",rn:1}
+]},
+{id:"x1",tab:"🚇 Zhujiajiao",title:"יום טיול: Zhujiajiao, עיירת התעלות",extra:"יום מחוץ לעיר · כשעתיים במטרו קו 17 ואוטובוס, או כ־70 דק׳ במונית.",anchors:["פתוח 8:30–16:30"],book:[],stops:[
+ {ic:"🛶",cat:"עיירת מים",slot:"יום",n:"Zhujiajiao",z:"朱家角",g:"Zhujiajiao, Shanghai",dur:"כ־3 שעות",d:"תעלות, גשרי אבן (Fangsheng Bridge) ורחוב עתיק. הכניסה לעיירה חופשית. כרטיס משולב לגנים ולמקדשים ¥60–80.",tip:"שיט בסירה ¥200–300 לסירה של עד 6. בסוף שבוע ובחגים צפוף."}
+]}
+]}
+});
+
 const DVS={};
 function dvStops(k,day){const v=DVS[k+"v"]||(day.variants?day.variants[0][0]:null);return day.stops.filter(s=>!s.v||s.v===v)}
 function dvMap(k,stops,act){const hll=hq(k);const pts=[];const hp=/^-?\d+\.\d+,-?\d+\.\d+$/.test(hll)?hll.split(",").map(Number):null;
@@ -938,14 +1274,14 @@ function dvMap(k,stops,act){const hll=hq(k);const pts=[];const hp=/^-?\d+\.\d+,-
  const W=320,Hh=Math.max(200,Math.min(380,W*dA/dO));const X=p=>(p[1]-o0)/dO*W,Y=p=>(a1-p[0])/dA*Hh;
  const seq=list.filter(x=>!x.h);const path=[...(hp?[hp]:[]),...seq.map(x=>x.p),...(hp?[hp]:[])].map(p=>X(p).toFixed(1)+","+Y(p).toFixed(1)).join(" ");
  return `<svg class="dvsvg" viewBox="0 0 ${W} ${Hh}" style="direction:ltr"><rect width="${W}" height="${Hh}" rx="14" class="dvbg"/><polyline points="${path}" class="dvline"/>${hp?`<g class="dvh"><circle cx="${X(hp)}" cy="${Y(hp)}" r="11"/><text x="${X(hp)}" y="${Y(hp)+4}">🏨</text></g>`:""}${seq.map(x=>`<g class="dvm${x.i===act?" on":""}" data-dvi="${x.i}"><circle cx="${X(x.p)}" cy="${Y(x.p)}" r="12"/><text x="${X(x.p)}" y="${Y(x.p)+4}">${x.i+1}</text></g>`).join("")}</svg><div class="dvmapnote">מפה סכמטית, בלי רחובות. תחנות בלי מיקום מאומת לא מסומנות.</div>`}
-function dvHTML(k){const dv=DV[k];if(!dv)return"";const di=Math.min(DVS[k]||0,dv.days.length-1),day=dv.days[di],st=dvStops(k,day),act=DVS[k+"a"]===undefined?-1:DVS[k+"a"];const v=DVS[k+"v"]||(day.variants?day.variants[0][0]:null);
+function dvHTML(k){const dv=DV[k];if(!dv)return"";const di=Math.min(DVS[k]||0,dv.days.length-1),day=dv.days[di],st=dvStops(k,day),hasLL=st.some(s=>s.ll),act=DVS[k+"a"]===undefined?-1:DVS[k+"a"];const v=DVS[k+"v"]||(day.variants?day.variants[0][0]:null);
  const routeQ=["HOTEL",...st.filter(s=>s.g).map(s=>s.g),"HOTEL"];
  return `<div class="card dv"><div class="dvtop"><h3>תוכנית מוצעת · יום אחרי יום</h3><div class="hsel">${H[k].list.map((x,i)=>`<button class="pill${baseIdx(k)===i?" active":""}" data-hs="${i}">🛏 ${x[1].replace(/ \(.*\)/,"")}</button>`).join("")}</div></div>
  <div class="dvtabs">${dv.days.map((d,i)=>`<button class="dvtab${i===di?" on":""}" data-dvd="${i}">${d.tab}</button>`).join("")}</div>
  <div class="dvhead"><div><div class="dvt">${day.title}</div>${day.extra?`<div class="small muted">🚌 ${day.extra}</div>`:""}</div>${day.variants?`<div class="seg dvvar">${day.variants.map(([id,l])=>`<button class="${id===v?"on":""}" data-dvv="${id}">${l}</button>`).join("")}</div>`:""}</div>
  <div class="dvsum"><span>📍 ${st.length} תחנות</span>${day.anchors.map(a=>`<span>🕘 ${a}</span>`).join("")}${day.book.length?`<span>🎟 להזמין: ${day.book.join(" · ")}</span>`:""}</div>
- <div class="dvgrid"><ol class="dvtl">${st.map((s,i)=>`<li class="dvs${i===act?" open":""}" data-dvi="${i}"><div class="dvdot">${i+1}</div><div class="dvcard"><button class="dvhd" data-dvo="${i}"><span class="dvic">${s.ic}</span><span class="dvnm"><b>${s.hotel?esc(H[k].list[baseIdx(k)][1]):s.n}</b>${s.z?` <span class="zh">${s.z}</span>`:""}<small>${s.cat} · ${s.dur}${s.rn?" · 🗣 RedNote":""}</small></span><span class="dvslot">${s.slot}</span></button><div class="dvd">${s.d}</div>${i===act?`<div class="dvmore">${s.tip?`<div class="dvtip">💡 ${s.tip}</div>`:""}${s.n&&PR[s.n]?pracHTML(s.n):""}<div class="row" style="gap:6px;flex-wrap:wrap;margin-top:6px">${s.g?`<a class="ib" href="${gm(s.g)}" target="_blank" rel="noopener">📍 Google Maps</a>`:""}${s.z?`<a class="ib" href="${am(s.z.split(" ").pop(),amCity(k))}" target="_blank" rel="noopener">高德 Amap</a>${cpb(s.z)}<button class="ib" data-dvdr="${i}">🚕 לנהג</button>`:""}${!s.ll&&!s.hotel?`<span class="small muted">📍 לא במפה: מיקום לא מאומת ב־Google, לנווט ב־Amap</span>`:""}</div></div>`:""}</div>${s.tr&&i<st.length-1?`<div class="dvtr">${s.tr}</div>`:""}</li>`).join("")}</ol>
- <div class="dvmap"><details class="dvmapd" ${(DVS.mo===undefined?innerWidth>900:DVS.mo)?"open":""}><summary>🗺 מפה של היום</summary>${dvMap(k,st,act)}</details><div class="row" style="gap:6px;flex-wrap:wrap;margin-top:8px"><a class="ib gmb" href="${gdir(fillH(routeQ,k),"driving")}" target="_blank" rel="noopener">🗺 כל היום ב־Google Maps</a></div></div></div>
+ <div class="dvgrid${hasLL?"":" nomap"}"><ol class="dvtl">${st.map((s,i)=>`<li class="dvs${i===act?" open":""}" data-dvi="${i}"><div class="dvdot">${i+1}</div><div class="dvcard"><button class="dvhd" data-dvo="${i}"><span class="dvic">${s.ic}</span><span class="dvnm"><b>${s.hotel?esc(H[k].list[baseIdx(k)][1]):s.n}</b>${s.z?` <span class="zh">${s.z}</span>`:""}<small>${s.cat} · ${s.dur}${s.rn?" · 🗣 RedNote":""}</small></span><span class="dvslot">${s.slot}</span></button><div class="dvd">${s.d}</div>${s.hl&&i!==act?`<div class="dvhln">✨ ${s.hl.length} נקודות מיוחדות · לחצו לפרטים</div>`:""}${i===act?`<div class="dvmore">${s.hl?`<div class="dvhl"><b>✨ מה מיוחד בכל נקודה, לפי סדר ההליכה</b><ol>${s.hl.map(h=>`<li><b>${h[0]}</b> <span class="zh">${h[1]}</span><div>${h[2]}</div></li>`).join("")}</ol></div>`:""}${s.tip?`<div class="dvtip">💡 ${s.tip}</div>`:""}${s.n&&PR[s.n]?pracHTML(s.n):""}<div class="row" style="gap:6px;flex-wrap:wrap;margin-top:6px">${s.g?`<a class="ib" href="${gm(s.g)}" target="_blank" rel="noopener">📍 Google Maps</a>`:""}${s.z?`<a class="ib" href="${am(s.z.split(" ").pop(),amCity(k))}" target="_blank" rel="noopener">高德 Amap</a>${cpb(s.z)}<button class="ib" data-dvdr="${i}">🚕 לנהג</button>`:""}${hasLL&&!s.ll&&!s.hotel?`<span class="small muted">📍 לא במפה: מיקום לא מאומת ב־Google, לנווט ב־Amap</span>`:""}</div></div>`:""}</div>${s.tr&&i<st.length-1?`<div class="dvtr">${s.tr}</div>`:""}</li>`).join("")}</ol>
+ <div class="dvmap">${hasLL?`<details class="dvmapd" ${(DVS.mo===undefined?innerWidth>900:DVS.mo)?"open":""}><summary>🗺 מפה של היום</summary>${dvMap(k,st,act)}</details>`:""}<div class="row" style="gap:6px;flex-wrap:wrap;margin-top:8px"><a class="ib gmb" href="${gdir(fillH(routeQ,k),"driving")}" target="_blank" rel="noopener">🗺 כל היום ב־Google Maps</a></div></div></div>
  <p class="small muted" style="margin:8px 0 0">זמני נסיעה שמסומנים ״אומדן״ לא נבדקו. ״🗣 RedNote״ = מבוסס על המלצות מטיילים.</p></div>`}
 function dvBind(k){const root=document.querySelector(".dv");if(!root)return;const re=()=>{const c=document.querySelector(".dv");if(c){c.outerHTML=dvHTML(k);dvBind(k)}};
  {const md=root.querySelector(".dvmapd");if(md)md.ontoggle=()=>{DVS.mo=md.open}}root.querySelectorAll("[data-dvd]").forEach(b=>b.onclick=()=>{DVS[k]=+b.dataset.dvd;DVS[k+"a"]=-1;re()});
@@ -964,7 +1300,7 @@ function renderDest(){{const rb=document.getElementById("rnBox");if(rb)rb.innerH
  document.getElementById("seeTitle").textContent=`מה רואים ב־${C[k].en} ${C[k].zh}`;
  document.getElementById("destSide").innerHTML=`<div class="cityban" style="background-image:url(${IMG[C[k].img[0]]})"><div class="cbin"><div class="cbname">${C[k].en} <span>${C[k].zh}</span></div><div class="cbfacts"><span>☀ סוף אוגוסט: ${W[k][0]} · ${W[k][1]}</span><span>🛏 ${hh.area.split(":")[0]}</span>${inR.length?`<span>🗺 ${inR.join(" · ")}</span>`:""}${(()=>{const r=R.find(x=>x.id===S.route);let o=0,hit=null;stops(r).forEach(([kk,n])=>{if(kk===k)hit=[o,n];o+=n});return hit?`<span>📅 במסלול ${r.id}: ${dd(hit[0])}–${dd(hit[0]+hit[1])}</span>`:""})()}</div></div></div>
 ${DV[k]?dvHTML(k):""} <div class="infogrid">`+
-  (DAYS[k]&&!DV[k]?`<details class="card col" open><summary><h3>תוכנית מוצעת</h3></summary><div class="small muted" style="margin:4px 0">המסלולים ב־Google Maps יוצאים מהמלון שבוחרים כאן וחוזרים אליו. מלון קטן שלא מופיע ב־Google מסומן לפי הרחוב שלו.</div><div class="hsel">${H[k].list.map((x,i)=>`<button class="pill${(baseIdx(k))===i?" active":""}" data-hs="${i}">🛏 ${x[1].replace(/ \(.*\)/,"")}</button>`).join("")}</div><table class="cost">${DAYS[k].map(d=>`<tr class="${d[4]&&d[4].X?"dtrow":""}"><td style="white-space:nowrap;vertical-align:top"><b>${d[4]&&d[4].X?"🚌 "+d[0]:d[0]}</b></td><td style="white-space:normal">${d[4]&&d[4].note?`<div class="dtnote">🚌 ${d[4].note}</div>`:""}<div class="enl" dir="ltr">${zhfmt(d[1])}</div>${d[4]&&d[4].dowLbl?`<div class="dowlbl">${d[4].dowLbl}</div>`:""}${d[4]&&d[4].rn?`<div class="rnchip">🗣 ${d[4].rn}</div>`:""}${d[4]&&d[4].dow?`<a class="ib" href="${am("遇龙桥",amCity(k))}" target="_blank" rel="noopener">高德 遇龙桥 (המופע)</a>`:""}${d[4]&&d[4].alt?`<div class="altday"><div class="dowlbl">${d[4].alt[4].dowLbl}</div><div class="enl" dir="ltr">${zhfmt(d[4].alt[1])}</div>${d[4].alt[4].rn?`<div class="rnchip">🗣 ${d[4].alt[4].rn}</div>`:""}<a class="ib gmb" href="${gdir(fillH(d[4].alt[2],k),d[4].alt[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a> <a class="ib" href="${am("千里江山图大型水墨画打卡地",amCity(k))}" target="_blank" rel="noopener">高德 千里江山图</a></div>`:""}${/Yuanjiajie/.test(d[1])?`<div class="gnote">⚠️ המיקום של Yuanjiajie ב־Google לא מדויק, ולכן מסלול Google מגיע עד מעלית Bailong. לדיוק מומלץ לבדוק ב־Amap: <a class="zl" href="${am("袁家界景区-观景台",amCity(k))}" target="_blank" rel="noopener">袁家界景区-观景台</a>${cpb("袁家界景区-观景台")}</div>`:""}${d[2]?`<br><a class="ib gmb" href="${gdir(fillH(d[2],k),d[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a>`:""}</td></tr>`).join("")}</table>${ALLQ[k]?`<p><a class="btn" href="${gdir(fillH(ALLQ[k],k),"driving")}" target="_blank" rel="noopener">🗺 כל האתרים במסלול אחד ב־Google Maps</a></p>`:""}<p class="small muted">בסין Google Maps עובד רק עם eSIM עם נדידה או VPN, והוא פחות מדויק שם. לניווט בפועל עדיף Amap 高德 (כפתור 高德 ליד כל אתר).</p></details>`:"")+(DIST[k]?`<details class="card col" open><summary><h3>מרחקים מ־${DIST[k].from}</h3></summary>${DIST[k].fromNote?`<p class="small" style="margin:2px 0;color:var(--terra);font-weight:700">🛍 ${DIST[k].fromNote}</p>`:""}<p class="small muted" style="margin:2px 0 6px">כפתור ״דרך מהמלון״ יוצא מ: <b>${H[k].list[baseIdx(k)][1]}</b>${H[k].list[baseIdx(k)][5]?"":` (במפה: ${ANCH[k]})`}</p><table class="cost">${DIST[k].rows.map(r=>`<tr><td>${r[0]}<div class="row" style="gap:6px;margin-top:4px">${r[3]?`<a class="ib" href="${gm(r[3])}" target="_blank" rel="noopener">📍 Google Maps${GNOTE[r[0]]?" · לא מדויק":""}</a><a class="ib" href="${gdir([hq(k),r[3]],"driving")}" target="_blank" rel="noopener">↪ דרך מהמלון</a>`:""}${r[4]?`<a class="ib" href="${am(r[4],amCity(k))}" target="_blank" rel="noopener">高德</a><button class="ib" data-cp="${esc(r[4])}" title="העתקת השם בסינית">⧉ ${esc(r[4])}</button>`:""}${gNote(r[0],k)}</div></td><td style="white-space:nowrap;vertical-align:top">${r[1]} ק״מ<br><span class="small muted">${r[2]}</span></td></tr>`).join("")}</table><p class="small muted">מרחק בקו אווירי. זמני הנסיעה הם אומדן, ותלויים בתנועה.</p></details>`:"")+`<details class="card col" open><summary><h3>איפה לישון · ${TNAME()}</h3></summary><p class="small">${hh.area}</p><div class="seg tierIn" style="margin:4px 0 8px">${[["0.75","חסכוני"],["1","מומלץ"],["1.8","פינוק"]].map(([v,n])=>`<button data-ti="${v}" class="${String(S.tier)===v?"on":""}">${n}</button>`).join("")}</div><p class="small muted" style="margin:0 0 6px">${TNOTE()}</p>${k==="zjj"?`<div class="twohot"><b>🛏🛏 בג׳אנגג׳יאג׳יה צריך להזמין שני מלונות</b><ol><li><b>Wulingyuan 武陵源</b>, ליד שער הפארק: לכל הלילות חוץ מהאחרון. כל המלונות כאן נמצאים ב־Wulingyuan, חוץ מ־JI Hotel Tianmen.</li><li><b>בעיר Zhangjiajie 张家界市区</b>, ליד תחנת Zhangjiajie West: ללילה האחרון, אחרי Tianmen. מהרשימה: <b>JI Hotel Tianmen Mountain Cableway</b> (ברמת ״מומלץ״).</li></ol><span class="small">ברשימת ההזמנות יש שתי שורות נפרדות, אחת לכל מלון.</span></div>`:""}`+hh.list.map((x,hi)=>`<div class="hotel flat${(DAYS[k]&&(baseIdx(k))===hi)?" sel":""}"><div class="k">${x[0]}${(DAYS[k]&&(baseIdx(k))===hi)?" · ✓ בסיס המסלולים":""}</div><h4>${x[1]}</h4>${HZH[x[1]]?`<p class="small muted" style="margin:0 0 2px" lang="zh">${esc(HZH[x[1]][0])} ${cpb(HZH[x[1]][0])}</p>`:""}${gNote(x[1],k)}${aliasNote(x[1])}<p>${x[2]}</p><p><b>${x[3]}</b></p><div class="row">${tripUrl(k,x[1])?`<a class="ib" href="${tripUrl(k,x[1])}" target="_blank" rel="noopener">Trip.com</a>`:""}${bookUrl(x[1])?`<a class="ib" href="${bookUrl(x[1])}" target="_blank" rel="noopener">Booking.com</a>`:""}${x[5]?`<a class="ib" href="${gm(x[5])}" target="_blank" rel="noopener">📍 Google Maps</a>`:""}${HZH[x[1]]?`<a class="ib" href="${am(HZH[x[1]][0],amCity(k))}" target="_blank" rel="noopener">高德 Amap</a>`:""}${DAYS[k]?`<button class="ib" data-hs="${hi}">🛏 בסיס למסלולים</button>`:""}<button class="ib" data-drh="${hi}">🚕 לנהג</button>${TRIP_OPEN?`<button class="ib bk${(STORE.b[hbId(k,x[1])]||{}).s===2&&(STORE.b[hbId(k,x[1])]||{}).n===x[1]?" on":""}" data-hb="${hi}">${(STORE.b[hbId(k,x[1])]||{}).s===2&&(STORE.b[hbId(k,x[1])]||{}).n===x[1]?"✓ הזמנו כאן":"סימון: הזמנו כאן"}</button>`:""}</div></div>`).join("")+`</details></div>`;{const ds=document.querySelectorAll("#destSide details.col");if(_same)ds.forEach((d,i)=>{if(i<_prev.length)d.open=_prev[i]});else if(innerWidth<700)ds.forEach((d,i)=>{if(i>0)d.open=false})}if(_same)scrollTo(0,_sy);
+  (DAYS[k]&&!DV[k]?`<details class="card col" open><summary><h3>תוכנית מוצעת</h3></summary><div class="small muted" style="margin:4px 0">המסלולים ב־Google Maps יוצאים מהמלון שבוחרים כאן וחוזרים אליו. מלון קטן שלא מופיע ב־Google מסומן לפי הרחוב שלו.</div><div class="hsel">${H[k].list.map((x,i)=>`<button class="pill${(baseIdx(k))===i?" active":""}" data-hs="${i}">🛏 ${x[1].replace(/ \(.*\)/,"")}</button>`).join("")}</div><table class="cost">${DAYS[k].map(d=>`<tr class="${d[4]&&d[4].X?"dtrow":""}"><td style="white-space:nowrap;vertical-align:top"><b>${d[4]&&d[4].X?"🚌 "+d[0]:d[0]}</b></td><td style="white-space:normal">${d[4]&&d[4].note?`<div class="dtnote">🚌 ${d[4].note}</div>`:""}<div class="enl" dir="ltr">${zhfmt(d[1])}</div>${d[4]&&d[4].dowLbl?`<div class="dowlbl">${d[4].dowLbl}</div>`:""}${d[4]&&d[4].rn?`<div class="rnchip">🗣 ${d[4].rn}</div>`:""}${d[4]&&d[4].dow?`<a class="ib" href="${am("遇龙桥",amCity(k))}" target="_blank" rel="noopener">高德 遇龙桥 (המופע)</a>`:""}${d[4]&&d[4].alt?`<div class="altday"><div class="dowlbl">${d[4].alt[4].dowLbl}</div><div class="enl" dir="ltr">${zhfmt(d[4].alt[1])}</div>${d[4].alt[4].rn?`<div class="rnchip">🗣 ${d[4].alt[4].rn}</div>`:""}<a class="ib gmb" href="${gdir(fillH(d[4].alt[2],k),d[4].alt[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a> <a class="ib" href="${am("千里江山图大型水墨画打卡地",amCity(k))}" target="_blank" rel="noopener">高德 千里江山图</a></div>`:""}${/Yuanjiajie/.test(d[1])?`<div class="gnote">⚠️ המיקום של Yuanjiajie ב־Google לא מדויק, ולכן מסלול Google מגיע עד מעלית Bailong. לדיוק מומלץ לבדוק ב־Amap: <a class="zl" href="${am("袁家界景区-观景台",amCity(k))}" target="_blank" rel="noopener">袁家界景区-观景台</a>${cpb("袁家界景区-观景台")}</div>`:""}${d[2]?`<br><a class="ib gmb" href="${gdir(fillH(d[2],k),d[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a>`:""}</td></tr>`).join("")}</table>${ALLQ[k]?`<p><a class="btn" href="${gdir(fillH(ALLQ[k],k),"driving")}" target="_blank" rel="noopener">🗺 כל האתרים במסלול אחד ב־Google Maps</a></p>`:""}<p class="small muted">בסין Google Maps עובד רק עם eSIM עם נדידה או VPN, והוא פחות מדויק שם. לניווט בפועל עדיף Amap 高德 (כפתור 高德 ליד כל אתר).</p></details>`:"")+(DIST[k]?`<details class="card col dstc" open><summary><h3>מרחקים מהמלון</h3></summary>${DIST[k].fromNote?`<p class="dst-note">${DIST[k].fromNote}</p>`:""}<div class="dst-from"><span>🏨 נקודת יציאה</span><b>${H[k].list[baseIdx(k)][1]}</b>${H[k].list[baseIdx(k)][5]?"":`<small>במפה: ${ANCH[k]}</small>`}</div>${DIST[k].rows.map(r=>{const t=r[4]?r[0].replace(/[\u3400-\u9fff]+/g,"").replace(/\s+/g," ").replace(/\s+\)/g,")").trim():r[0];return `<div class="dst"><div class="dst-h"><span class="dst-n"><bdi>${t}</bdi></span><span class="dst-km">${/^[\d.]+$/.test(String(r[1]))?r[1]+" ק״מ":String(r[1]).replace(/^([\d.]+)/,"$1 ק״מ")}</span></div><div class="dst-s">${r[4]?`<button class="dst-zh" data-cp="${esc(r[4])}" title="העתקת השם בסינית" lang="zh">${esc(r[4])} <span aria-hidden="true">⧉</span></button>`:"<span></span>"}<span class="dst-t">${r[2]}</span></div><div class="dst-l">${r[3]?`<a href="${gm(r[3])}" target="_blank" rel="noopener">📍 Google${GNOTE[r[0]]?" · לא מדויק":""}</a><a href="${gdir([hq(k),r[3]],"driving")}" target="_blank" rel="noopener">↪ מסלול מהמלון</a>`:""}${r[4]?`<a href="${am(r[4],amCity(k))}" target="_blank" rel="noopener">高德 Amap</a>`:""}</div>${gNote(r[0],k)}</div>`}).join("")}<p class="small muted" style="margin-top:10px">מרחק בקו אווירי. זמני הנסיעה הם אומדן ותלויים בתנועה. לחיצה על השם הסיני מעתיקה אותו לנהג.</p></details>`:"")+`<details class="card col" open><summary><h3>איפה לישון · ${TNAME()}</h3></summary><p class="small">${hh.area}</p><div class="seg tierIn" style="margin:4px 0 8px">${[["0.75","חסכוני"],["1","מומלץ"],["1.8","פינוק"]].map(([v,n])=>`<button data-ti="${v}" class="${String(S.tier)===v?"on":""}">${n}</button>`).join("")}</div><p class="small muted" style="margin:0 0 6px">${TNOTE()}</p>${k==="zjj"?`<div class="twohot"><b>🛏🛏 בג׳אנגג׳יאג׳יה צריך להזמין שני מלונות</b><ol><li><b>Wulingyuan 武陵源</b>, ליד שער הפארק: לכל הלילות חוץ מהאחרון. כל המלונות כאן נמצאים ב־Wulingyuan, חוץ מ־JI Hotel Tianmen.</li><li><b>בעיר Zhangjiajie 张家界市区</b>, ליד תחנת Zhangjiajie West: ללילה האחרון, אחרי Tianmen. מהרשימה: <b>JI Hotel Tianmen Mountain Cableway</b> (ברמת ״מומלץ״).</li></ol><span class="small">ברשימת ההזמנות יש שתי שורות נפרדות, אחת לכל מלון.</span></div>`:""}`+hh.list.map((x,hi)=>`<div class="hotel flat${(DAYS[k]&&(baseIdx(k))===hi)?" sel":""}"><div class="k">${x[0]}${(DAYS[k]&&(baseIdx(k))===hi)?" · ✓ בסיס המסלולים":""}</div><h4>${x[1]}</h4>${HZH[x[1]]?`<p class="small muted" style="margin:0 0 2px" lang="zh">${esc(HZH[x[1]][0])} ${cpb(HZH[x[1]][0])}</p>`:""}${gNote(x[1],k)}${aliasNote(x[1])}<p>${x[2]}</p><p><b>${x[3]}</b></p><div class="row">${tripUrl(k,x[1])?`<a class="ib" href="${tripUrl(k,x[1])}" target="_blank" rel="noopener">Trip.com</a>`:""}${bookUrl(x[1])?`<a class="ib" href="${bookUrl(x[1])}" target="_blank" rel="noopener">Booking.com</a>`:""}${x[5]?`<a class="ib" href="${gm(x[5])}" target="_blank" rel="noopener">📍 Google Maps</a>`:""}${HZH[x[1]]?`<a class="ib" href="${am(HZH[x[1]][0],amCity(k))}" target="_blank" rel="noopener">高德 Amap</a>`:""}${DAYS[k]?`<button class="ib" data-hs="${hi}">🛏 בסיס למסלולים</button>`:""}<button class="ib" data-drh="${hi}">🚕 לנהג</button>${TRIP_OPEN?`<button class="ib bk${(STORE.b[hbId(k,x[1])]||{}).s===2&&(STORE.b[hbId(k,x[1])]||{}).n===x[1]?" on":""}" data-hb="${hi}">${(STORE.b[hbId(k,x[1])]||{}).s===2&&(STORE.b[hbId(k,x[1])]||{}).n===x[1]?"✓ הזמנו כאן":"סימון: הזמנו כאן"}</button>`:""}</div></div>`).join("")+`</details></div>`;{{const dc=document.querySelector("#destSide .dstc"),hc=document.querySelector("#destSide .tierIn");const hd=hc&&hc.closest("details");if(dc&&hd)hd.after(dc)}const ds=document.querySelectorAll("#destSide details.col");if(_same)ds.forEach((d,i)=>{if(i<_prev.length)d.open=_prev[i]});else if(innerWidth<700)ds.forEach((d,i)=>{if(i>0)d.open=false})}if(_same)scrollTo(0,_sy);
  document.querySelectorAll("[data-hs]").forEach(b=>b.onclick=()=>{HSEL[k]=+b.dataset.hs;HBASE[k]=H[k].list[+b.dataset.hs][1];try{localStorage.setItem("cn27base",JSON.stringify(HBASE))}catch(e){};renderDest()});document.querySelectorAll("[data-ti]").forEach(b=>b.onclick=()=>setTier(+b.dataset.ti));
  if(DV[k])dvBind(k);
  const cats=["all",...(MUST[k]?["must"]:[]),"fav","want","vis",...new Set(P[k].map(p=>p[2]))];
@@ -988,7 +1324,7 @@ if(document.getElementById("credits"))document.getElementById("credits").innerHT
 function seg(id,key){document.querySelectorAll(`#${id} button`).forEach(b=>b.onclick=()=>{S[key]=+b.dataset.v;document.querySelectorAll(`#${id} button`).forEach(x=>x.classList.toggle("on",x===b));S.step=-1;setPlan({[key]:S[key]})})}
 seg("lenSeg","len");function setLen(v){S.len=v;document.querySelectorAll("#lenSeg button").forEach(x=>x.classList.toggle("on",+x.dataset.v===v));setPlan({len:v})}seg("paxSeg","pax");seg("roomSeg","rooms");function setTier(v){S.tier=v;resetHSEL();renderAll();renderDest()}const TNAME=()=>({"0.75":"חסכוני","1":"מומלץ","1.8":"פינוק"})[String(S.tier)];const TNOTE=()=>({"0.75":"מלונות זולים עם דירוג אורחים 9.3 ומעלה, במרחק הליכה מהרחוב המרכזי. החדרים קטנים יותר.","1":"האיזון בין מחיר, מיקום ונוחות.","1.8":"מלונות יוקרה ששווים את התוספת: מיקום מעולה, חדרים גדולים ונוף."})[String(S.tier)]+" החלפת הרמה מחליפה גם את נקודת היציאה של המסלולים במפה.";
 function costAt(r,len){const s=S.len;S.len=len;const c=cost(r);S.len=s;return c}
-function openRoute(id,len){S.all=false;S.route=id;S.step=-1;S.city=null;setPlan({route:id,len});fitRoute();document.getElementById("routeTabs").scrollIntoView({behavior:"smooth"})}
+function openRoute(id,len){S.all=false;S.route=id;S.step=-1;S.city=null;setPlan({route:id,len});fitRoute();goTo("planner")}
 function recoHTML(){const ca=costAt(R.find(r=>r.id==="A"),14),cb=costAt(R.find(r=>r.id==="B"),12);
  return`<details class="reco"><summary>🐼 ההמלצה שלי · כמה לילות לכל מסלול</summary><p class="small">ל־14 לילות: <b>מסלול A</b> (כ־${f(ca.total)}). ל־12 לילות: <b>מסלול B</b> (כ־${f(cb.total)}). <b>מסלול E</b> הוא המסלול של חברות הטיולים, עם יום רכבת אחד של 7 שעות.</p><table class="cost">${R.map(r=>`<tr><td><a href="#" onclick="openRoute('${r.id}',${r.ideal});return false">${r.id} · ${r.name}</a></td><td>${r.ideal} לילות</td></tr>`).join("")}</table></details>`}
 function renderReco(){}
@@ -998,22 +1334,22 @@ const PR={
 "Forbidden City":{h:"8:30–17:00 (אפריל–אוקטובר), כניסה אחרונה 16:00 · סגור בימי שני (חוץ מחגים)",b:"חובה להזמין מראש עם מספר דרכון. המכירה נפתחת 7 ימים לפני הביקור ב־20:00 שעון בייג׳ינג, באתר הרשמי intl.dpm.org.cn. אין כרטיסים ביום עצמו. מבוגר ¥60. נכנסים עם הדרכון המקורי",a:"סופי שבוע וחופשת הקיץ נגמרים מהר. עדיף שלישי–חמישי, ולהגיע בבוקר",src:"https://chinasurvivalkit.com/blog/forbidden-city-tickets",d:"7.11.2026",mon:1},
 "Great Wall · Mutianyu":{h:"כניסה 7:30–18:00 · רכבל כיסאות ומגלשה 8:00–17:00 (16.3–15.11)",b:"מומלץ להזמין אונליין מראש ולהיכנס עם QR. מתחת לגיל 6 חינם. ילדים מתחת לגיל 10 גולשים במגלשה רק עם מבוגר. מגיל 60 אסור במגלשה",a:"להגיע מוקדם בבוקר",src:"https://www.travelchinaguide.com/mutianyu-great-wall-tickets-booking.htm",d:"נבדק 16.11.2026"},
 "Temple of Heaven":{h:"הפארק 6:00–22:00 · המבנים בתשלום 8:00–18:00, סגורים בימי שני",b:"הכניסה למבנים המרכזיים בהזמנה מראש, 1–7 ימים לפני, בחשבון WeChat ״Visiting Beijing Parks״. עם דרכון: ¥20, כרטיס משולב ¥34",a:"הכי נעים עד 9:00",src:"https://english.beijing.gov.cn/specials/ticketing/parks/202407/t20240719_3753312.html",d:"אתר ממשלתי",mon:1},
-"Summer Palace":{h:"בחורף 6:30–19:00. שעות הקיץ לא אומתו",b:"לא אומת. לבדוק לפני ההגעה",src:"https://english.beijing.gov.cn/latest/news/202511/t20251101_4249869.html",d:"אתר ממשלתי",nv:1},
+"Summer Palace":{h:"אפריל–אוקטובר: כניסה 6:00–19:00, הפארק נסגר ב־20:00 · אתרים בתשלום 8:00–17:30",b:"¥30 (אפריל–אוקטובר). הזמנה 1–7 ימים מראש בחשבון ה־WeChat הרשמי של הפארק, או בקופה. להביא דרכון ולהגיע בשעה שנבחרה",src:"https://english.beijing.gov.cn/specials/ticketing/parks/202407/t20240719_3753037.html",d:"אתר ממשלתי (פורסם 7.2024)"},
 "Shanghai Tower":{h:"שעות הפתיחה לא אומתו",b:"קומה 118: ¥180. מתחת ל־1.2 מ׳ חינם, 1.2–1.4 מ׳ ¥90. אין החזר כספי, אז להזמין רק יום־יומיים לפני, לפי מזג האוויר. נכנסים עם דרכון",a:"בסופי שבוע ובחגים תור של עד שעתיים. הכי יפה סביב 17:00 (אור יום, שקיעה ואורות)",src:"https://www.wanderinchina.com/destinations/shanghai/shanghai-tower/",d:"נבדק 16.11.2026"},
 "Oriental Pearl Tower":{h:"9:00–21:00, כניסה אחרונה 20:30",b:"חבילה בסיסית ¥199. מתחת למטר חינם, 1–1.4 מ׳ חצי מחיר",src:"https://www.travelchinaguide.com/attraction/shanghai/oriental_pearl.htm",d:"אתר צד שלישי"},
 "Yu Garden":{h:"9:00–16:30, כניסה אחרונה 16:00 · סגור בימי שני",b:"¥30 ביולי–אוגוסט (¥40 באביב ובסתיו). עדיף לקנות אונליין",a:"צפוף מאוד. להגיע עד 15:30. הגשר וסמטאות הבזאר שבחוץ פתוחים גם בערב",src:"https://www.trvlogue.com/en/yu-garden-shanghai-tickets",d:"נבדק 16.11.2026",mon:1},
 "Yangtze River Cableway":{h:"8:00–22:00 (מרץ–נובמבר), כניסה אחרונה כ־21:30 · יום תחזוקה אחד בחודש",b:"¥30 לכיוון, ¥50 הלוך־חזור. מתחת ל־1.2 מ׳ חינם. נמכר ב־WeChat מ־7:45, עד יומיים מראש, או ב־Trip.com. ביום עצמו לוקחים מספר תור",a:"בערבי סוף שבוע תור של שעה ויותר. ביום חול, או אחרי 20:30 מהתחנה הדרומית, כמעט בלי תור. לקנות לכיוון אחד",src:"https://chinafortravelers.com/guides/yangtze-cable-car-chongqing/",d:"עודכן 16.8.2026"},
 "Wulong Karst":{h:"8:30–16:30, כניסות 9:00–16:00",b:"מבוגר כ־$25 (כולל אוטובוס ומעלית). גיל 6–18 או 1.2–1.5 מ׳: כ־$21. להזמין לפחות שעתיים מראש",src:"https://etripchina.com/ticket/wulong-three-natural-bridge-ticket-booking.htm",d:"אתר צד שלישי"},
-"Zhangjiajie Forest Park":{h:"התור בשער המזרחי מתחיל בסביבות 6:30",b:"כרטיס ל־4 ימים (אין אפשרות אחרת). נכנסים בשעה שהוזמנה, ומי שמפספס מחכה. כרטיס משולב עם הרכבלים והמעלית: ¥530 בזמן ביקור הכותב. התאריכים נפתחים כחודש מראש",a:"יולי–אוגוסט חם, גשום ועם ערפל. להגיע מוקדם",src:"https://passportnomads.com/?p=19473",d:"עודכן 8.11.2026"},
+"Zhangjiajie Forest Park":{h:"התור בשער המזרחי מתחיל בסביבות 6:30",b:"כרטיס ל־4 ימים: כניסה + שאטל ¥240 (מפעיל אחר: ¥236). כל כניסה, גם חוזרת, דורשת הזמנה לשער ולשעה. בנפרד: מעלית Bailong ¥65 לכיוון, רכבל Tianzi ¥72 לכיוון. הזמנה ב־WeChat 「张家界旅游小助手」 או ב־Trip.com. מתי נפתחת ההזמנה: אין מקור רשמי. מקור אחד כותב כחודש מראש, ופוסט מ־9.2026 כ־10 ימים. לבדוק כחודש לפני",src:"https://chinasurvivalkit.com/blog/zhangjiajie-national-forest-park-tickets",d:"עודכן 7.11.2026 (מחירים נבדקו 5.11.2026)",a:"יולי–אוגוסט חם, גשום ועם ערפל. להגיע מוקדם"},
 "Yuanjiajie & Bailong Elevator":{b:"מעלית Bailong: ¥65 לכיוון, כלולה בכרטיס המשולב של הפארק",a:"להגיע מוקדם, לפני הקבוצות",src:"https://passportnomads.com/?p=19473",d:"עודכן 8.11.2026"},
 "Tianmen Mountain":{h:"לתכנן 4–6 שעות",b:"¥288 למבוגר, כרטיס שמי ומתוזמן עם דרכון. נמכר רק מסלול C: הרכבל הארוך מהעיר לא פועל (בשיפוץ, בלי תאריך חזרה). עולים בשאטל, ברכבל Tianmen Cave ובמדרגות נעות. בעונה להזמין שבוע ומעלה מראש",a:"לקחת את השעה המוקדמת ביותר",src:"https://www.babagoeschina.com/tianmen-mountain-zhangjiajie/",d:"3.11.2026"},
 "Grand Canyon Glass Bridge":{b:"כניסה בחלון של שעתיים, עד 8,000 איש ביום. גשר + קניון: כ־¥178. מתחת ל־1.2 מ׳ חינם. המכירה הרשמית נפתחת 30 יום מראש. דרכון. אין תיקים על הגשר (יש לוקרים)",a:"החלון של 8:00 הכי פנוי. הגשר נסגר ברוח חזקה ובסופות",src:"https://www.babagoeschina.com/zhangjiajie-glass-bridge/",d:"נבדק 16.11.2026"},
 "Reed Flute Cave":{h:"כ־8:00–17:30 (יולי–דצמבר)",b:"¥90. מתחת ל־1.2 מ׳ או מתחת לגיל 6 חינם. כרטיס אונליין מופעל רק אחרי כשעה",a:"הקבוצות מגיעות בין 10:00 ל־14:00. בקיץ לבוא לפני 10:00",src:"https://chinafortravelers.com/guides/reed-flute-cave-guilin/",d:"עודכן 6.7.2026"},
-"Elephant Trunk Hill":{h:"6:30–19:00 (אפריל–אוקטובר)",b:"מ־¥20. מתחת ל־1.2 מ׳ או מתחת לגיל 6 חינם",src:"https://www.travelchinaguide.com/attraction/guangxi/guilin/elephant-trunk-hill-tickets.htm",d:"אתר צד שלישי"},
+"Elephant Trunk Hill":{h:"נפתח ב־6:30 · שעת סגירה בקיץ לא אומתה",b:"כניסה חינם, מאז 31.1.2022. נכנסים בסריקת QR",a:"שער 3 = נקודת הצילום של ״הפיל שותה״",src:"https://m.gmw.cn/2026-11/16/content_1304586552.htm",d:"Guangming Daily, 16.11.2026"},
 "Li River Cruise":{h:"יוצאים בסביבות 9:00–9:30, השיט 4–5 שעות. סירות 3 כוכבים מ־Mopanshan, 4 כוכבים מ־Zhujiang. לצאת מהמלון לפני 8:00, במונית",b:"להזמין מראש (למשל ב־Trip.com). לבדוק תחזית 3 ימים לפני",a:"מאי–ספטמבר זו עונת הגשמים, והשיט עלול להתבטל בהצפה",src:"https://chinatravel.com/guilin/li-river-cruise-ticket",d:"עודכן 28.4.2026"},
 "Pearl River Night Cruise":{h:"יציאות ערב מ־Tianzi: 18:40, 19:10, 20:10, 21:00 (¥98, 70–90 דק׳)",b:"ב־WeChat ״珠江夜游״ או בקופה (תור בסופ״ש). דרכון מקורי",a:"הכי יפה ב־19:10 או 20:10. בקיץ סופות וטייפונים עלולים לבטל",src:"https://www.chinatravel.com/guangzhou/attraction/pearl-river-night-cruise",d:"נבדק 16.11.2026"},
 "Chen Clan Ancestral Hall":{h:"9:00–17:30 כל יום, מכירה עד 17:00",b:"¥10",src:"https://intotravelchina.com/en/articles/1776910297125519049.html",d:"נבדק 16.11.2026"},
-"Canton Tower":{b:"המחירים לשנת 2026 לא אומתו. מומלץ להזמין אונליין מראש",a:"ביום בהיר. ערב יפה במיוחד",nv:1},
+"Canton Tower":{h:"9:30–22:30, כניסה אחרונה 22:00 · תאורת המגדל 19:00–23:00",b:"תצפית 433 מ׳ ¥150 · מרפסת פתוחה 488 מ׳ ¥328 · Sky Drop ¥268. באתר הרשמי של Canton Tower. בסוף שבוע להזמין מראש",a:"הכי יפה 17:00–18:30. ביום מעונן הפסגה בעננים",src:"https://www.chinatravel.com/guangzhou/attraction/canton-tower",d:"עודכן 17.4.2026 (אתר צד שלישי)"},
 "Impression Liu Sanjie":{b:"שעות המופע והמחירים לא אומתו",nv:1},
 "Yulong River Rafting":{b:"שעות ומחיר לא אומתו",nv:1}};
 
@@ -1072,43 +1408,142 @@ function tripDays(){const pl=plan(),r=R.find(x=>x.id===pl.route),st=pl.len===12?
  days.push({date:addD(start,off),k:st[st.length-1][0],home:true,leg:L[r.legs[r.legs.length-1]],txt:"Flight home"});return{r,st,days,pl,start}}
 function monWarn(d){if(d.date.getUTCDay()!==1||!d.txt)return"";const hit=Object.keys(PR).filter(n=>PR[n].mon&&d.txt.includes(n.split(" ")[0]));return hit.length?`<div class="warn">⚠ יום שני: ${hit.join(", ")} סגור. כדאי להחליף עם יום אחר.</div>`:""}
 function legChip(lg,intl){if(!lg)return"";const md=rec(lg);return `<span class="lchip" style="background:${MC[md.m]}">${IC[md.m]} ${intl?"טיסה מישראל":esc(C[lg.from]?C[lg.from].en+" → "+(C[lg.to]?C[lg.to].en:"Israel"):"")}${intl?"":" · "+esc(shortT(lg))}</span>`}
-function itinHTML(T){const tot=T.days.length-1;return `<h3>יום אחרי יום · ${tot} לילות · ${T.st.length} ערים</h3><p class="small muted">כל יום מתמקד באזור אחד, והאתרים הקרובים מקובצים יחד. הימים לפי ״תוכנית מוצעת״ של כל עיר.</p><div class="itin">`+T.days.map((d,i)=>`<div class="iday${d.home?" home":""}"><div class="idate"><b>יום ${i+1}</b><span>${fd(d.date)}</span></div><div class="ibody"><div class="irow"><span class="cchip">${C[d.k].en} <span class="zh">${C[d.k].zh}</span></span>${d.home?`<span class="lchip" style="background:${MC.flight}">✈ ${C[d.k].en} → ישראל</span>`:legChip(d.leg,d.intl)}</div>${d.dd&&d.dd[4]&&d.dd[4].T?`<div class="dtnote">🚌 ${d.dd[4].note}</div>`:""}<div class="enl" dir="ltr">${zhfmt(esc(d.home?"Flight home":d.txt))}</div>${d.dd&&d.dd[4]&&d.dd[4].dowLbl?`<div class="dowlbl">${d.dd[4].dowLbl}</div>`:""}${d.dd&&d.dd[4]&&d.dd[4].rn?`<div class="rnchip">🗣 ${d.dd[4].rn}</div>`:""}${monWarn(d)}${d.dd&&d.dd[2]?`<a class="ib gmb" href="${gdir(fillH(d.dd[2],d.k),d.dd[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a>`:""}</div></div>`).join("")+`</div>`}
+let ITC=null;
+function itinHTML(T){const tot=T.days.length-1,ks=T.st.map(x=>x[0]);if(!ITC||(ITC!=="all"&&!ks.includes(ITC)))ITC=ks[0];
+ const rng=k=>{const ds=T.days.filter(d=>d.k===k);return ds.length?`${ds[0].date.getUTCDate()}.${ds[0].date.getUTCMonth()+1}–${ds[ds.length-1].date.getUTCDate()}.${ds[ds.length-1].date.getUTCMonth()+1}`:""};
+ const tabs=`<div class="itabs"><button class="itab${ITC==="all"?" on":""}" data-itc="all"><b>כל הטיול</b><small>${tot} לילות</small></button>${T.st.map(([k,n])=>`<button class="itab${ITC===k?" on":""}" data-itc="${k}" style="--cc:${CCOL[k]||"#999"}"><b><i></i>${C[k].en} <span class="zh">${C[k].zh}</span></b><small>${n} ${n===1?"לילה":"לילות"} · <bdi dir="ltr">${rng(k)}</bdi></small></button>`).join("")}</div>`;
+ const list=T.days.map((d,i)=>({d,i})).filter(o=>ITC==="all"||o.d.k===ITC);
+ const card=({d,i})=>{const x=d.dd&&d.dd[4]||{};return `<div class="icard${d.home?" home":""}" style="--cc:${CCOL[d.k]||"#999"}"><div class="ich"><div class="idate"><b>יום ${i+1}</b><span>${fd(d.date)}</span></div>${ITC==="all"?`<span class="cchip">${C[d.k].en} <span class="zh">${C[d.k].zh}</span></span>`:""}${d.home?`<span class="lchip" style="background:${MC.flight}">✈ ${C[d.k].en} → ישראל</span>`:legChip(d.leg,d.intl)}</div>${x.T?`<div class="dtnote">🚌 ${x.note}</div>`:""}<div class="enl" dir="ltr">${zhfmt(esc(d.home?"Flight home":d.txt))}</div>${x.dowLbl?`<div class="dowlbl">${x.dowLbl}</div>`:""}${x.rn?`<div class="rnchip">🗣 ${x.rn}</div>`:""}${monWarn(d)}${d.dd&&d.dd[2]?`<a class="ib gmb" href="${gdir(fillH(d.dd[2],d.k),d.dd[3])}" target="_blank" rel="noopener">🗺 מסלול היום ב־Google Maps</a>`:""}</div>`};
+ return `<h3>יום אחרי יום · ${tot} לילות · ${T.st.length} ערים</h3><p class="small muted">בוחרים עיר ורואים את הימים שלה. התוכנית המפורטת, עם שעות וטיפים, נמצאת במסך היעדים.</p>${tabs}${ITC!=="all"&&DV[ITC]?`<button class="ib idv" data-itdv="${ITC}">🏙 לתוכנית המפורטת של ${C[ITC].en} ←</button>`:""}<div class="igrid">${list.map(card).join("")}</div>`}
 
 /* ===== booking tracker ===== */
+const BKCAT=x=>x.id.startsWith("ht_")?"ht":x.ic==="✈"?"fl":x.ic==="🚄"?"tr":(x.ic==="⛴"||x.ic==="🚐")?"mv":x.id.startsWith("tk_")?"tk":"pr";
+const BKLBL={fl:"✈ טיסות",ht:"🛏 מלונות",tr:"🚄 רכבות",mv:"⛴ שיט והסעות",tk:"🎟 כרטיסים",pr:"📋 הכנות"};
+let BKF="all",BKM=null;
+const bkS=x=>(STORE.b[x.id]||{}).s||0;
+const ymd=d=>iso(d);
+let BKCM=null;const mAdd=(m,n)=>new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+n,1));
+const BKC5={fl:"#C77B61",ht:"#3F6E8C",tr:"#7A5BA6",mv:"#2F8F8A",tk:"#B0874A",pr:"#8C8C8C"};
+const BKCF={fl:1,ht:1,tr:1,mv:1,tk:1,dl:1};
+const bkTag=x=>{const c=BKCAT(x);if(c==="fl")return"טיסה";if(c==="ht")return"מלון";if(c==="tr")return"רכבת";if(c==="mv")return x.ic==="⛴"?"שיט":"הסעה";const t=x.t.split(" · ")[0];return t.length>14?t.slice(0,13)+"…":t};
+function bkCalHTML(T){const it=bookItems(T),days=T.days.filter(d=>!d.home),first=T.start,last=T.days[T.days.length-1].date;
+ const cityOf={};days.forEach(d=>{cityOf[ymd(d.date)]=d.k});
+ const ev={};const put=(d,o)=>{const k=ymd(d);(ev[k]=ev[k]||[]).push(o)};
+ it.forEach(x=>{const c=BKCAT(x),s=bkS(x);if(s!==2)put(x.due,{x,c,s,dl:1});if(!x.on)return;
+  if(c==="ht"){const hk=cityOf[ymd(x.on)],hl=x.id==="ht_zjjc"?"Zhangjiajie (עיר)":(x.id==="ht_zjj"&&it.some(y=>y.id==="ht_zjjc"))?"Wulingyuan":null;const nx=it.find(y=>BKCAT(y)==="ht"&&y.on&&+y.on===+x.end);for(let d=x.on;d<x.end;d=addD(d,1)){const lastN=+addD(d,1)===+x.end;put(d,{x,c,s,night:1,hk,hl,last:lastN,nx:lastN&&nx?{k:cityOf[ymd(nx.on)],s:bkS(nx),hl:nx.id==="ht_zjjc"?"Zhangjiajie (עיר)":null}:null})}}
+  else{put(x.on,{x,c,s});if(x.on2)put(x.on2,{x,c,s})}});
+ const now=new Date(),today=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate())),nowM=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),1)),fm=new Date(Date.UTC(first.getUTCFullYear(),first.getUTCMonth(),1)),lm=new Date(Date.UTC(last.getUTCFullYear(),last.getUTCMonth(),1));
+ if(!BKCM||BKCM.k!==ymd(first))BKCM={k:ymd(first),m:fm};
+ const minM=nowM<fm?nowM:fm,maxM=lm>fm?mAdd(lm,-1):lm;if(BKCM.m<minM)BKCM.m=minM;if(BKCM.m>maxM)BKCM.m=maxM;
+ const months=[BKCM.m,mAdd(BKCM.m,1)];
+ const mname=m=>m.toLocaleDateString("he-IL",{month:"long",year:"numeric",timeZone:"UTC"});
+ const vis=o=>o.dl?BKCF.dl:BKCF[o.c];
+ const dayInfo=k=>{const e=(ev[k]||[]).filter(vis),main=e.filter(o=>!o.dl),dl=e.filter(o=>o.dl),tagged=main.filter(o=>!o.night),nights=main.filter(o=>o.night);
+  const all=(ev[k]||[]).filter(o=>!o.dl),dn=all.filter(o=>o.s===2).length;const st=all.length?(dn===all.length?"full":dn?"part":""):"";return {e,main,dl,tagged,nights,st}};
+ const hotBar=o=>{const k=o.hk,ok=o.s===2;return `<span class="bhot${ok?" ok":""}${o.last?" last":""}"><span class="bhf">🛏 מלון ${o.hl||(k?C[k].en:"")}</span><span class="bhs">🛏 ${(o.hl||(k?C[k].en:"")).slice(0,3)}</span>${ok?` <b>✓</b>`:""}${o.last?`<small class="bhl"> · לילה אחרון</small>`:""}</span>${o.last&&o.nx&&o.nx.k?`<span class="bnx${o.nx.s===2?" ok":""}">→ מחר: <span class="bhf">מלון ${o.nx.hl||C[o.nx.k].en}</span><span class="bhs">${(o.nx.hl||C[o.nx.k].en).slice(0,3)}</span> ${o.nx.s===2?"✓":"○"}</span>`:""}`};
+ const tag=o=>`<em dir="auto" class="bt${o.s===2?" ok":""}" style="--k:${BKC5[o.c]}">${o.s===2?"✓ ":""}${esc(bkTag(o.x))}</em>`;
+ const grid=m=>{const y=m.getUTCFullYear(),mo=m.getUTCMonth(),n=new Date(Date.UTC(y,mo+1,0)).getUTCDate();let h=`<div class="bcm"><div class="bcmh">${mname(m)}</div><div class="bcg">${HEB_D.map(d=>`<span class="bcw">${d}</span>`).join("")}`;
+  const pad=m.getUTCDay();for(let i=pad;i>0;i--){h+=`<span class="bcd out"><b>${addD(m,-i).getUTCDate()}</b></span>`}
+  for(let dd=1;dd<=n;dd++){const d=new Date(Date.UTC(y,mo,dd)),k=ymd(d),inT=d>=first&&d<=last,ck=cityOf[k],I=dayInfo(k);
+   const night=I.nights[0],show=I.tagged.slice(0,night?1:2),more=I.tagged.length-show.length;
+   h+=`<button class="bcd${inT?" in":""}${+d===+today?" today":""}${BKSEL===k?" sel":""}" ${I.e.length?`data-bcd="${k}"`:"disabled"} ${ck?`style="--cc:${CCOL[ck]||"#999"}"`:""} title="${I.e.map(o=>(o.dl?"⏰ להזמין עד היום: ":o.s===2?"✓ ":"○ ")+o.x.t.replace(/"/g,"'")).join("\n")}"><span class="bct"><b>${dd}</b>${ck?`<i class="bcc">${C[ck].en.slice(0,3)}</i>`:""}${I.st==="full"?`<span class="bok" title="הכל הוזמן">✓</span>`:I.st==="part"?`<span class="bpart" title="חלק הוזמן"></span>`:""}${I.dl.length?`<span class="bdl" title="להזמין עד היום">${I.dl.length}</span>`:""}</span><span class="bcx">${show.map(tag).join("")}${more>0?`<em class="bt more">+${more}</em>`:""}</span>${night?hotBar(night):""}</button>`}
+  const tail=(7-((pad+n)%7))%7;for(let i=1;i<=tail;i++)h+=`<span class="bcd out"><b>${i}</b></span>`;
+  return h+`</div></div>`};
+ const agenda=()=>{let h="";months.forEach(m=>{const y=m.getUTCFullYear(),mo=m.getUTCMonth(),n=new Date(Date.UTC(y,mo+1,0)).getUTCDate();let rows="";
+  for(let dd=1;dd<=n;dd++){const d=new Date(Date.UTC(y,mo,dd)),k=ymd(d),I=dayInfo(k),ck=cityOf[k];if(!I.tagged.length&&!I.dl.length)continue;
+   rows+=`<button class="bag${BKSEL===k?" sel":""}" data-bcd="${k}" ${ck?`style="--cc:${CCOL[ck]}"`:""}><span class="bagd"><b>${dd}</b><small>${HEB_D[d.getUTCDay()]}</small></span><span class="bagb">${ck?`<small class="bagc">${C[ck].en}${I.nights.length?" · 🛏":""}</small>`:""}<span class="bcx">${I.tagged.map(tag).join("")}${I.dl.length?`<em class="bt dl">⏰ להזמין: ${I.dl.length}</em>`:""}</span></span>${I.st==="full"?`<span class="bok">✓</span>`:I.st==="part"?`<span class="bpart"></span>`:""}</button>`}
+  h+=`<div class="bagm"><div class="bcmh">${mname(m)}</div>${rows||`<p class="small muted">אין אירועים בחודש הזה.</p>`}</div>`});return h};
+ const tot=it.length,done=it.filter(x=>bkS(x)===2).length,pct=Math.round(done/tot*100);
+ const strip=[];for(let m=nowM;m<=last;m=mAdd(m,1)){const nx=mAdd(m,1);const its=it.filter(x=>(x.due<nx&&x.due>=m)||(+m===+nowM&&x.due<nowM));const dn=its.filter(x=>bkS(x)===2).length;if(its.length)strip.push({m,its,dn})}
+ const chips=[["fl","טיסות"],["ht","מלונות"],["tr","רכבות"],["mv","שיט והסעות"],["tk","כרטיסים"],["dl","מועדי הזמנה"]];
+ return `<div class="bkhead"><div class="bkh1"><h3>לוח ההזמנות</h3><span class="bkpct">${done} מתוך ${tot} הוזמנו</span></div><button class="bkics" id="icsBtn" type="button" title="קובץ CSV לייבוא ב־Google Calendar">📅 ייצוא ל־Google Calendar</button></div>
+ <div class="bkbar"><div style="width:${pct}%"></div></div>
+ <div class="bktools"><div class="bkchips">${chips.map(([c,l])=>`<button class="bkchip${BKCF[c]?" on":""}" data-bkcf="${c}" style="--k:${c==="dl"?"#c0392b":BKC5[c]}"><i></i>${l}</button>`).join("")}</div>
+ <div class="bcnav"><button data-bcn="-1" ${BKCM.m<=minM?"disabled":""} aria-label="חודש קודם">›</button><button data-bcn="today">היום</button><button data-bcn="trip">✈ הטיול</button><button data-bcn="1" ${BKCM.m>=maxM?"disabled":""} aria-label="חודש הבא">‹</button></div></div>
+ <div class="bcms">${months.map(grid).join("")}</div><div class="bagenda">${agenda()}</div>
+ <div id="bcdInfo" class="bcdinfo" hidden></div>
+ <h4 class="bkst">מה להזמין ומתי</h4><div class="bkstrip">${strip.map(o=>{const all=o.dn===o.its.length,key=ymd(o.m);return `<button class="bkm${all?" ok":""}${BKM===key?" on":""}" data-bkm="${key}"><b>${o.m.toLocaleDateString("he-IL",{month:"short",timeZone:"UTC"})} ${String(o.m.getUTCFullYear()).slice(2)}</b><span>${all?"✓ הכל הוזמן":`${o.dn}/${o.its.length}`}</span><small>${[...new Set(o.its.map(x=>x.ic))].join(" ")}</small></button>`}).join("")}</div>`}
+let BKSEL=null;
+function bkCalBind(T){const it=bookItems(T);const box=document.getElementById("bcdInfo");
+ const show=k=>{const d=pd(k);const xs=it.filter(x=>x.on&&(ymd(x.on)===k||(x.on2&&ymd(x.on2)===k)||(x.end&&d>=x.on&&d<x.end)));const ds=it.filter(x=>ymd(x.due)===k);
+  document.querySelectorAll("[data-bcd]").forEach(e=>e.classList.toggle("sel",e.dataset.bcd===k));
+  const row=x=>{const s=bkS(x),n=(STORE.b[x.id]||{}).n;return `<div class="bcdi s${s}"><button class="bst sm" data-bs="${x.id}" title="שינוי סטטוס">${STS[s][0]}</button><span style="--k:${BKC5[BKCAT(x)]}"><i class="bcdk"></i>${x.ic} ${esc(x.t)}${n?` <small class="muted">· ${esc(n)}</small>`:""}</span><button class="ib bgo" data-bkgo="${x.id}" title="פתיחה ברשימה">↓ ברשימה</button>${bkGcal(x)}</div>`};
+  box.hidden=false;box.innerHTML=`<div class="bcdh"><b>${fd(d)}.${String(d.getUTCFullYear()).slice(2)}</b><button class="ib" data-bcclose aria-label="סגירה">✕</button></div>`+(xs.length?`<div class="bcds">בטיול ביום הזה</div>`+xs.map(row).join(""):"")+(ds.length?`<div class="bcds">⏰ התאריך האחרון להזמין</div>`+ds.map(row).join(""):"");bindBS();
+  box.querySelector("[data-bcclose]").onclick=()=>{BKSEL=null;box.hidden=true;document.querySelectorAll("[data-bcd].sel").forEach(e=>e.classList.remove("sel"))};
+  box.querySelectorAll("[data-bkgo]").forEach(b=>b.onclick=()=>{const id=b.dataset.bkgo;BKF="all";BKM=null;BKX[id]=1;renderTrip();const el=document.querySelector(`.bitem[data-id="${id}"]`);if(el){el.scrollIntoView({block:"center",behavior:"smooth"});el.classList.add("flash");setTimeout(()=>el.classList.remove("flash"),1600)}})};
+ document.querySelectorAll("[data-bcd]").forEach(b=>b.onclick=()=>{const k=b.dataset.bcd;if(BKSEL===k){BKSEL=null;document.querySelectorAll("[data-bcd].sel").forEach(e=>e.classList.remove("sel"));box.hidden=true;return}BKSEL=k;show(k)});
+ if(BKSEL)show(BKSEL);
+ document.querySelectorAll("[data-bkcf]").forEach(b=>b.onclick=()=>{const c=b.dataset.bkcf;BKCF[c]=BKCF[c]?0:1;renderTrip()});
+ document.querySelectorAll("[data-bcn]").forEach(b=>b.onclick=()=>{BKSEL=null;const v=b.dataset.bcn;if(v==="trip")BKCM.m=new Date(Date.UTC(T.start.getUTCFullYear(),T.start.getUTCMonth(),1));else if(v==="today"){const n=new Date();BKCM.m=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),1))}else BKCM.m=mAdd(BKCM.m,+v);renderTrip()});
+ document.querySelectorAll("[data-bkm]").forEach(b=>b.onclick=()=>{BKM=BKM===b.dataset.bkm?null:b.dataset.bkm;if(BKM)BKCM.m=pd(BKM);renderTrip();const l=document.getElementById("book");if(l&&BKM)l.scrollIntoView({block:"start",behavior:"smooth"})});
+ const ib=document.getElementById("icsBtn");if(ib)ib.onclick=()=>icsDownload(T)}
+function bkGcal(x){if(!x.on)return"";const b=STORE.b[x.id]||{};const a=x.on,e=x.end||addD(x.on,1);return `<a class="ib gc" target="_blank" rel="noopener" title="הוספה ליומן Google" href="${gcal((b.s===2?"✓ ":"")+x.ic+" "+x.t,a,e,(b.n?"הערה: "+b.n+"\n":"")+(x.dn||""),"")}">📅</a>`}
+function bindBS(){document.querySelectorAll("[data-bs]").forEach(b=>b.onclick=()=>{const id=b.dataset.bs,s=((STORE.b[id]||{}).s||0);setB(id,{s:(s+1)%3});renderTrip()})}
+async function icsDownload(T){const it=bookItems(T).filter(x=>x.on);
+ const md=d=>`${String(d.getUTCMonth()+1).padStart(2,"0")}/${String(d.getUTCDate()).padStart(2,"0")}/${d.getUTCFullYear()}`;
+ const q=v=>'"'+String(v).replace(/"/g,'""')+'"';
+ const rows=[["Subject","Start Date","End Date","All Day Event","Description","Location","Private"]];
+ it.forEach(x=>{const b=STORE.b[x.id]||{};const sub=(b.s===2?"✓ ":"")+x.ic+" "+x.t,desc=(b.n?"הערה: "+b.n+"\n":"")+(x.dn||"")+"\nסטטוס: "+STS[b.s||0][1];
+  const e=x.end?addD(x.end,-1):x.on;rows.push([sub,md(x.on),md(e),"True",desc,"","True"]);if(x.on2)rows.push([sub,md(x.on2),md(x.on2),"True",desc,"","True"])});
+ const csv=rows.map(r=>r.map(q).join(",")).join("\r\n");const fn="china2027-bookings.csv";
+ let dl=null;try{if(window.claude&&window.claude.use)dl=await window.claude.use("downloads")}catch(e){}
+ if(dl){try{await dl.save({filename:fn,data:csv});toast("נשמר. ב־Google Calendar: ⚙ הגדרות ← ייבוא וייצוא ← בוחרים את הקובץ")}catch(e){toast(e&&e.code==="declined"?"ההורדה בוטלה":"ההורדה לא זמינה כאן"+(e&&e.code?" ("+e.code+")":""))}return}
+ try{const bl=new Blob([csv],{type:"text/csv;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download=fn;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast("הקובץ ירד. ב־Google Calendar: ⚙ הגדרות ← ייבוא וייצוא")}catch(e){toast("ההורדה נחסמה בדפדפן הזה")}}
+
 function bookItems(T){const it=[],start=T.start,st=T.st,last=st[st.length-1][0],ks=st.map(x=>x[0]);
  const arr={};T.days.forEach(d=>{if(!d.home&&!(d.k in arr))arr[d.k]=d.date});
  const dayOf=(k,re)=>{const d=T.days.find(x=>x.k===k&&!x.home&&re.test(x.txt||""));return d?d.date:null};
- const add=(id,ic,t,due,dn,url)=>it.push({id,ic,t,due,dn,url});
- add("fl_intl","✈",`טיסות בינלאומיות: ישראל → ${C[st[0][0]].en}, ${C[last].en} → ישראל`,pd("2027-03-31"),"מומלץ עד סוף מרץ 2027, בכרטיס פתוח (multi-city)");
+ const add=(id,ic,t,due,dn,url,x)=>it.push(Object.assign({id,ic,t,due,dn,url},x||{}));const lastD=T.days[T.days.length-1].date;
+ add("fl_intl","✈",`טיסות בינלאומיות: ישראל → ${C[st[0][0]].en}, ${C[last].en} → ישראל`,pd("2027-03-31"),"מומלץ עד סוף מרץ 2027, בכרטיס פתוח (multi-city)",null,{on:start,on2:lastD});
  add("visa","🛂","ויזה לסין לכל הנוסעים, ודרכון בתוקף 6 חודשים לפחות. לאמת את הדרישה העדכנית לישראלים",addD(start,-75),"כ־2–3 חודשים לפני");
- st.forEach(([k,n],j)=>{const a=arr[k];const tmD=k==="zjj"?T.days.find(x=>x.k==="zjj"&&/Tianmen/.test(x.txt||"")):null;if(tmD&&n>1){const nw=Math.round((tmD.date-a)/864e5);add("ht_"+k,"🛏",`מלון 1 ב־Zhangjiajie: ב־Wulingyuan 武陵源, ליד הפארק · ${nw} ${nw===1?"לילה":"לילות"} (${fd(a)}–${fd(addD(a,nw))})`,pd("2027-03-31"),"כבר עכשיו, עם ביטול חינם");if(n-nw>0)add("ht_zjjc","🛏",`מלון 2 ב־Zhangjiajie: בעיר 张家界市区, ליד תחנת Zhangjiajie West · ${n-nw} ${n-nw===1?"לילה":"לילות"} (${fd(addD(a,nw))}–${fd(addD(a,n))})`,pd("2027-03-31"),"ללילה של Tianmen. למשל JI Hotel Tianmen Mountain Cableway")}else add("ht_"+k,"🛏",`מלון ב־${C[k].en} · ${n} ${n===1?"לילה":"לילות"} (${fd(a)}–${fd(addD(a,n))})`,pd("2027-03-31"),"כבר עכשיו, עם ביטול חינם");
+ st.forEach(([k,n],j)=>{const a=arr[k];const tmD=k==="zjj"?T.days.find(x=>x.k==="zjj"&&/Tianmen/.test(x.txt||"")):null;if(tmD&&n>1){const nw=Math.round((tmD.date-a)/864e5);add("ht_"+k,"🛏",`מלון 1 ב־Zhangjiajie: ב־Wulingyuan 武陵源, ליד הפארק · ${nw} ${nw===1?"לילה":"לילות"} (${fd(a)}–${fd(addD(a,nw))})`,pd("2027-03-31"),"כבר עכשיו, עם ביטול חינם",null,{on:a,end:addD(a,nw)});if(n-nw>0)add("ht_zjjc","🛏",`מלון 2 ב־Zhangjiajie: בעיר 张家界市区, ליד תחנת Zhangjiajie West · ${n-nw} ${n-nw===1?"לילה":"לילות"} (${fd(addD(a,nw))}–${fd(addD(a,n))})`,pd("2027-03-31"),"ללילה של Tianmen. למשל JI Hotel Tianmen Mountain Cableway",null,{on:addD(a,nw),end:addD(a,n)})}else add("ht_"+k,"🛏",`מלון ב־${C[k].en} · ${n} ${n===1?"לילה":"לילות"} (${fd(a)}–${fd(addD(a,n))})`,pd("2027-03-31"),"כבר עכשיו, עם ביטול חינם",null,{on:a,end:addD(a,n)});
   if(j>0){const lg=L[T.r.legs[j]],md=rec(lg),nm=`${C[lg.from].en} → ${C[lg.to].en}`;
-   if(md.m==="train")add("lg_"+T.r.legs[j],"🚄",`רכבת ${nm} · ${fd(a)}`,addD(a,-15),`נפתח למכירה ב־${fd(addD(a,-15))} (15 יום לפני) ב־12306 או Trip.com`);
-   else if(md.m==="flight")add("lg_"+T.r.legs[j],"✈",`טיסת פנים ${nm} · ${fd(a)}`,addD(a,-60),"מומלץ חודשיים לפני");
-   else if(md.m==="boat")add("lg_"+T.r.legs[j],"⛴",`שיט Li River ${nm} · ${fd(a)}`,addD(a,-14),"להזמין מראש. לבדוק תחזית 3 ימים לפני (עונת גשמים)");
-   else add("lg_"+T.r.legs[j],"🚐",`הסעה ${nm} · ${fd(a)}`,addD(a,-3),"נהג או מונית, כמה ימים לפני")}});
- if(ks.includes("bj")){const fc=dayOf("bj",/Forbidden/);if(fc)add("tk_fc","🎟",`העיר האסורה · ביקור ב־${fd(fc)}`,addD(fc,-7),`נפתח ב־${fd(addD(fc,-7))} ב־20:00 שעון בייג׳ינג. נגמר מהר`);
-  const th=dayOf("bj",/Temple of Heaven/);if(th)add("tk_toh","🎟",`מקדש השמיים · ${fd(th)}`,addD(th,-7),"אפשר 1–7 ימים לפני, ב־WeChat");
-  const gw=dayOf("bj",/Great Wall|Mutianyu/);if(gw)add("tk_gw","🎟",`החומה · Mutianyu · ${fd(gw)}`,addD(gw,-5),"אונליין מראש, כולל רכבל ומגלשה")}
- if(ks.includes("sh")){const d=dayOf("sh",/Shanghai Tower|Lujiazui/);if(d)add("tk_sht","🎟",`Shanghai Tower · ${fd(d)}`,addD(d,-2),"רק יום־יומיים לפני, לפי מזג האוויר (אין החזר)")}
- if(ks.includes("ckg")){const d=dayOf("ckg",/Cableway|Yangtze/);if(d)add("tk_cw","🎟",`Yangtze River Cableway · ${fd(d)}`,addD(d,-2),"עד יומיים מראש, מ־7:45 ב־WeChat או Trip.com")}
- if(ks.includes("zjj")){const d=dayOf("zjj",/Golden Whip|Bailong|Yuanjiajie|Tianzi|Forest Park/)||arr.zjj;add("tk_zfp","🎟",`פארק Zhangjiajie · כניסה ${fd(d)} (4 ימים)`,addD(d,-30),"התאריכים נפתחים כחודש מראש. שעת כניסה קבועה");
-  const gb=dayOf("zjj",/Glass Bridge|Grand Canyon/);if(gb)add("tk_gb","🎟",`גשר הזכוכית · ${fd(gb)}`,addD(gb,-30),"נפתח 30 יום מראש, חלון של שעתיים");
-  const tm=dayOf("zjj",/Tianmen/);if(tm)add("tk_tm","🎟",`Tianmen Mountain · ${fd(tm)}`,addD(tm,-10),"שבוע ומעלה מראש בעונה")}
- if(ks.includes("ys")){const d=dayOf("ys",/Golden Dragon/);if(d)add("tk_gdp","🎟",`金龙巡游 Golden Dragon Parade · ${fd(d)}`,addD(d,-30),"בדרך כלל רק בשישי ושבת. לבדוק תאריכים חודש מראש, ולהזמין ב־i游阳朔 (גשר ¥108)");const r=dayOf("ys",/Yulong/);if(r)add("tk_ylr","🎟",`רפסודה Yulong 夏棠码头 → 骥马码头 · ${fd(r)}`,addD(r,-1),"אונליין, נפתח ב־08:00 (לפי פוסטים), נגמר מהר בעונה")}
- if(ks.includes("gl")){const d=dayOf("gl",/Reed Flute/);if(d)add("tk_rfc","🎟",`Reed Flute Cave · ${fd(d)}`,addD(d,-1),"אונליין, לפחות שעה לפני")}
- if(ks.includes("gz")){const d=arr.gz;add("tk_prc","🎟",`שיט ערב Pearl River · ${fd(d)}`,addD(d,-2),"WeChat ״珠江夜游״ או בקופה. דרכון")}
+   if(md.m==="train")add("lg_"+T.r.legs[j],"🚄",`רכבת ${nm} · ${fd(a)}`,addD(a,-15),`נפתח למכירה ב־${fd(addD(a,-15))} (15 יום לפני) ב־12306 או Trip.com`,null,{on:a});
+   else if(md.m==="flight")add("lg_"+T.r.legs[j],"✈",`טיסת פנים ${nm} · ${fd(a)}`,addD(a,-60),"מומלץ חודשיים לפני",null,{on:a});
+   else if(md.m==="boat")add("lg_"+T.r.legs[j],"⛴",`שיט Li River ${nm} · ${fd(a)}`,addD(a,-14),"להזמין מראש. לבדוק תחזית 3 ימים לפני (עונת גשמים)",null,{on:a});
+   else add("lg_"+T.r.legs[j],"🚐",`הסעה ${nm} · ${fd(a)}`,addD(a,-3),"נהג או מונית, כמה ימים לפני",null,{on:a})}});
+ if(ks.includes("bj")){const fc=dayOf("bj",/Forbidden/);if(fc)add("tk_fc","🎟",`העיר האסורה · ביקור ב־${fd(fc)}`,addD(fc,-7),`נפתח ב־${fd(addD(fc,-7))} ב־20:00 שעון בייג׳ינג. נגמר מהר`,null,{on:fc});const ta=dayOf("bj",/Tiananmen/);if(ta)add("tk_tam","🎟",`כיכר Tiananmen (חינם) · ${fd(ta)}`,addD(ta,-7),"חובה מראש: 1–7 ימים לפני, ב־WeChat 「天安门广场预约参观」, נפתח כל יום ב־12:00",null,{on:ta});const sp=dayOf("bj",/Summer Palace/);if(sp)add("tk_sp","🎟",`Summer Palace · ${fd(sp)}`,addD(sp,-7),"1–7 ימים לפני, ב־WeChat של הפארק",null,{on:sp});
+  const th=dayOf("bj",/Temple of Heaven/);if(th)add("tk_toh","🎟",`מקדש השמיים · ${fd(th)}`,addD(th,-7),"אפשר 1–7 ימים לפני, ב־WeChat",null,{on:th});
+  const gw=dayOf("bj",/Great Wall|Mutianyu/);if(gw)add("tk_gw","🎟",`החומה · Mutianyu · ${fd(gw)}`,addD(gw,-5),"אונליין מראש, כולל רכבל ומגלשה",null,{on:gw})}
+ if(ks.includes("sh")){const d=dayOf("sh",/Shanghai Tower|Lujiazui/);if(d)add("tk_sht","🎟",`Shanghai Tower · ${fd(d)}`,addD(d,-2),"רק יום־יומיים לפני, לפי מזג האוויר (אין החזר)",null,{on:d})}
+ if(ks.includes("ckg")){const d=dayOf("ckg",/Cableway|Yangtze/);if(d)add("tk_cw","🎟",`Yangtze River Cableway · ${fd(d)}`,addD(d,-2),"עד יומיים מראש, מ־7:45 ב־WeChat או Trip.com",null,{on:d})}
+ if(ks.includes("zjj")){const d=dayOf("zjj",/Golden Whip|Bailong|Yuanjiajie|Tianzi|Forest Park/)||arr.zjj;add("tk_zfp","🎟",`פארק Zhangjiajie · כניסה ${fd(d)} (4 ימים)`,addD(d,-30),"לבדוק כחודש לפני: מקור אחד כותב שההזמנה נפתחת כחודש מראש, ופוסט מ־9.2026 כ־10 ימים. שעת כניסה קבועה",null,{on:d});
+  const gb=dayOf("zjj",/Glass Bridge|Grand Canyon/);if(gb)add("tk_gb","🎟",`גשר הזכוכית · ${fd(gb)}`,addD(gb,-30),"נפתח 30 יום מראש, חלון של שעתיים",null,{on:gb});
+  const tm=dayOf("zjj",/Tianmen/);if(tm)add("tk_tm","🎟",`Tianmen Mountain · ${fd(tm)}`,addD(tm,-10),"שבוע ומעלה מראש בעונה",null,{on:tm})}
+ if(ks.includes("ys")){const d=dayOf("ys",/Golden Dragon/);if(d)add("tk_gdp","🎟",`金龙巡游 Golden Dragon Parade · ${fd(d)}`,addD(d,-30),"בדרך כלל רק בשישי ושבת. לבדוק תאריכים חודש מראש, ולהזמין ב־i游阳朔 (גשר ¥108)",null,{on:d});const r=dayOf("ys",/Yulong/);if(r)add("tk_ylr","🎟",`רפסודה Yulong 夏棠码头 → 骥马码头 · ${fd(r)}`,addD(r,-1),"אונליין, נפתח ב־08:00 (לפי פוסטים), נגמר מהר בעונה",null,{on:r})}
+ if(ks.includes("gl")){const d=dayOf("gl",/Reed Flute/);if(d)add("tk_rfc","🎟",`Reed Flute Cave · ${fd(d)}`,addD(d,-1),"אונליין, לפחות שעה לפני",null,{on:d})}
+ if(ks.includes("gz")){const d=arr.gz;add("tk_prc","🎟",`שיט ערב Pearl River · ${fd(d)}`,addD(d,-2),"WeChat ״珠江夜游״ או בקופה. דרכון",null,{on:d})}
  add("pay","💳","Alipay ו־WeChat Pay עם כרטיס אשראי זר",addD(start,-30),"להגדיר ולבדוק לפני הטיסה");
  add("ins","🛡","ביטוח נסיעות לכל הנוסעים",addD(start,-30),"");
  add("esim","📶","eSIM לסין (עם גישה ל־Google ו־WhatsApp)",addD(start,-14),"");
  add("apps","📱","אפליקציות: Amap 高德, Trip.com, 12306, WeChat, Alipay",addD(start,-14),"להתקין ולהירשם מראש");
  return it.sort((a,b)=>a.due-b.due)}
 const STS=[["○","לא התחלנו"],["◐","בטיפול"],["✓","הוזמן"]];
-function bookHTML(T){const it=bookItems(T),now=new Date(),done=it.filter(x=>(STORE.b[x.id]||{}).s===2).length,pct=Math.round(done/it.length*100);
- return `<h3>הזמנות ומשימות</h3><div class="prog"><div style="width:${pct}%"></div></div><p class="small"><b>${done} מתוך ${it.length}</b> הוזמנו · הכי דחוף למעלה. לחיצה על הסטטוס מחליפה אותו.</p><div class="blist">`+it.map(x=>{const b=STORE.b[x.id]||{},s=b.s||0,days=Math.ceil((x.due-now)/864e5);const cls=s===2?"ok":days<0?"late":days<=30?"soon":"";
-  return `<div class="bitem s${s}"><button class="bst" data-bs="${x.id}" title="שינוי סטטוס">${STS[s][0]}<small>${STS[s][1]}</small></button><div class="bbody"><div><span class="bic">${x.ic}</span> ${esc(x.t)}</div><div class="small muted"><span class="due ${cls}">📅 ${s===2?"הוזמן":"עד "+fd(x.due)+"."+String(x.due.getUTCFullYear()).slice(2)}</span>${x.dn?" · "+esc(x.dn):""}</div><input type="text" class="bnote" data-bn="${x.id}" placeholder="הערה: מספר הזמנה, מחיר…" value="${esc(b.n||"")}"></div></div>`}).join("")+`</div>`}
+let BKG="all";
+function bookHTML(T){let it=bookItems(T);const now=new Date(),done=it.filter(x=>bkS(x)===2).length,pct=Math.round(done/it.length*100);
+ const cnt={all:it.length,todo:it.length-done,done};
+ const dayIdx={};T.days.forEach((d,i)=>{dayIdx[ymd(d.date)]={i,k:d.k,d:d.date}});
+ const cityOfX=x=>x.on?(dayIdx[ymd(x.on)]||{}).k:null;
+ if(BKM){const m=pd(BKM),nx=new Date(Date.UTC(m.getUTCFullYear(),m.getUTCMonth()+1,1)),m0=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),1));it=it.filter(x=>(x.due<nx&&x.due>=m)||(+m===+m0&&x.due<m0))}
+ if(BKF==="todo")it=it.filter(x=>bkS(x)!==2);else if(BKF==="done")it=it.filter(x=>bkS(x)===2);
+ const soon=x=>bkS(x)!==2&&(x.due-now)/864e5<=60;
+ const ks=T.st.map(x=>x[0]);if(BKG!=="all"&&BKG!=="soon"&&BKG!=="prep"&&!ks.includes(BKG))BKG="all";
+ const tabs=[["all","הכל, לפי ימים",it.length],["soon","⏰ דחוף (60 יום)",it.filter(soon).length],["prep","📋 לפני הטיול",it.filter(x=>!x.on).length],...ks.map(k=>[k,C[k].en,it.filter(x=>cityOfX(x)===k).length])];
+ let view=it;if(BKG==="soon")view=it.filter(soon);else if(BKG==="prep")view=it.filter(x=>!x.on);else if(BKG!=="all")view=it.filter(x=>cityOfX(x)===BKG);
+ const secs=[];const pre=view.filter(x=>!x.on);if(pre.length&&BKG!=="soon")secs.push({h:"📋 לפני הטיול · מסמכים, טיסות ומלונות מראש",sub:"",items:pre});
+ if(BKG==="soon")secs.push({h:"⏰ להזמין בחודשיים הקרובים",items:view.slice()});
+ else{const byD={};view.filter(x=>x.on).forEach(x=>{const k=ymd(x.on);(byD[k]=byD[k]||[]).push(x)});Object.keys(byD).sort().forEach(k=>{const di=dayIdx[k];secs.push({h:di?`יום ${di.i+1} · ${fd(di.d)} · ${C[di.k].en} <span class="zh">${C[di.k].zh}</span>`:fd(pd(k)),cc:di?CCOL[di.k]:"",items:byD[k]})})}
+ const item=x=>{const b=STORE.b[x.id]||{},s=b.s||0,days=Math.ceil((x.due-now)/864e5);const cls=s===2?"ok":days<0?"late":days<=30?"soon":"";
+  if(s===2&&!BKX[x.id])return `<div class="bitem s2 mini" data-id="${x.id}"><button class="bst" data-bs="${x.id}" title="שינוי סטטוס">✓</button><button class="bmini" data-bkx="${x.id}"><span class="bic">${x.ic}</span> ${esc(x.t)}${b.n?` <small class="muted">· ${esc(b.n)}</small>`:""}</button>${bkGcal(x)}</div>`;
+  return `<div class="bitem s${s}" data-id="${x.id}"><button class="bst" data-bs="${x.id}" title="שינוי סטטוס">${STS[s][0]}<small>${STS[s][1]}</small></button><div class="bbody"><div class="row" style="justify-content:space-between;gap:6px;flex-wrap:nowrap"><div><span class="bic">${x.ic}</span> ${esc(x.t)}</div>${bkGcal(x)}</div><div class="small muted"><span class="due ${cls}">📅 ${s===2?"הוזמן":"עד "+fd(x.due)+"."+String(x.due.getUTCFullYear()).slice(2)}</span>${x.dn?" · "+esc(x.dn):""}</div><input type="text" class="bnote" data-bn="${x.id}" placeholder="הערה: מספר הזמנה, מחיר…" value="${esc(b.n||"")}"></div></div>`};
+ return `<h3>הזמנות ומשימות</h3><div class="prog"><div style="width:${pct}%"></div></div><p class="small"><b>${done} מתוך ${cnt.all}</b> הוזמנו. לחיצה על הסטטוס מחליפה אותו: ○ לא התחלנו ← ◐ בטיפול ← ✓ הוזמן.</p>
+ <div class="bkgt">${tabs.map(([k,l,n])=>`<button class="bkg${BKG===k?" on":""}" data-bkg="${k}" ${ks.includes(k)?`style="--cc:${CCOL[k]}"`:""}>${ks.includes(k)?"<i></i>":""}${l}<small>${n}</small></button>`).join("")}</div>
+ <div class="seg bkf">${[["all","הכל"],["todo","להזמין"],["done","הוזמן"]].map(([k,l])=>`<button data-bkf="${k}" class="${BKF===k?"on":""}">${l} · ${cnt[k]}</button>`).join("")}</div>
+ ${BKM?`<p class="small bkmf">מוצג רק: ${pd(BKM).toLocaleDateString("he-IL",{month:"long",year:"numeric",timeZone:"UTC"})} <button class="ib" data-bkm-clear>✕ הצג הכל</button></p>`:""}
+ ${secs.length?secs.map(sc=>`<div class="bsec"${sc.cc?` style="--cc:${sc.cc}"`:""}><div class="bsech"><i></i>${sc.h}<small>${sc.items.filter(x=>bkS(x)===2).length}/${sc.items.length}</small></div><div class="blist">${sc.items.map(item).join("")}</div></div>`).join(""):`<p class="small muted">אין פריטים בסינון הזה.</p>`}`}
+const BKX={};
 let TRIP_OPEN=false;try{TRIP_OPEN=localStorage.getItem("cn27tripOpen")==="1"}catch(e){}
-function setTripOpen(v){TRIP_OPEN=v;try{localStorage.setItem("cn27tripOpen",v?"1":"0")}catch(e){}document.getElementById("tripLock").hidden=v;document.getElementById("tripBody").hidden=!v;renderTrip();renderDest();if(v)document.getElementById("tripBody").scrollIntoView({behavior:"smooth"})}
+function setTripOpen(v){TRIP_OPEN=v;try{localStorage.setItem("cn27tripOpen",v?"1":"0")}catch(e){}document.getElementById("tripLock").hidden=v;document.getElementById("tripBody").hidden=!v;{const cb=document.getElementById("tripCloseBtn");if(cb)cb.hidden=!v}renderTrip();renderDest();if(v)document.getElementById("tripBody").scrollIntoView({behavior:"smooth"})}
 document.getElementById("tripOpenBtn").onclick=()=>setTripOpen(true);document.getElementById("tripCloseBtn").onclick=()=>setTripOpen(false);
 document.getElementById("tripLock").hidden=TRIP_OPEN;document.getElementById("tripBody").hidden=!TRIP_OPEN;
 const gd=d=>iso(d).replace(/-/g,"");
@@ -1116,15 +1551,15 @@ function gcal(title,a,b,details,loc){return "https://calendar.google.com/calenda
 function gcalHTML(T){const end=T.days[T.days.length-1].date;let off=0;const ev=T.st.map(([k,n])=>{const a=addD(T.start,off);off+=n;const hb=(STORE.b["ht_"+k]||{});const days=(DAYS[k]||[]).map(d=>d[0]+": "+plain(d[1])).join("\n");return `<a class="ib" target="_blank" rel="noopener" href="${gcal(`🇨🇳 ${C[k].en} ${C[k].zh} · ${n} ${n===1?"לילה":"לילות"}`,a,addD(a,n),(hb.n?"מלון: "+hb.n+"\n\n":"")+days,C[k].en+", China")}">${C[k].en}</a>`}).join("");
  return `<details class="gcal"><summary>📅 הוספה ליומן Google</summary><p class="small muted">כל כפתור פותח את Google Calendar עם אירוע מוכן לשמירה (צריך להיות מחוברים לחשבון Google). אם משנים תאריכים כאן, היומן לא מתעדכן לבד: מוחקים את האירועים הישנים ומוסיפים שוב.</p><div class="row" style="gap:6px;flex-wrap:wrap"><a class="ib pri" target="_blank" rel="noopener" href="${gcal("🇨🇳 טיול סין · מסלול "+T.r.id,T.start,addD(end,1),T.st.map(([k,n])=>C[k].en+" "+n).join(" → "),"China")}">כל הטיול כאירוע אחד</a>${ev}</div></details>`}
 function renderTrip(){const el=document.getElementById("trip");if(!el||!TRIP_OPEN)return;const T=tripDays(),pl=T.pl;
-   document.getElementById("tripCtl").innerHTML=`<div class="trip-summary"><div><b>התכנון משתמש בהגדרות הראשיות</b><p>מסלול ${T.r.id} · ${T.pl.nights} לילות · ${S.pax} נוסעים · נחיתה ${heDate(T.pl.start)}</p></div><div class="section-actions"><button class="edit-settings" id="editSettingsBtn" type="button">עריכת הגדרות הטיול ↑</button><span id="syncState" class="sync"></span></div></div>`;
-  document.getElementById("itin").innerHTML=gcalHTML(T)+itinHTML(T);document.getElementById("book").innerHTML=bookHTML(T);syncBadge();
-  document.getElementById("editSettingsBtn").onclick=()=>document.getElementById("settings").scrollIntoView({behavior:"smooth",block:"start"});
-  document.querySelectorAll("[data-bs]").forEach(b=>b.onclick=()=>{const id=b.dataset.bs,s=((STORE.b[id]||{}).s||0);setB(id,{s:(s+1)%3});renderTrip()});
+   document.getElementById("tripCtl").innerHTML=`<div class="trip-summary"><div><b>התכנון משתמש בהגדרות הראשיות</b><p>מסלול ${T.r.id} · ${T.pl.nights} לילות · ${S.pax} נוסעים · נחיתה ${heDate(T.pl.start)}</p></div><div class="section-actions"><button class="edit-settings" id="editSettingsBtn" type="button">עריכת הגדרות הטיול</button><span id="syncState" class="sync"></span></div></div>`;
+  document.getElementById("itin").innerHTML=gcalHTML(T)+itinHTML(T);document.getElementById("book").innerHTML=bookHTML(T);{const bc=document.getElementById("bookCal");if(bc){bc.innerHTML=bkCalHTML(T);bkCalBind(T)}}syncBadge();
+  document.getElementById("editSettingsBtn").onclick=()=>goTo("settings");
+  document.querySelectorAll("[data-itc]").forEach(b=>b.onclick=()=>{ITC=b.dataset.itc;renderTrip()});{const v=document.querySelector("[data-itdv]");if(v)v.onclick=()=>{S.dest=v.dataset.itdv;renderDest.last=null;renderDest();goTo("dest")}}bindBS();document.querySelectorAll("[data-bkf]").forEach(b=>b.onclick=()=>{BKF=b.dataset.bkf;renderTrip()});document.querySelectorAll("[data-bkg]").forEach(b=>b.onclick=()=>{BKG=b.dataset.bkg;renderTrip()});document.querySelectorAll("[data-bkx]").forEach(b=>b.onclick=()=>{BKX[b.dataset.bkx]=1;renderTrip()});{const c=document.querySelector("[data-bkm-clear]");if(c)c.onclick=()=>{BKM=null;renderTrip()}}
   document.querySelectorAll("[data-bn]").forEach(i=>i.onchange=()=>{setB(i.dataset.bn,{n:i.value.trim()})})}
 
 /* ===== mobile: jump to city ===== */
 function openCitySheet(){const s=document.getElementById("citySheet");s.innerHTML=`<div class="sh-in" onclick="event.stopPropagation()"><h3>קפיצה לעיר</h3><div class="sh-grid">${DO.map(k=>`<button data-jc="${k}" style="background-image:url(${IMG[C[k].img[0]]})"><b>${C[k].en}</b><span>${C[k].zh}</span></button>`).join("")}</div></div>`;s.classList.add("on");
- s.querySelectorAll("[data-jc]").forEach(b=>b.onclick=()=>{S.dest=b.dataset.jc;S.filter="all";S.heroCity=S.dest;S.heroIdx=0;renderDest.last=null;renderDest();renderHero();s.classList.remove("on");document.getElementById("dest").scrollIntoView()})}
+ s.querySelectorAll("[data-jc]").forEach(b=>b.onclick=()=>{S.dest=b.dataset.jc;S.filter="all";S.heroCity=S.dest;S.heroIdx=0;renderDest.last=null;renderDest();renderHero();s.classList.remove("on");goTo("dest")})}
 document.getElementById("citySheet").onclick=e=>e.currentTarget.classList.remove("on");
 
 
@@ -1134,17 +1569,43 @@ setInterval(()=>{const c=C[S.heroCity];if(c.img.length>1){S.heroIdx=(S.heroIdx+1
 </script>
 
 <script>
-(function(){
-  const nav=document.getElementById('sideNav');
-  if(!nav || !('IntersectionObserver' in window)) return;
-  const links=[...nav.querySelectorAll('[data-section]')];
-  const setActive=id=>links.forEach(a=>a.classList.toggle('active',a.dataset.section===id));
-  const nodes=links.map(a=>document.getElementById(a.dataset.section)).filter(Boolean);
-  const pick=()=>{const atEnd=innerHeight+scrollY>=document.documentElement.scrollHeight-4;let cur=nodes[0].id;if(atEnd){for(const n of nodes){if(n.getBoundingClientRect().top<innerHeight*0.6)cur=n.id}}else{for(const n of nodes){if(n.getBoundingClientRect().top<=140)cur=n.id}}setActive(cur)};
-  let tk=false;addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(()=>{tk=false;pick()})}},{passive:true});
-  setActive('hero');
-})();
+const VIEW_OF=id=>{let e=document.getElementById(id);while(e&&!(e.dataset&&e.dataset.view))e=e.parentElement;return e?e.dataset.view:null};
+let CURV="home";
+function renderHomeSum(){const el=document.getElementById("homeSum");if(!el)return;try{
+ const pl=plan(),r=R.find(x=>x.id===pl.route)||R[0],c=cost(r),T=tripDays(),it=bookItems(T),now=new Date();
+ const done=it.filter(x=>(STORE.b[x.id]||{}).s===2).length;
+ const todo=it.filter(x=>(STORE.b[x.id]||{}).s!==2).sort((a,b)=>a.due-b.due).slice(0,3);
+ const dd=d=>d.toLocaleDateString("he-IL",{day:"numeric",month:"short"});
+ el.innerHTML=`<div class="hs-top"><div class="hs-route">מסלול ${r.id} · ${esc(r.name)}</div><div class="hs-meta">${pl.nights} לילות · ${S.pax} נוסעים · נחיתה ${heDate(pl.start)}</div></div>
+ <div class="hs-kpis"><div><b>${f(c.total)}</b><span>אומדן טיסות, מלונות ותחבורה</span></div><div><b>${done}/${it.length}</b><span>הזמנות שבוצעו</span></div><div><b>${Math.max(0,Math.ceil((pd(pl.start)-now)/864e5))}</b><span>ימים עד הנחיתה</span></div></div>
+ ${todo.length?`<h3>הבא בתור להזמנה</h3><ul>${todo.map(x=>`<li class="${x.due<now?"late":""}"><span>${x.ic||""} ${esc(x.t)}</span><small>${x.due<now?"באיחור · ":"עד "}${dd(x.due)}</small></li>`).join("")}</ul>`:""}
+ <div class="hs-act"><a class="btn" href="#trip" onclick="setTripOpen(true)">יומן והזמנות</a><a class="btn ghost" href="#planner">השוואת מסלולים</a><a class="btn ghost" href="#settings">הגדרות</a></div>`;
+}catch(e){el.innerHTML=""}}
+function showView(v,tid){if(!v)return;CURV=v;
+ document.querySelectorAll("[data-view]").forEach(e=>e.classList.toggle("von",e.dataset.view===v));
+ const sec=tid&&document.querySelector('.side-link[data-section="'+tid+'"]')?tid:null;
+ document.querySelectorAll(".side-link[data-section]").forEach(a=>{const on=sec?a.dataset.section===sec:VIEW_OF(a.dataset.section)===v&&!(v==="plan"&&a.dataset.section==="settings");a.classList.toggle("active",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+ document.querySelectorAll(".mnav a").forEach(a=>a.classList.toggle("on",VIEW_OF(a.getAttribute("href").slice(1))===v));
+ if(v==="home")renderHomeSum();
+ if(v==="plan"){try{fitRoute()}catch(e){}}
+ const t=tid&&document.getElementById(tid),first=document.querySelector('[data-view="'+v+'"]');
+ if(t&&tid==="planner")requestAnimationFrame(()=>t.scrollIntoView({block:"start"}));else scrollTo(0,0);
+ if(v==="dest")requestAnimationFrame(()=>{const a=document.querySelector("#destTabs .pill.active");if(a&&a.parentElement.scrollWidth>a.parentElement.clientWidth)a.parentElement.scrollLeft+=a.getBoundingClientRect().left-a.parentElement.getBoundingClientRect().left-(a.parentElement.clientWidth-a.offsetWidth)/2});
+ try{history.replaceState(null,"","#"+(tid||v))}catch(e){}}
+function goTo(id){showView(VIEW_OF(id),id)}
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a||e.defaultPrevented)return;const id=a.getAttribute("href").slice(1);const v=id&&VIEW_OF(id);if(!v)return;e.preventDefault();showView(v,id)});
+addEventListener("hashchange",()=>{const h=(location.hash||"").slice(1),v=h&&VIEW_OF(h);if(v&&v!==CURV){if(v==="trip")setTripOpen(true);showView(v,h)}});
+(function(){const _ra=renderAll;renderAll=function(){_ra.apply(this,arguments);if(CURV==="home")renderHomeSum()}})();
+{const cb=document.getElementById("tripCloseBtn");if(cb)cb.hidden=!TRIP_OPEN}
+(function(){const h=(location.hash||"").slice(1),v=h&&VIEW_OF(h);if(v==="trip")setTripOpen(true);showView(v||"home",v?h:null)})();
 </script>
 
+
+<script>
+(function(){const ios=/iPhone|iPad|iPod/.test(navigator.userAgent),and=/Android/.test(navigator.userAgent);
+document.querySelectorAll('.app-logo[data-ios]').forEach(a=>{if(and)a.href=a.dataset.and;else if(ios)a.href=a.dataset.ios});
+let st={};try{st=JSON.parse(localStorage.getItem("cn27apps")||"{}")}catch(e){}
+document.querySelectorAll('[data-app]').forEach(c=>{c.checked=!!st[c.dataset.app];c.closest('.app').classList.toggle('done',c.checked);c.onchange=()=>{st[c.dataset.app]=c.checked;c.closest('.app').classList.toggle('done',c.checked);try{localStorage.setItem("cn27apps",JSON.stringify(st))}catch(e){}}})})();
+</script>
 </body>
 </html>
